@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyiufudqgqyal"
-path="res://.godot/imported/leaderboard_button_clicked.png-9518e0a5bc0f367d0b35434b3f3e5e93.ctex"
+uid="uid://csnmj401jvusm"
+path="res://.godot/imported/green_default_long.png-80774c009ed0e5e0e96e49ad5292fe0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/UI/UI/leaderboard_button_clicked.png"
-dest_files=["res://.godot/imported/leaderboard_button_clicked.png-9518e0a5bc0f367d0b35434b3f3e5e93.ctex"]
+source_file="res://assets/sprites/UI/green_default_long.png"
+dest_files=["res://.godot/imported/green_default_long.png-80774c009ed0e5e0e96e49ad5292fe0d.ctex"]
 
 [params]
 

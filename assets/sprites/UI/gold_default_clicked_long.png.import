@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gyp2fbn6ud66"
-path="res://.godot/imported/green_default_long.png-928542e1989fe1af6454dcb83fabb8dc.ctex"
+uid="uid://rpu40exkrikh"
+path="res://.godot/imported/gold_default_clicked_long.png-6987c68b6270cf480b1a0123f03a13c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fonts/UI/green_default_long.png"
-dest_files=["res://.godot/imported/green_default_long.png-928542e1989fe1af6454dcb83fabb8dc.ctex"]
+source_file="res://assets/sprites/UI/gold_default_clicked_long.png"
+dest_files=["res://.godot/imported/gold_default_clicked_long.png-6987c68b6270cf480b1a0123f03a13c0.ctex"]
 
 [params]
 
