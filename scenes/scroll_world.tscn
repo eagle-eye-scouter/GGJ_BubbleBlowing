@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=14 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
+[ext_resource type="PackedScene" uid="uid://baj1cgpjrapyv" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
@@ -178,27 +179,52 @@ scale = Vector2(1, -1)
 velocity = 100.0
 direction = Vector2(1, -1)
 
-[node name="SpawnerUFO3" parent="Dynamic" instance=ExtResource("4_ptieh")]
+[node name="SpawnerUFO" parent="Dynamic" instance=ExtResource("4_ptieh")]
 position = Vector2(64, -14889)
 
-[node name="Trigger" parent="Dynamic/SpawnerUFO3" index="0"]
+[node name="Trigger" parent="Dynamic/SpawnerUFO" index="0"]
 position = Vector2(148, 147)
 scale = Vector2(12.64, 1)
 
-[node name="Collider" parent="Dynamic/SpawnerUFO3/Trigger" index="0"]
+[node name="Collider" parent="Dynamic/SpawnerUFO/Trigger" index="0"]
 position = Vector2(-4.35126, -3)
 shape = SubResource("RectangleShape2D_06o81")
 
-[node name="UFO" parent="Dynamic/SpawnerUFO3/Fleet" index="0" instance=ExtResource("6_3hp1q")]
+[node name="UFO" parent="Dynamic/SpawnerUFO/Fleet" index="0" instance=ExtResource("6_3hp1q")]
 position = Vector2(-176, -151)
 
-[node name="UFO2" parent="Dynamic/SpawnerUFO3/Fleet" index="1" instance=ExtResource("6_3hp1q")]
+[node name="UFO2" parent="Dynamic/SpawnerUFO/Fleet" index="1" instance=ExtResource("6_3hp1q")]
 position = Vector2(347, -243)
 direction = Vector2(-1, 0)
 
-[node name="UFO3" parent="Dynamic/SpawnerUFO3/Fleet" index="2" instance=ExtResource("6_3hp1q")]
+[node name="UFO3" parent="Dynamic/SpawnerUFO/Fleet" index="2" instance=ExtResource("6_3hp1q")]
 position = Vector2(377, -478)
 velocity = 80.0
+direction = Vector2(-1, 0)
+
+[node name="SpawnerPlane" parent="Dynamic" instance=ExtResource("4_ptieh")]
+position = Vector2(67, -2946)
+
+[node name="Trigger" parent="Dynamic/SpawnerPlane" index="0"]
+position = Vector2(148, 147)
+scale = Vector2(12.64, 1)
+
+[node name="Collider" parent="Dynamic/SpawnerPlane/Trigger" index="0"]
+position = Vector2(-4.35126, -3)
+shape = SubResource("RectangleShape2D_06o81")
+
+[node name="Plane" parent="Dynamic/SpawnerPlane/Fleet" index="0" instance=ExtResource("7_rhndl")]
+position = Vector2(-130, 33)
+velocity = 200.0
+
+[node name="Plane2" parent="Dynamic/SpawnerPlane/Fleet" index="1" instance=ExtResource("7_rhndl")]
+position = Vector2(-218, 345)
+velocity = 200.0
+
+[node name="Plane3" parent="Dynamic/SpawnerPlane/Fleet" index="2" instance=ExtResource("7_rhndl")]
+position = Vector2(529, -498)
+scale = Vector2(1, 1)
+velocity = 200.0
 direction = Vector2(-1, 0)
 
 [node name="Fixed" type="Node2D" parent="."]
@@ -240,4 +266,5 @@ text = "7:00"
 [editable path="Dynamic/SpawnerBird1"]
 [editable path="Dynamic/SpawnerBird2"]
 [editable path="Dynamic/SpawnerBird3"]
-[editable path="Dynamic/SpawnerUFO3"]
+[editable path="Dynamic/SpawnerUFO"]
+[editable path="Dynamic/SpawnerPlane"]
