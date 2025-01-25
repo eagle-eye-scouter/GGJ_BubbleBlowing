@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var player : Player = $Dynamic/Player
-@onready var player_bubble : GumBubble = $Dynamic/Player/Bubble
-#@onready var gravity_field : Area2D = $Fixed/GravityZone
+@onready var player : Player = $Player
+@onready var player_bubble : GumBubble = player.bubble
+@onready var scrolling : Node2D = $Dynamic
 
 var virtual_elevation : float = 0.0 ## Used for spawning enemies, keeping track of score
 var player_levity : float = 1.0
@@ -16,5 +16,16 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var speed_of_ascent : float = player_bubble.volume * player_levity
-	#gravity_field.gravity_direction = Vector2(0, speed_of_ascent)
-	virtual_elevation += speed_of_ascent * delta
+	var delta_ascent = speed_of_ascent * delta
+	virtual_elevation += delta_ascent
+	scrolling.global_position.y += delta_ascent
+	_resync_scrolling()
+
+
+func _resync_scrolling():
+	var offset = scrolling.global_position
+	var children = scrolling.get_children()
+	for child in children:
+		children.append_array(child.get_children())
+		child.global_position -= offset
+	scrolling.global_position = Vector2.ZERO
