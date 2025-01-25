@@ -45,6 +45,14 @@ texture = SubResource("GradientTexture1D_p6wtx")
 [node name="Player" parent="." instance=ExtResource("2_wuabt")]
 position = Vector2(148, 143)
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = 0
+limit_right = 320
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 1.0
+drag_right_margin = 1.0
+
 [node name="Dynamic" type="Node2D" parent="."]
 
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_xqx3g")]
