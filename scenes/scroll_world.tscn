@@ -8,10 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
 [ext_resource type="PackedScene" uid="uid://baj1cgpjrapyv" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://cuqxd3qt0rcca" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
-=======
->>>>>>> Stashed changes
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
