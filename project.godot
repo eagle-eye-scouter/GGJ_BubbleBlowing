@@ -66,6 +66,11 @@ player_breath={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Solid"
+2d_physics/layer_2="Pop"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

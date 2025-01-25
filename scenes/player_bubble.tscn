@@ -11,6 +11,8 @@ script = ExtResource("1_bs340")
 
 [node name="Body" type="Area2D" parent="."]
 position = Vector2(0, -64)
+collision_layer = 0
+collision_mask = 2
 
 [node name="Icon" type="Sprite2D" parent="Body"]
 rotation = 0.785398
