@@ -22,24 +22,21 @@ size = Vector2(1837, 186.5)
 script = ExtResource("1_eiwcc")
 
 [node name="Background" type="Control" parent="."]
-clip_contents = true
+z_index = -1
 layout_mode = 3
 anchors_preset = 0
-offset_top = 167.0
-offset_right = 1577.0
-offset_bottom = 487.0
+offset_top = 169.0
+offset_right = 180.0
+offset_bottom = 489.0
 rotation = -1.5708
-scale = Vector2(11.56, 1)
 
 [node name="Sky" type="TextureRect" parent="Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -33.3045
-offset_top = -1.68289e-05
-offset_right = 1442.7
-offset_bottom = -3.05176e-05
+offset_left = -38.0
+offset_right = 7782.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture1D_p6wtx")

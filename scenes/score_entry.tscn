@@ -20,3 +20,9 @@ offset_bottom = 35.0
 text = "SCORE"
 label_settings = ExtResource("2_1ht85")
 metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.75
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
