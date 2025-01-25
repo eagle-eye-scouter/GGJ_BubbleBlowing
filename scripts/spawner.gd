@@ -1,7 +1,7 @@
 extends Marker2D
 
 
-@export var fleet : Array[Node2D] = []
+@onready var fleet : Node2D = $Fleet
 @onready var trigger : Area2D = $Trigger
 
 
