@@ -66,6 +66,6 @@ func _handle_death_animation(delta: float) -> void:
 	pass
 
 
-func kill():
+func kill() -> void:
 	if state != State.START:
 		state = State.DEAD

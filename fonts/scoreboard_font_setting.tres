@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://rx64br4ah44n"]
+
+[ext_resource type="FontFile" uid="uid://dgpmvqhinp40v" path="res://fonts/MatrixtypeDisplayBold-6R4e6.ttf" id="1_uwphu"]
+
+[resource]
+font = ExtResource("1_uwphu")
+font_size = 32
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)

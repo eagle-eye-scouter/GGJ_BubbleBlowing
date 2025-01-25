@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://m24coaqulwcp"]
+
+[ext_resource type="PackedScene" uid="uid://yeplf5s6wa2n" path="res://scenes/score_entry.tscn" id="1_6sl18"]
+
+[node name="Scoreboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score Entry" parent="." instance=ExtResource("1_6sl18")]
+
+[node name="Score Entry2" parent="." instance=ExtResource("1_6sl18")]
+position = Vector2(0, 64)
+
+[node name="Score Entry3" parent="." instance=ExtResource("1_6sl18")]
+position = Vector2(0, 128)
