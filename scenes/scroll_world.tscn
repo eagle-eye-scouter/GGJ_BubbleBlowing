@@ -56,7 +56,7 @@ texture = SubResource("GradientTexture1D_p6wtx")
 position = Vector2(144.5, 136)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0.5, -37)
+position = Vector2(-5.5, -43)
 limit_left = 0
 limit_right = 320
 limit_bottom = 180
