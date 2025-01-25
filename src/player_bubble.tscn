@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cycv7lfgdrhhy"]
+
+[ext_resource type="Texture2D" uid="uid://duc6vpt17ye4s" path="res://assets/gum_bubble.png" id="1_xn1kj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tyhwl"]
+radius = 63.0714
+
+[node name="Bubble" type="Node2D"]
+
+[node name="Body" type="StaticBody2D" parent="."]
+position = Vector2(0, -64)
+
+[node name="Icon" type="Sprite2D" parent="Body"]
+rotation = 0.785398
+scale = Vector2(8, 8)
+texture = ExtResource("1_xn1kj")
+
+[node name="Collider" type="CollisionShape2D" parent="Body"]
+shape = SubResource("CircleShape2D_tyhwl")
