@@ -12,11 +12,12 @@ const INFLATE_SPEED : float = 0.2
 const DECELLERATION : float = 0.90
 const DECCELERATION_RATE := Vector2(DECELLERATION, DECELLERATION)
 
-var state := State.ALIVE
+var state := State.START
 @onready var bubble : GumBubble = $Bubble
 @onready var sprite : Sprite2D = $Sprite
 
 enum State {
+	START,
 	ALIVE,
 	DEAD
 }
@@ -66,4 +67,5 @@ func _handle_death_animation(delta: float) -> void:
 
 
 func kill():
-	state = State.DEAD
+	if state != State.START:
+		state = State.DEAD
