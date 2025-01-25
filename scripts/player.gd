@@ -10,9 +10,10 @@ const SPEED_MAX := Vector2(HORI_SPEED_MAX, VERT_SPEED_MAX)
 const INFLATE_SPEED : float = 0.01
 const DECELLERATION : float = 0.90
 const DECCELERATION_RATE := Vector2(DECELLERATION, DECELLERATION)
+const BUBBLE_VOLUME_START_THRESHOLD : float = 0.5
 const LEVITY : float = 4000.0
 
-var state := State.ALIVE
+var state := State.START
 @onready var bubble : GumBubble = $Bubble
 @onready var sprite : Sprite2D = $Sprite
 
@@ -21,6 +22,7 @@ enum State {
 	ALIVE,
 	DEAD
 }
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +36,9 @@ func _physics_process(delta: float) -> void:
 	match state:
 		State.DEAD:
 			_handle_death_animation(delta)
+		State.START:
+			if bubble.volume >= BUBBLE_VOLUME_START_THRESHOLD:
+				state = State.ALIVE
 		_:
 			_handle_movement(delta)
 
@@ -43,7 +48,7 @@ func _handle_movement(delta: float) -> void:
 	linear_velocity *= DECCELERATION_RATE
 	
 	## Get the raw input direction
-	var vector : Vector2 = Input.get_vector("player_left", "player_right", "player_up", "player_down")
+	var vector : Vector2 = Input.get_vector("player_left", "player_right", "dummy", "player_down")
 	
 	## Scale the input direction by delta (which is the difference in time between cycles)
 	vector = vector * delta
