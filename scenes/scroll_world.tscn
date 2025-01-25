@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=9 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_eiwcc"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
@@ -13,10 +13,7 @@ colors = PackedColorArray(0.4182, 0.725067, 1, 1, 0.204, 0.464667, 1, 1)
 gradient = SubResource("Gradient_p0pkq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qts6x"]
-size = Vector2(202, 1247.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6k36p"]
-size = Vector2(1837, 186.5)
+size = Vector2(202, 1554.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qiv8v"]
 size = Vector2(1837, 186.5)
@@ -29,8 +26,9 @@ clip_contents = true
 layout_mode = 3
 anchors_preset = 0
 offset_left = 320.0
-offset_right = 500.0
-offset_bottom = 320.0
+offset_top = -499.0
+offset_right = 1897.0
+offset_bottom = -179.0
 rotation = 1.5708
 
 [node name="Sky" type="TextureRect" parent="Background"]
@@ -59,33 +57,21 @@ scale = Vector2(3, 1.333)
 position = Vector2(-101, 436)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fixed/LeftWall"]
+position = Vector2(0, -153.625)
 shape = SubResource("RectangleShape2D_qts6x")
 
 [node name="RightWall" type="StaticBody2D" parent="Fixed"]
 position = Vector2(1253, 437)
 
 [node name="Collider" type="CollisionShape2D" parent="Fixed/RightWall"]
-position = Vector2(-832, -78)
+position = Vector2(-832, -157)
 shape = SubResource("RectangleShape2D_qts6x")
-
-[node name="UpWall" type="StaticBody2D" parent="Fixed"]
-position = Vector2(561, -94)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fixed/UpWall"]
-shape = SubResource("RectangleShape2D_6k36p")
-
-[node name="DownWall" type="StaticBody2D" parent="Fixed"]
-position = Vector2(607, 901)
-
-[node name="Collider" type="CollisionShape2D" parent="Fixed/DownWall"]
-position = Vector2(-226, -582)
-shape = SubResource("RectangleShape2D_6k36p")
 
 [node name="KillZone" type="Area2D" parent="Fixed"]
 script = ExtResource("4_f4p2y")
 
 [node name="Collider" type="CollisionShape2D" parent="Fixed/KillZone"]
-position = Vector2(487, 262)
+position = Vector2(352, 886)
 shape = SubResource("RectangleShape2D_qiv8v")
 debug_color = Color(0.7, 0, 0, 0.419608)
 
