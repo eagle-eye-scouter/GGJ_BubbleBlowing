@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://m24coaqulwcp"]
+[gd_scene load_steps=2 format=3 uid="uid://bi1iy3b1bjabh"]
 
-[ext_resource type="PackedScene" uid="uid://yeplf5s6wa2n" path="res://scenes/score_entry.tscn" id="1_6sl18"]
+[ext_resource type="PackedScene" path="res://scenes/score_entry.tscn" id="1_6sl18"]
 
 [node name="Scoreboard" type="Control"]
 layout_mode = 3
