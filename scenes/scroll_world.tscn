@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=13 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
 [ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
+[ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
@@ -124,6 +125,29 @@ position = Vector2(160, -88)
 scale = Vector2(1, 1)
 direction = Vector2(-1, 0)
 
+[node name="Spawner3" parent="Dynamic" instance=ExtResource("4_ptieh")]
+position = Vector2(64, -14889)
+
+[node name="Trigger" parent="Dynamic/Spawner3" index="0"]
+position = Vector2(152, 6)
+scale = Vector2(12.64, 1)
+
+[node name="Collider" parent="Dynamic/Spawner3/Trigger" index="0"]
+position = Vector2(-4.35126, -3)
+shape = SubResource("RectangleShape2D_06o81")
+
+[node name="UFO" parent="Dynamic/Spawner3/Fleet" index="0" instance=ExtResource("6_3hp1q")]
+position = Vector2(-176, -151)
+
+[node name="UFO2" parent="Dynamic/Spawner3/Fleet" index="1" instance=ExtResource("6_3hp1q")]
+position = Vector2(347, -243)
+direction = Vector2(-1, 0)
+
+[node name="UFO3" parent="Dynamic/Spawner3/Fleet" index="2" instance=ExtResource("6_3hp1q")]
+position = Vector2(377, -478)
+velocity = 80.0
+direction = Vector2(-1, 0)
+
 [node name="Fixed" type="Node2D" parent="."]
 
 [node name="LeftWall" type="StaticBody2D" parent="Fixed"]
@@ -162,3 +186,4 @@ text = "7:00"
 
 [editable path="Dynamic/Spawner1"]
 [editable path="Dynamic/Spawner2"]
+[editable path="Dynamic/Spawner3"]
