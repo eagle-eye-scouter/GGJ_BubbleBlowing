@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=12 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
@@ -13,6 +13,9 @@ colors = PackedColorArray(0.4182, 0.725067, 1, 1, 0.077, 0, 0.21, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_p6wtx"]
 gradient = SubResource("Gradient_p0pkq")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_06o81"]
+size = Vector2(27.057, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qts6x"]
 size = Vector2(202, 1554.75)
@@ -44,7 +47,7 @@ grow_vertical = 2
 texture = SubResource("GradientTexture1D_p6wtx")
 
 [node name="Player" parent="." instance=ExtResource("2_wuabt")]
-position = Vector2(144, 136)
+position = Vector2(144.5, 136)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 0
@@ -85,6 +88,42 @@ position = Vector2(15, -94)
 [node name="Bird5" parent="Dynamic/Spawner1/Fleet" index="4" instance=ExtResource("5_q1vn8")]
 position = Vector2(15, -35)
 
+[node name="Spawner2" parent="Dynamic" instance=ExtResource("4_ptieh")]
+position = Vector2(59, -212)
+
+[node name="Trigger" parent="Dynamic/Spawner2" index="0"]
+position = Vector2(152, 6)
+scale = Vector2(12.64, 1)
+
+[node name="Collider" parent="Dynamic/Spawner2/Trigger" index="0"]
+position = Vector2(-4.35126, -3)
+shape = SubResource("RectangleShape2D_06o81")
+
+[node name="Bird" parent="Dynamic/Spawner2/Fleet" index="0" instance=ExtResource("5_q1vn8")]
+position = Vector2(89, -63)
+scale = Vector2(1, 1)
+direction = Vector2(-1, 0)
+
+[node name="Bird2" parent="Dynamic/Spawner2/Fleet" index="1" instance=ExtResource("5_q1vn8")]
+position = Vector2(120, -48)
+scale = Vector2(1, 1)
+direction = Vector2(-1, 0)
+
+[node name="Bird3" parent="Dynamic/Spawner2/Fleet" index="2" instance=ExtResource("5_q1vn8")]
+position = Vector2(123, -77)
+scale = Vector2(1, 1)
+direction = Vector2(-1, 0)
+
+[node name="Bird4" parent="Dynamic/Spawner2/Fleet" index="3" instance=ExtResource("5_q1vn8")]
+position = Vector2(158, -42)
+scale = Vector2(1, 1)
+direction = Vector2(-1, 0)
+
+[node name="Bird5" parent="Dynamic/Spawner2/Fleet" index="4" instance=ExtResource("5_q1vn8")]
+position = Vector2(160, -88)
+scale = Vector2(1, 1)
+direction = Vector2(-1, 0)
+
 [node name="Fixed" type="Node2D" parent="."]
 
 [node name="LeftWall" type="StaticBody2D" parent="Fixed"]
@@ -122,3 +161,4 @@ offset_bottom = 23.0
 text = "7:00"
 
 [editable path="Dynamic/Spawner1"]
+[editable path="Dynamic/Spawner2"]

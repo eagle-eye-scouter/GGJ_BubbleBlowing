@@ -17,6 +17,7 @@ enum State {
 func _ready() -> void:
 	hurtbox.area_entered.connect(_on_area_entered)
 	starting_position = global_position
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
