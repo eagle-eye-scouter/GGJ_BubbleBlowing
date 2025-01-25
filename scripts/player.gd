@@ -19,6 +19,7 @@ const SPRITE_FLOATING := preload("res://assets/guy_floating.png")
 var state := State.START
 @onready var bubble : GumBubble = $Bubble
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
+@onready var camera : Camera2D = $Camera2D
 
 var bubble_stage_size = float(bubble.POP_VOLUME_THRESHOLD)/8
 
@@ -72,7 +73,10 @@ func _handle_movement(delta: float) -> void:
 
 
 func _handle_death_animation(delta: float) -> void:
-	gravity_scale = 1
+	if (sprite.animation == "pop"):
+		linear_velocity = Vector2(0, 0)
+	else:
+		gravity_scale = 1
 
 
 func kill() -> void:
@@ -83,7 +87,6 @@ func kill() -> void:
 func _on_bubble_popped():
 	kill()
 
-
 func _set_state(new_state:State):
 	var new_animation = null
 	match new_state:
@@ -93,6 +96,7 @@ func _set_state(new_state:State):
 			new_animation = "float"
 		State.DEAD:
 			new_animation = "pop"
+			camera.reparent($"..")
 	if (new_animation != null && sprite.get_animation() != new_animation):
 		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())

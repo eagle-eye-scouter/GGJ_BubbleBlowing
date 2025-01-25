@@ -157,7 +157,9 @@ shape = SubResource("CapsuleShape2D_wox2i")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_qmwmx")
-animation = &"chew"
+animation = &"fall"
 autoplay = "chew"
+frame = 2
+frame_progress = 0.254861
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
