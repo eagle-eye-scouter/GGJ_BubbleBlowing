@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct157yqi3i3qm"
-path="res://.godot/imported/leaderboard.png-3aa655524940844284b3521daed8531b.ctex"
+uid="uid://1r2o1ws2irb3"
+path="res://.godot/imported/blue_clicked.png-e9b400b7786adf6099ca6a535e95e859.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/UI/leaderboard.png"
-dest_files=["res://.godot/imported/leaderboard.png-3aa655524940844284b3521daed8531b.ctex"]
+source_file="res://assets/sprites/UI/blue_clicked.png"
+dest_files=["res://.godot/imported/blue_clicked.png-e9b400b7786adf6099ca6a535e95e859.ctex"]
 
 [params]
 
