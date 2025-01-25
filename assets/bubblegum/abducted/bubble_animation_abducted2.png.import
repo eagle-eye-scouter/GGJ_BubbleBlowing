@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1002udthtt0e"
-path="res://.godot/imported/bubble_animation_abducted9.png-395c99295b7643e1dfdad89bd021a2b7.ctex"
+uid="uid://dlp6bpgejchvw"
+path="res://.godot/imported/bubble_animation_abducted2.png-564f2bcda18880e2ffd6e7eb5a433b15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/abducted/bubble_animation_abducted9.png"
-dest_files=["res://.godot/imported/bubble_animation_abducted9.png-395c99295b7643e1dfdad89bd021a2b7.ctex"]
+source_file="res://assets/bubblegum/abducted/bubble_animation_abducted2.png"
+dest_files=["res://.godot/imported/bubble_animation_abducted2.png-564f2bcda18880e2ffd6e7eb5a433b15.ctex"]
 
 [params]
 
