@@ -1,6 +1,60 @@
-[gd_scene load_steps=2 format=3 uid="uid://be5gtv3rimc1g"]
+[gd_scene load_steps=12 format=3 uid="uid://be5gtv3rimc1g"]
 
 [ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_magfb"]
+[ext_resource type="Texture2D" uid="uid://btguoc2lwwx82" path="res://assets/sprites/bird/bird1.png" id="2_hqq0d"]
+[ext_resource type="Texture2D" uid="uid://dhh3er2ber2bn" path="res://assets/sprites/bird/bird2.png" id="3_d0qn7"]
+[ext_resource type="Texture2D" uid="uid://qun2cb1dg3e7" path="res://assets/sprites/bird/bird3.png" id="4_00h1r"]
+[ext_resource type="Texture2D" uid="uid://3soffp4t6jch" path="res://assets/sprites/bird/bird4.png" id="5_827js"]
+[ext_resource type="Texture2D" uid="uid://btv6pneg5ddts" path="res://assets/sprites/bird/bird5.png" id="6_h54ic"]
+[ext_resource type="Texture2D" uid="uid://blqhslp4imqoi" path="res://assets/sprites/bird/bird6.png" id="7_i0xb7"]
+[ext_resource type="Texture2D" uid="uid://cggjbbo4hb656" path="res://assets/sprites/bird/bird7.png" id="8_l1rf1"]
+[ext_resource type="Texture2D" uid="uid://dk6m0502fetou" path="res://assets/sprites/bird/bird8.png" id="9_jtowb"]
+[ext_resource type="Texture2D" uid="uid://cuq8h6rdy4a6x" path="res://assets/sprites/bird/bird9.png" id="10_isgay"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_taguf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hqq0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d0qn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_00h1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_827js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h54ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i0xb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l1rf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jtowb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_isgay")
+}],
+"loop": true,
+"name": &"bird_fly",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bird" type="Node2D"]
 script = ExtResource("1_magfb")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_taguf")
+animation = &"bird_fly"
+frame_progress = 0.46386
