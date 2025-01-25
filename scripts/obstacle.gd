@@ -30,6 +30,13 @@ func _physics_process(delta: float) -> void:
 	
 	if abs(global_position.x) > 1000:
 		state = State.RESET
+	
+	if global_position.x > 1.5 * get_viewport_rect().size.x:
+		global_position.x = -0.5 * get_viewport_rect().size.x
+		global_position.y = starting_position.y
+	elif global_position.x < -0.5 * get_viewport_rect().size.x:
+		global_position.x = 1.5 * get_viewport_rect().size.x
+		global_position.y = starting_position.y
 
 
 func _on_area_entered(area:Node2D):
