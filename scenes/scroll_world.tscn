@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=10 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
+[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
@@ -61,6 +62,8 @@ drag_bottom_margin = 0.0
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_xqx3g")]
 position = Vector2(159, 159)
 scale = Vector2(3, 1.333)
+
+[node name="Marker2D" parent="Dynamic" instance=ExtResource("4_ptieh")]
 
 [node name="Fixed" type="Node2D" parent="."]
 

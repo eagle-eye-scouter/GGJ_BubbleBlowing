@@ -12,3 +12,5 @@ position = Vector2(10, 10)
 
 [node name="Collider" type="CollisionShape2D" parent="Trigger"]
 shape = SubResource("RectangleShape2D_5yjb1")
+
+[node name="Fleet" type="Node2D" parent="."]
