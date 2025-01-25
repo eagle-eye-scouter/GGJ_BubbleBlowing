@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dc2li2en1rga4" path="res://assets/guy_floating.png" id="3_x0pwf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wox2i"]
-radius = 26.0
-height = 118.0
+radius = 8.0
+height = 42.0
 
 [node name="Character" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -14,12 +14,13 @@ lock_rotation = true
 script = ExtResource("1_ssbc3")
 
 [node name="Bubble" parent="." instance=ExtResource("2_2mrk3")]
-position = Vector2(0, -58)
+position = Vector2(0, -15)
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, 6)
-scale = Vector2(2, 2)
+scale = Vector2(0.666, 0.666)
 texture = ExtResource("3_x0pwf")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_wox2i")

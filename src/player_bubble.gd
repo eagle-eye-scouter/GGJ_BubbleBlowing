@@ -3,7 +3,7 @@ class_name GumBubble
 
 const MAX_RADIUS = 100
 const MAX_VOLUME = 100
-var volume = 5
+var volume = 2
 var deflation_rate = 0.75 ## Multiplicative rate of decay per second
 
 # Called when the node enters the scene tree for the first time.

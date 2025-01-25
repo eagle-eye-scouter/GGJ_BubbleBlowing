@@ -23,11 +23,12 @@ size = Vector2(1837, 186.5)
 [node name="World" type="Node2D"]
 
 [node name="Background" type="Control" parent="."]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1153.0
-offset_right = 1801.0
-offset_bottom = 1153.0
+offset_left = 320.0
+offset_right = 500.0
+offset_bottom = 320.0
 rotation = 1.5708
 
 [node name="Sky" type="TextureRect" parent="Background"]
@@ -35,12 +36,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -38.0
+offset_right = 38.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture1D_p6wtx")
 
 [node name="Player" parent="." instance=ExtResource("1_2nuvo")]
-position = Vector2(600, 441)
+position = Vector2(148, 143)
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
 position = Vector2(-101, 436)
@@ -52,6 +55,7 @@ shape = SubResource("RectangleShape2D_qts6x")
 position = Vector2(1253, 437)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(-832, -78)
 shape = SubResource("RectangleShape2D_qts6x")
 
 [node name="UpWall" type="StaticBody2D" parent="."]
@@ -64,14 +68,14 @@ shape = SubResource("RectangleShape2D_6k36p")
 position = Vector2(607, 901)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DownWall"]
-position = Vector2(-8, 69)
+position = Vector2(-226, -582)
 shape = SubResource("RectangleShape2D_6k36p")
 
 [node name="KillZone" type="Area2D" parent="."]
 script = ExtResource("2_kroim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
-position = Vector2(599, 908)
+position = Vector2(487, 262)
 shape = SubResource("RectangleShape2D_qiv8v")
 debug_color = Color(0.7, 0, 0, 0.419608)
 
@@ -88,3 +92,5 @@ offset_bottom = 23.0
 text = "7:00"
 
 [node name="FloorGrass" parent="." instance=ExtResource("3_isjir")]
+position = Vector2(159, 159)
+scale = Vector2(3, 1.333)
