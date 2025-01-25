@@ -13,11 +13,22 @@ enum State {
 	RESET
 }
 
+var side := Side.LEFTWARDS
+enum Side {
+	LEFTWARDS,
+	RIGHTWARDS,
+	DOWNWARDS,
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hurtbox.area_entered.connect(_on_area_entered)
 	starting_position = global_position
 	
+	## If started on the left side:
+	if state == State.ACTIVE:
+		if starting_position.x < get_viewport_rect().size.x / 2:
+			s
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
