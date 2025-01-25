@@ -4,7 +4,8 @@ class_name GumBubble
 const MAX_RADIUS = 100
 const MAX_VOLUME = 100
 var volume = 2
-var deflation_rate = 0.75 ## Multiplicative rate of decay per second
+var deflate_factor = 0.75 ## Multiplicative rate of decay per second
+const SWALLOW_THRESHOLD = 0.001
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +16,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	if volume > 0:
-		volume -= (volume * (1-deflation_rate) * delta)
+		volume -= (volume * (1-deflate_factor) * delta)
 		volume = max(0, volume)
 	volume = min(MAX_VOLUME, volume)
 	
