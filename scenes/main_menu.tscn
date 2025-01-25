@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkqeenp2sn04y"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w5eq5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2gmxs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jpow2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_26cbf"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w5eq5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -77.0
+offset_right = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="ButtonPlay" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ButtonExit")
+focus_neighbor_bottom = NodePath("../ButtonExit")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2gmxs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jpow2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_26cbf")
+text = "Start"
+
+[node name="ButtonLeaderboard" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ButtonExit")
+focus_neighbor_bottom = NodePath("../ButtonExit")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2gmxs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jpow2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_26cbf")
+text = "Leaderboard"
+
+[node name="ButtonExit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ButtonPlay")
+focus_neighbor_bottom = NodePath("../ButtonPlay")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2gmxs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jpow2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_26cbf")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Game Title"
+
+[connection signal="pressed" from="VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonLeaderboard" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonLeaderboard" to="." method="_on_button_leaderboard_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
