@@ -34,9 +34,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_entered(area:Node2D):
 	if area.get_parent() is GumBubble:
-		print("Trying to pop")
 		area.get_parent().pop()
-	print("Area ", area, " entered obstacle ", self)
 
 
 func _active_process(delta: float) -> void:
