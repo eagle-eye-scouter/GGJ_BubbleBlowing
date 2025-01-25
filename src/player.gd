@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 	
 	match state:
 		State.DEAD:
-			pass
+			_handle_death_animation(delta)
 		_:
 			_handle_movement(delta)
 	
@@ -60,7 +60,7 @@ func _handle_death_animation(delta: float) -> void:
 	## Push self downwards
 	self.add_constant_force(Vector2(0,1))
 	
-	$Bubble.global_position = bubble_prior_position + delta
+	#$Bubble.global_position = bubble_prior_position + delta
 	
 	pass
 
