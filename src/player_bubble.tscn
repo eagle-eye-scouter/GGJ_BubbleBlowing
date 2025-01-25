@@ -7,7 +7,7 @@ radius = 63.0714
 
 [node name="Bubble" type="Node2D"]
 
-[node name="Body" type="StaticBody2D" parent="."]
+[node name="Body" type="Area2D" parent="."]
 position = Vector2(0, -64)
 
 [node name="Icon" type="Sprite2D" parent="Body"]
