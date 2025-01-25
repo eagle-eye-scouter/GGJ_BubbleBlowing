@@ -65,12 +65,6 @@ func _handle_movement(delta: float) -> void:
 
 func _handle_death_animation(delta: float) -> void:
 	
-	#var bubble_prior_position = $Bubble.global_position
-	#
-	#linear_velocity = Vector2.ZERO
-	#
-	#sprite.position += Vector2(0, 3*delta)
-	#sprite.position += Vector2(0, bubble.inflation*delta)
 	gravity_scale = 1
 
 
