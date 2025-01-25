@@ -46,6 +46,7 @@ func radius():
 
 func pop():
 	_set_state(State.POPPED)
+	print("I got popped!")
 
 
 func activate():
@@ -86,3 +87,10 @@ func _update_state():
 			elif volume > POP_VOLUME_THRESHOLD:
 				pop()
 	pass
+
+
+func _on_area_entered(area:Area2D):
+	if area.is_in_group("GumBubble"):
+		print("Trying to pop")
+		area.pop()
+	print("Area ", area, " entered obstacle ", self)

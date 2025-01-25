@@ -6,12 +6,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_tyhwl"]
 radius = 63.0714
 
-[node name="Bubble" type="Node2D"]
+[node name="Bubble" type="Node2D" groups=["GumBubble"]]
 script = ExtResource("1_bs340")
 
 [node name="Body" type="Area2D" parent="."]
 position = Vector2(0, -64)
-collision_layer = 0
+collision_layer = 4
 collision_mask = 2
 
 [node name="Icon" type="Sprite2D" parent="Body"]
