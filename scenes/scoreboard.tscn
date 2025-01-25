@@ -1,10 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://m24coaqulwcp"]
 
 [ext_resource type="PackedScene" uid="uid://yeplf5s6wa2n" path="res://scenes/score_entry.tscn" id="1_6sl18"]
-<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://scripts/scoreboard.gd" id="1_lrco3"]
-=======
->>>>>>> Stashed changes
 
 [node name="Scoreboard" type="Control"]
 layout_mode = 3
