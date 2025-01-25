@@ -14,11 +14,10 @@ script = ExtResource("1_ssbc3")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, 5)
-scale = Vector2(0.666, 0.666)
 texture = ExtResource("3_2s67o")
 
 [node name="Bubble" parent="." instance=ExtResource("2_2mrk3")]
-position = Vector2(0, 2)
+position = Vector2(0, -1)
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)

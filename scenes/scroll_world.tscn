@@ -44,7 +44,7 @@ grow_vertical = 2
 texture = SubResource("GradientTexture1D_p6wtx")
 
 [node name="Player" parent="." instance=ExtResource("2_wuabt")]
-position = Vector2(148, 143)
+position = Vector2(144, 136)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 0
