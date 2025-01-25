@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Player
 
 const HORIZONTAL_ACCELERATION : float = 2000.0
 const VERTICAL_ACCELERATION : float = 1800.0
@@ -11,6 +12,12 @@ const DEFLATE_SPEED : float = 45.0
 const DECELLERATION : float = 0.90
 const DECCELERATION_RATE := Vector2(DECELLERATION, DECELLERATION)
 
+var state := State.ALIVE
+
+enum State {
+	ALIVE,
+	DEAD
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,6 +27,17 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
+	match state:
+		State.DEAD:
+			pass
+		_:
+			_handle_movement(delta)
+	
+	
+	pass
+
+
+func _handle_movement(delta: float) -> void:
 	## First, slow down the speed, so that we can push it to the max.
 	linear_velocity *= DECCELERATION_RATE
 	
@@ -32,6 +50,20 @@ func _process(delta: float) -> void:
 	## Piecewise multiply the vectors, to enable smoother transition to the desired direction
 	## Clamp the result to prevent excessive speed
 	linear_velocity = (linear_velocity + vector * ACCELERATION_RATE).clamp(-SPEED_MAX, SPEED_MAX)
+	pass
+
+
+func _handle_death_animation(delta: float) -> void:
 	
+	var bubble_prior_position = $Bubble.global_position
+	
+	## Push self downwards
+	self.add_constant_force(Vector2(0,1))
+	
+	$Bubble.global_position = bubble_prior_position + delta
 	
 	pass
+
+
+func kill():
+	state = State.DEAD
