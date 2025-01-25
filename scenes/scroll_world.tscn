@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=16 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
 [ext_resource type="PackedScene" uid="uid://baj1cgpjrapyv" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
 [ext_resource type="PackedScene" uid="uid://cuqxd3qt0rcca" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
+[ext_resource type="Texture2D" uid="uid://cf1rfkio8lg05" path="res://assets/sprites/city.png" id="10_xnh1p"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
@@ -28,6 +29,10 @@ size = Vector2(1837, 186.5)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_eiwcc")
+
+[node name="City" type="Sprite2D" parent="."]
+position = Vector2(160, -131)
+texture = ExtResource("10_xnh1p")
 
 [node name="Background" type="Control" parent="."]
 z_index = -1
@@ -312,18 +317,6 @@ script = ExtResource("4_f4p2y")
 position = Vector2(352, 886)
 shape = SubResource("RectangleShape2D_qiv8v")
 debug_color = Color(0.7, 0, 0, 0.419608)
-
-[node name="HUD" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="HUD"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "7:00"
 
 [editable path="Dynamic/SpawnerBird1"]
 [editable path="Dynamic/SpawnerBird2"]
