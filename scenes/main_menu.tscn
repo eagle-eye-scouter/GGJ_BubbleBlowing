@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkqeenp2sn04y"]
+[gd_scene load_steps=11 format=3 uid="uid://bkqeenp2sn04y"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w5eq5"]
-[ext_resource type="Texture2D" uid="uid://35cecvq6j3at" path="res://assets/sprites/UI/green_default.png" id="3_64272"]
-[ext_resource type="Texture2D" uid="uid://cb4a6yn52gfhb" path="res://assets/sprites/UI/green_clicked.png" id="4_5sen0"]
+[ext_resource type="Texture2D" uid="uid://behf5fm1xw3vq" path="res://assets/sprites/UI/green_default.png" id="3_64272"]
+[ext_resource type="Texture2D" uid="uid://dubmdmvu8uobe" path="res://assets/sprites/UI/green_clicked.png" id="4_5sen0"]
 [ext_resource type="FontFile" uid="uid://bgcbrfthfm6i2" path="res://fonts/Bubblegum.ttf" id="5_05bwl"]
-[ext_resource type="Texture2D" uid="uid://bfxvbp41u6lry" path="res://assets/sprites/UI/gold_default_long.png" id="5_u7jre"]
-[ext_resource type="Texture2D" uid="uid://ddwegci17pbl7" path="res://assets/sprites/UI/red_default.png" id="6_cewoy"]
-[ext_resource type="Texture2D" uid="uid://rpu40exkrikh" path="res://assets/sprites/UI/gold_default_clicked_long.png" id="6_hqmv1"]
-[ext_resource type="Texture2D" uid="uid://c20q2e800njmi" path="res://assets/sprites/UI/red_clicked.png" id="7_bmg56"]
+[ext_resource type="Texture2D" uid="uid://dkxwv25a2l6m4" path="res://assets/sprites/UI/gold_default_long.png" id="5_u7jre"]
+[ext_resource type="Texture2D" uid="uid://dciiike1b5yla" path="res://assets/sprites/UI/red_default.png" id="6_cewoy"]
+[ext_resource type="Texture2D" uid="uid://dii45e3im21kr" path="res://assets/sprites/UI/gold_default_clicked_long.png" id="6_hqmv1"]
+[ext_resource type="Texture2D" uid="uid://bbgmsg4814thb" path="res://assets/sprites/UI/red_clicked.png" id="7_bmg56"]
+[ext_resource type="Texture2D" uid="uid://qbn3njarh3lq" path="res://assets/sprites/UI/blue_default.png" id="7_r1vig"]
+[ext_resource type="Texture2D" uid="uid://1r2o1ws2irb3" path="res://assets/sprites/UI/blue_clicked.png" id="8_44jes"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -46,65 +48,21 @@ alignment = 1
 layout_mode = 2
 texture_normal = ExtResource("3_64272")
 texture_pressed = ExtResource("4_5sen0")
-stretch_mode = 3
-
-[node name="Label" type="Label" parent="VBoxContainer/TextureButtonStart"]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 6.0
-offset_right = 50.0
-offset_bottom = 14.0
-theme_override_fonts/font = ExtResource("5_05bwl")
-theme_override_font_sizes/font_size = 8
-text = "Start"
 
 [node name="TextureButtonLeaderboard" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("5_u7jre")
 texture_pressed = ExtResource("6_hqmv1")
-stretch_mode = 3
-
-[node name="Label" type="Label" parent="VBoxContainer/TextureButtonLeaderboard"]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 6.0
-offset_right = 69.0
-offset_bottom = 14.0
-theme_override_fonts/font = ExtResource("5_05bwl")
-theme_override_font_sizes/font_size = 8
-text = "Leaderboard"
 
 [node name="TextureButtonCredits" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_64272")
-texture_pressed = ExtResource("4_5sen0")
-stretch_mode = 3
-
-[node name="Label" type="Label" parent="VBoxContainer/TextureButtonCredits"]
-layout_mode = 0
-offset_left = 17.0
-offset_top = 6.0
-offset_right = 57.0
-offset_bottom = 14.0
-theme_override_fonts/font = ExtResource("5_05bwl")
-theme_override_font_sizes/font_size = 8
-text = "Credits"
+texture_normal = ExtResource("7_r1vig")
+texture_pressed = ExtResource("8_44jes")
 
 [node name="TextureButtonExit" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("6_cewoy")
 texture_pressed = ExtResource("7_bmg56")
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="VBoxContainer/TextureButtonExit"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 6.0
-offset_right = 52.0
-offset_bottom = 14.0
-theme_override_fonts/font = ExtResource("5_05bwl")
-theme_override_font_sizes/font_size = 8
-text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/TextureButtonStart" to="." method="_on_texture_button_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/TextureButtonLeaderboard" to="." method="_on_texture_button_leaderboard_pressed"]
