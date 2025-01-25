@@ -8,11 +8,11 @@ const HORI_SPEED_MAX : float = 2000
 const VERT_SPEED_MAX : float = 2000
 const SPEED_MAX := Vector2(HORI_SPEED_MAX, VERT_SPEED_MAX)
 const INFLATE_SPEED : float = 0.01
-#const DEFLATE_SPEED : float = 45.0
 const DECELLERATION : float = 0.90
 const DECCELERATION_RATE := Vector2(DECELLERATION, DECELLERATION)
+const LEVITY : float = 4000.0
 
-var state := State.START
+var state := State.ALIVE
 @onready var bubble : GumBubble = $Bubble
 @onready var sprite : Sprite2D = $Sprite
 
@@ -28,7 +28,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("player_breath"):
 		bubble.volume += INFLATE_SPEED
 	match state:
@@ -51,7 +51,11 @@ func _handle_movement(delta: float) -> void:
 	## Piecewise multiply the vectors, to enable smoother transition to the desired direction
 	## Clamp the result to prevent excessive speed
 	linear_velocity = (linear_velocity + vector * ACCELERATION_RATE).clamp(-SPEED_MAX, SPEED_MAX)
-	pass
+	
+	if state == State.ALIVE:
+		var levity = -1 * bubble.volume * LEVITY
+		linear_velocity += Vector2(0, levity * delta)
+		print(linear_velocity)
 
 
 func _handle_death_animation(delta: float) -> void:
@@ -62,8 +66,6 @@ func _handle_death_animation(delta: float) -> void:
 	
 	sprite.position += Vector2(0, 3*delta)
 	sprite.position += Vector2(0, bubble.inflation*delta)
-	
-	pass
 
 
 func kill() -> void:

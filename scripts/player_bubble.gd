@@ -3,7 +3,8 @@ class_name GumBubble
 
 const MAX_RADIUS = 100
 const MAX_VOLUME = 100
-var volume = 2
+const SCALING_FACTOR := 0.5
+@export var volume = 1
 var deflate_factor = 0.75 ## Multiplicative rate of decay per second
 const SWALLOW_THRESHOLD = 0.001
 
@@ -20,5 +21,5 @@ func _process(delta: float) -> void:
 		volume = max(0, volume)
 	volume = min(MAX_VOLUME, volume)
 	
-	var radius = min(MAX_RADIUS, pow(3 * volume / (4 * PI), 1.0/3.0))
+	var radius = min(MAX_RADIUS, pow(3 * volume / (4 * PI), 1.0/3.0)) * SCALING_FACTOR
 	scale = Vector2.ONE * radius
