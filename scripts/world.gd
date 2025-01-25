@@ -19,13 +19,19 @@ func _process(delta: float) -> void:
 	var delta_ascent = speed_of_ascent * delta
 	virtual_elevation += delta_ascent
 	scrolling.global_position.y += delta_ascent
-	_resync_scrolling()
+	_resync_dynamic_scrolling()
 
 
-func _resync_scrolling():
+func _resync_dynamic_scrolling():
 	var offset = scrolling.global_position
 	var children = scrolling.get_children()
 	for child in children:
-		children.append_array(child.get_children())
+		#children.append_array(child.get_children())
 		child.global_position -= offset
 	scrolling.global_position = Vector2.ZERO
+	
+
+#func _resync_player_scrolling():
+	#var offset = player.global_position - scrolling.global_position
+	#player.global_position.y = scrolling.global_position.y
+	#scrolling.global_position.y += offset.y
