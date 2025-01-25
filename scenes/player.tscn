@@ -65,6 +65,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("27_sej8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_am1se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_pme1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_t3go7")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("10_4mo3f")
 }, {
 "duration": 1.0,
@@ -152,7 +169,7 @@ shape = SubResource("CapsuleShape2D_wox2i")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_qmwmx")
-animation = &"chew"
+animation = &"fall"
 autoplay = "chew"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

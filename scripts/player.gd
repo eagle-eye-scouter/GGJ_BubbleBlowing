@@ -94,12 +94,14 @@ func _set_state(new_state:State):
 		State.DEAD:
 			new_animation = "pop"
 	if (new_animation != null && sprite.get_animation() != new_animation):
-		sprite.set_animation(new_animation)
+		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())
 	state = new_state
 
-
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if (sprite.get_animation() == "chew"):
-		sprite.set_animation("float")
+		sprite.play("float")
+		print("Current animation: " + sprite.animation)
+	if (sprite.get_animation() == "pop"):
+		sprite.play("fall")
 		print("Current animation: " + sprite.animation)

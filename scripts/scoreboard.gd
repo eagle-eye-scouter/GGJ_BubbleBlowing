@@ -21,7 +21,7 @@ var flash_timer: Timer
 
 # Set the references to the labels and their values
 func _ready():
-	entries = get_children()
+	entries = [$"Score Entry", $"Score Entry2", $"Score Entry3"]
 	flash_timer = $Timer
 	receive_score(2050)
 
