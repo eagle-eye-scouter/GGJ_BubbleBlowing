@@ -22,6 +22,3 @@ func _process(delta: float) -> void:
 	
 	var radius = min(MAX_RADIUS, pow(3 * volume / (4 * PI), 1.0/3.0))
 	scale = Vector2.ONE * radius
-
-## Volume = r^3
-## V

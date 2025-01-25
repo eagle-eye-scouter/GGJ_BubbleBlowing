@@ -42,7 +42,6 @@ func _handle_movement(delta: float) -> void:
 	## First, slow down the speed, so that we can push it to the max.
 	linear_velocity *= DECCELERATION_RATE
 	
-	
 	## Get the raw input direction
 	var vector : Vector2 = Input.get_vector("player_left", "player_right", "player_up", "player_down")
 	
@@ -67,6 +66,6 @@ func _handle_death_animation(delta: float) -> void:
 	pass
 
 
-func kill():
+func kill() -> void:
 	if state != State.START:
 		state = State.DEAD
