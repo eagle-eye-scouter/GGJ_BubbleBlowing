@@ -2,10 +2,9 @@ extends Node2D
 class_name GumBubble
 
 const MAX_RADIUS = 100
-const MAX_INFLATION = 100
-const RADIUS_PER_INFLATION = MAX_RADIUS / MAX_INFLATION
-var inflation = 20
-var deflation_rate = 0.99 ## Subtractive rate of decay per second
+const MAX_VOLUME = 100
+var volume = 5
+var deflation_rate = 0.75 ## Multiplicative rate of decay per second
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,8 +14,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	if inflation > 0:
-		inflation -= (deflation_rate * delta)
-		inflation = max(0, inflation)
+	if volume > 0:
+		volume -= (volume * (1-deflation_rate) * delta)
+		volume = max(0, volume)
+	volume = min(MAX_VOLUME, volume)
 	
-	scale = Vector2.ONE * inflation
+	var radius = min(MAX_RADIUS, pow(3 * volume / (4 * PI), 1.0/3.0))
+	scale = Vector2.ONE * radius
+
+## Volume = r^3
+## V
