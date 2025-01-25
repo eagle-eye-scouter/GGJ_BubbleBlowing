@@ -68,82 +68,135 @@ drag_bottom_margin = 0.0
 position = Vector2(159, 159)
 scale = Vector2(3, 1.333)
 
-[node name="Spawner1" parent="Dynamic" instance=ExtResource("4_ptieh")]
+[node name="SpawnerBird1" parent="Dynamic" instance=ExtResource("4_ptieh")]
 
-[node name="Trigger" parent="Dynamic/Spawner1" index="0"]
+[node name="Trigger" parent="Dynamic/SpawnerBird1" index="0"]
 position = Vector2(152, 6)
 scale = Vector2(12.64, 1)
 
-[node name="Bird" parent="Dynamic/Spawner1/Fleet" index="0" instance=ExtResource("5_q1vn8")]
+[node name="Bird" parent="Dynamic/SpawnerBird1/Fleet" index="0" instance=ExtResource("5_q1vn8")]
 position = Vector2(89, -63)
 
-[node name="Bird2" parent="Dynamic/Spawner1/Fleet" index="1" instance=ExtResource("5_q1vn8")]
+[node name="Bird2" parent="Dynamic/SpawnerBird1/Fleet" index="1" instance=ExtResource("5_q1vn8")]
 position = Vector2(55, -50)
 
-[node name="Bird3" parent="Dynamic/Spawner1/Fleet" index="2" instance=ExtResource("5_q1vn8")]
+[node name="Bird3" parent="Dynamic/SpawnerBird1/Fleet" index="2" instance=ExtResource("5_q1vn8")]
 position = Vector2(51, -78)
 
-[node name="Bird4" parent="Dynamic/Spawner1/Fleet" index="3" instance=ExtResource("5_q1vn8")]
+[node name="Bird4" parent="Dynamic/SpawnerBird1/Fleet" index="3" instance=ExtResource("5_q1vn8")]
 position = Vector2(15, -94)
 
-[node name="Bird5" parent="Dynamic/Spawner1/Fleet" index="4" instance=ExtResource("5_q1vn8")]
+[node name="Bird5" parent="Dynamic/SpawnerBird1/Fleet" index="4" instance=ExtResource("5_q1vn8")]
 position = Vector2(15, -35)
 
-[node name="Spawner2" parent="Dynamic" instance=ExtResource("4_ptieh")]
+[node name="SpawnerBird2" parent="Dynamic" instance=ExtResource("4_ptieh")]
 position = Vector2(59, -212)
 
-[node name="Trigger" parent="Dynamic/Spawner2" index="0"]
+[node name="Trigger" parent="Dynamic/SpawnerBird2" index="0"]
 position = Vector2(152, 6)
 scale = Vector2(12.64, 1)
 
-[node name="Collider" parent="Dynamic/Spawner2/Trigger" index="0"]
+[node name="Collider" parent="Dynamic/SpawnerBird2/Trigger" index="0"]
 position = Vector2(-4.35126, -3)
 shape = SubResource("RectangleShape2D_06o81")
 
-[node name="Bird" parent="Dynamic/Spawner2/Fleet" index="0" instance=ExtResource("5_q1vn8")]
+[node name="Bird" parent="Dynamic/SpawnerBird2/Fleet" index="0" instance=ExtResource("5_q1vn8")]
 position = Vector2(89, -63)
 scale = Vector2(1, 1)
 direction = Vector2(-1, 0)
 
-[node name="Bird2" parent="Dynamic/Spawner2/Fleet" index="1" instance=ExtResource("5_q1vn8")]
+[node name="Bird2" parent="Dynamic/SpawnerBird2/Fleet" index="1" instance=ExtResource("5_q1vn8")]
 position = Vector2(120, -48)
 scale = Vector2(1, 1)
 direction = Vector2(-1, 0)
 
-[node name="Bird3" parent="Dynamic/Spawner2/Fleet" index="2" instance=ExtResource("5_q1vn8")]
+[node name="Bird3" parent="Dynamic/SpawnerBird2/Fleet" index="2" instance=ExtResource("5_q1vn8")]
 position = Vector2(123, -77)
 scale = Vector2(1, 1)
 direction = Vector2(-1, 0)
 
-[node name="Bird4" parent="Dynamic/Spawner2/Fleet" index="3" instance=ExtResource("5_q1vn8")]
+[node name="Bird4" parent="Dynamic/SpawnerBird2/Fleet" index="3" instance=ExtResource("5_q1vn8")]
 position = Vector2(158, -42)
 scale = Vector2(1, 1)
 direction = Vector2(-1, 0)
 
-[node name="Bird5" parent="Dynamic/Spawner2/Fleet" index="4" instance=ExtResource("5_q1vn8")]
+[node name="Bird5" parent="Dynamic/SpawnerBird2/Fleet" index="4" instance=ExtResource("5_q1vn8")]
 position = Vector2(160, -88)
 scale = Vector2(1, 1)
 direction = Vector2(-1, 0)
 
-[node name="Spawner3" parent="Dynamic" instance=ExtResource("4_ptieh")]
-position = Vector2(64, -14889)
+[node name="SpawnerBird3" parent="Dynamic" instance=ExtResource("4_ptieh")]
+position = Vector2(62, -476)
 
-[node name="Trigger" parent="Dynamic/Spawner3" index="0"]
+[node name="Trigger" parent="Dynamic/SpawnerBird3" index="0"]
 position = Vector2(152, 6)
 scale = Vector2(12.64, 1)
 
-[node name="Collider" parent="Dynamic/Spawner3/Trigger" index="0"]
+[node name="Collider" parent="Dynamic/SpawnerBird3/Trigger" index="0"]
 position = Vector2(-4.35126, -3)
 shape = SubResource("RectangleShape2D_06o81")
 
-[node name="UFO" parent="Dynamic/Spawner3/Fleet" index="0" instance=ExtResource("6_3hp1q")]
+[node name="Bird" parent="Dynamic/SpawnerBird3/Fleet" index="0" instance=ExtResource("5_q1vn8")]
+position = Vector2(262, -33)
+rotation = 0.785398
+scale = Vector2(1, 1)
+velocity = 100.0
+direction = Vector2(-1, -1)
+
+[node name="Bird3" parent="Dynamic/SpawnerBird3/Fleet" index="1" instance=ExtResource("5_q1vn8")]
+position = Vector2(312, -173)
+rotation = 0.785398
+scale = Vector2(1, 1)
+velocity = 100.0
+direction = Vector2(-1, -1)
+
+[node name="Bird7" parent="Dynamic/SpawnerBird3/Fleet" index="2" instance=ExtResource("5_q1vn8")]
+position = Vector2(360, -186)
+rotation = 0.785398
+scale = Vector2(1, 1)
+velocity = 100.0
+direction = Vector2(-1, -1)
+
+[node name="Bird6" parent="Dynamic/SpawnerBird3/Fleet" index="3" instance=ExtResource("5_q1vn8")]
+position = Vector2(298, -212)
+rotation = 0.785398
+scale = Vector2(1, 1)
+velocity = 100.0
+direction = Vector2(-1, -1)
+
+[node name="Bird5" parent="Dynamic/SpawnerBird3/Fleet" index="4" instance=ExtResource("5_q1vn8")]
+position = Vector2(320, -213)
+rotation = 0.785398
+scale = Vector2(1, 1)
+velocity = 100.0
+direction = Vector2(-1, -1)
+
+[node name="Bird4" parent="Dynamic/SpawnerBird3/Fleet" index="5" instance=ExtResource("5_q1vn8")]
+position = Vector2(-65, -35)
+rotation = 2.35619
+scale = Vector2(1, -1)
+velocity = 100.0
+direction = Vector2(1, -1)
+
+[node name="SpawnerUFO3" parent="Dynamic" instance=ExtResource("4_ptieh")]
+position = Vector2(64, -14889)
+
+[node name="Trigger" parent="Dynamic/SpawnerUFO3" index="0"]
+position = Vector2(148, 147)
+scale = Vector2(12.64, 1)
+
+[node name="Collider" parent="Dynamic/SpawnerUFO3/Trigger" index="0"]
+position = Vector2(-4.35126, -3)
+shape = SubResource("RectangleShape2D_06o81")
+
+[node name="UFO" parent="Dynamic/SpawnerUFO3/Fleet" index="0" instance=ExtResource("6_3hp1q")]
 position = Vector2(-176, -151)
 
-[node name="UFO2" parent="Dynamic/Spawner3/Fleet" index="1" instance=ExtResource("6_3hp1q")]
+[node name="UFO2" parent="Dynamic/SpawnerUFO3/Fleet" index="1" instance=ExtResource("6_3hp1q")]
 position = Vector2(347, -243)
 direction = Vector2(-1, 0)
 
-[node name="UFO3" parent="Dynamic/Spawner3/Fleet" index="2" instance=ExtResource("6_3hp1q")]
+[node name="UFO3" parent="Dynamic/SpawnerUFO3/Fleet" index="2" instance=ExtResource("6_3hp1q")]
 position = Vector2(377, -478)
 velocity = 80.0
 direction = Vector2(-1, 0)
@@ -184,6 +237,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "7:00"
 
-[editable path="Dynamic/Spawner1"]
-[editable path="Dynamic/Spawner2"]
-[editable path="Dynamic/Spawner3"]
+[editable path="Dynamic/SpawnerBird1"]
+[editable path="Dynamic/SpawnerBird2"]
+[editable path="Dynamic/SpawnerBird3"]
+[editable path="Dynamic/SpawnerUFO3"]
