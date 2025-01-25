@@ -1,9 +1,17 @@
 extends Node2D
 
-const HORIZONTAL_SPEED : float = 1000.0
-const VERTICAL_SPEED : float = 900.0
+const HORIZONTAL_ACCELERATION : float = 1000.0
+const VERTICAL_ACCELERATION : float = 900.0
+const ACCELERATION_RATE := Vector2(HORIZONTAL_ACCELERATION, VERTICAL_ACCELERATION)
+const HORI_SPEED_MAX : float = 200
+const VERT_SPEED_MAX : float = 200
+const SPEED_MAX := Vector2(HORI_SPEED_MAX, VERT_SPEED_MAX)
 const INFLATE_SPEED : float = 90.0
 const DEFLATE_SPEED : float = 45.0
+const DECELLERATION : float = 0.90
+const DECCELERATION_RATE := Vector2(DECELLERATION, DECELLERATION)
+
+var velocity := Vector2(0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,11 +21,20 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
+	## First, slow down the speed, so that we can push it to the max.
+	velocity *= DECCELERATION_RATE
+	
+	## Get the raw input direction
 	var vector : Vector2 = Input.get_vector("player_left", "player_right", "player_up", "player_down")
 	
-	self.position = vector * Vector2(HORIZONTAL_SPEED, VERTICAL_SPEED) * delta
-	#print("delta", delta, ";vector", vector)
+	## Scale the input direction by delta (which is the difference in time between cycles)
+	vector = vector * delta
 	
+	## Piecewise multiply the vectors, to enable smoother transition to the desired direction
+	## Clamp the result to prevent excessive speed
+	velocity += (vector * ACCELERATION_RATE).clamp(-SPEED_MAX, SPEED_MAX)
 	
+	## Then, have the velocity move the player node (since this script is/was Node2D)
+	self.position += velocity * delta
 	
 	pass
