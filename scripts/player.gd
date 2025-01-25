@@ -18,8 +18,9 @@ const SPRITE_FLOATING := preload("res://assets/guy_floating.png")
 
 var state := State.START
 @onready var bubble : GumBubble = $Bubble
-@onready var sprite : Sprite2D = $Sprite
+@onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 
+var bubble_stage_size = float(bubble.POP_VOLUME_THRESHOLD)/8
 
 enum State {
 	START,
@@ -33,6 +34,9 @@ func _ready() -> void:
 	bubble.popped.connect(_on_bubble_popped)
 	_set_state(State.START)
 
+func _process(delta: float) -> void:
+	if (sprite.get_animation() == "float"):
+		sprite.set_frame(bubble.volume/bubble_stage_size)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -68,7 +72,6 @@ func _handle_movement(delta: float) -> void:
 
 
 func _handle_death_animation(delta: float) -> void:
-	
 	gravity_scale = 1
 
 
@@ -82,11 +85,21 @@ func _on_bubble_popped():
 
 
 func _set_state(new_state:State):
+	var new_animation = null
 	match new_state:
 		State.START:
-			sprite.texture = SPRITE_GROUNDED
+			new_animation = "chew"
 		State.ALIVE:
-			sprite.texture = SPRITE_FLOATING
+			new_animation = "float"
 		State.DEAD:
-			pass
+			new_animation = "pop"
+	if (new_animation != null && sprite.get_animation() != new_animation):
+		sprite.set_animation(new_animation)
+		print("Current animation: " + sprite.get_animation())
 	state = new_state
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if (sprite.get_animation() == "chew"):
+		sprite.set_animation("float")
+		print("Current animation: " + sprite.animation)
