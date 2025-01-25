@@ -44,10 +44,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture1D_p6wtx")
 
-[node name="Dynamic" type="Node2D" parent="."]
-
-[node name="Player" parent="Dynamic" instance=ExtResource("1_2nuvo")]
+[node name="Player" parent="." instance=ExtResource("1_2nuvo")]
 position = Vector2(148, 143)
+
+[node name="Dynamic" type="Node2D" parent="."]
 
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_isjir")]
 position = Vector2(159, 159)
