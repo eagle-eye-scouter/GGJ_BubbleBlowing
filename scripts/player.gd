@@ -12,6 +12,9 @@ const DECELLERATION : float = 0.90
 const DECCELERATION_RATE := Vector2(DECELLERATION, DECELLERATION)
 const BUBBLE_VOLUME_START_THRESHOLD : float = 0.5
 
+const SPRITE_GROUNDED := preload("res://assets/sprites/player_start_position.png") 
+const SPRITE_FLOATING := preload("res://assets/guy_floating.png")
+
 
 var state := State.START
 @onready var bubble : GumBubble = $Bubble
@@ -28,6 +31,7 @@ enum State {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	bubble.popped.connect(_on_bubble_popped)
+	_set_state(State.START)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,7 +43,7 @@ func _physics_process(delta: float) -> void:
 			_handle_death_animation(delta)
 		State.START:
 			if bubble.volume >= BUBBLE_VOLUME_START_THRESHOLD:
-				state = State.ALIVE
+				_set_state(State.ALIVE)
 				bubble.activate()
 		_:
 			_handle_movement(delta)
@@ -70,8 +74,19 @@ func _handle_death_animation(delta: float) -> void:
 
 func kill() -> void:
 	if state != State.START:
-		state = State.DEAD
+		_set_state(State.DEAD)
 
 
 func _on_bubble_popped():
 	kill()
+
+
+func _set_state(new_state:State):
+	match new_state:
+		State.START:
+			sprite.texture = SPRITE_GROUNDED
+		State.ALIVE:
+			sprite.texture = SPRITE_FLOATING
+		State.DEAD:
+			pass
+	state = new_state

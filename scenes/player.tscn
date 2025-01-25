@@ -2,24 +2,24 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ssbc3"]
 [ext_resource type="PackedScene" uid="uid://cycv7lfgdrhhy" path="res://scenes/player_bubble.tscn" id="2_2mrk3"]
-[ext_resource type="Texture2D" uid="uid://dc2li2en1rga4" path="res://assets/guy_floating.png" id="3_x0pwf"]
+[ext_resource type="Texture2D" uid="uid://crn6c5ikmnarq" path="res://assets/sprites/player_start_position.png" id="3_2s67o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wox2i"]
-radius = 8.0
-height = 42.0
+radius = 3.0
+height = 16.0
 
 [node name="Character" type="RigidBody2D"]
 lock_rotation = true
 script = ExtResource("1_ssbc3")
 
-[node name="Bubble" parent="." instance=ExtResource("2_2mrk3")]
-position = Vector2(0, -15)
-
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(0, 5)
 scale = Vector2(0.666, 0.666)
-texture = ExtResource("3_x0pwf")
+texture = ExtResource("3_2s67o")
+
+[node name="Bubble" parent="." instance=ExtResource("2_2mrk3")]
+position = Vector2(0, 2)
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_wox2i")

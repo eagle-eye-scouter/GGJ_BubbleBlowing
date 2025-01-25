@@ -63,7 +63,7 @@ velocity = 40.0
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_taguf")
 animation = &"bird_fly"
-frame_progress = 0.0326803
+frame_progress = 0.0314716
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 2
