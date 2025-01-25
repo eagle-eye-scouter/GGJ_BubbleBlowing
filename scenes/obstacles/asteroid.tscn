@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuqxd3qt0rcca"]
+
+[ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_s0h3k"]
+[ext_resource type="Texture2D" uid="uid://mclqh2aqf0ta" path="res://assets/asteroid_1.png" id="2_jc08f"]
+[ext_resource type="Texture2D" uid="uid://clriirnoxf1ie" path="res://assets/asteroid_2.png" id="3_qfxc4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbtup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jc08f")
+}],
+"loop": true,
+"name": &"rock1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qfxc4")
+}],
+"loop": true,
+"name": &"rock2",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ol8fg"]
+radius = 20.0
+height = 42.0
+
+[node name="Plane" type="Node2D"]
+scale = Vector2(-1, 1)
+script = ExtResource("1_s0h3k")
+velocity = 40.0
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wbtup")
+animation = &"rock1"
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Collider" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-1, -1)
+rotation = 1.5708
+scale = Vector2(1, 0.996712)
+shape = SubResource("CapsuleShape2D_ol8fg")
