@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=11 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://src/player.tscn" id="1_2nuvo"]
+[ext_resource type="Script" path="res://src/world.gd" id="1_em1jr"]
 [ext_resource type="Script" path="res://src/kill_zone.gd" id="2_kroim"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://src/props/floor_grass.tscn" id="3_isjir"]
 
@@ -24,6 +25,7 @@ size = Vector2(1837, 186.5)
 size = Vector2(945, 730)
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_em1jr")
 
 [node name="Background" type="Control" parent="."]
 clip_contents = true
