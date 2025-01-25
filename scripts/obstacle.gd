@@ -26,9 +26,9 @@ func _ready() -> void:
 	starting_position = global_position
 	
 	## If started on the left side:
-	if state == State.ACTIVE:
-		if starting_position.x < get_viewport_rect().size.x / 2:
-			s
+	#if state == State.ACTIVE:
+		#if starting_position.x < get_viewport_rect().size.x / 2:
+			#pass#s
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
