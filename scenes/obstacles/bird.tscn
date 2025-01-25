@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://be5gtv3rimc1g"]
+[gd_scene load_steps=13 format=3 uid="uid://be5gtv3rimc1g"]
 
 [ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_magfb"]
 [ext_resource type="Texture2D" uid="uid://btguoc2lwwx82" path="res://assets/sprites/bird/bird1.png" id="2_hqq0d"]
@@ -51,10 +51,25 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ol8fg"]
+radius = 3.0
+height = 16.0
+
 [node name="Bird" type="Node2D"]
+scale = Vector2(-1, 1)
 script = ExtResource("1_magfb")
+velocity = 40.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_taguf")
 animation = &"bird_fly"
-frame_progress = 0.46386
+frame_progress = 0.0326803
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Collider" type="CollisionShape2D" parent="Hurtbox"]
+rotation = 1.5708
+scale = Vector2(1, 0.996712)
+shape = SubResource("CapsuleShape2D_ol8fg")

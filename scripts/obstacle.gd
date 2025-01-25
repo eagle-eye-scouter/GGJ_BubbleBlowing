@@ -1,11 +1,11 @@
 extends Node2D
 class_name Obstacle
 
-var hurtbox : Area2D
+@onready var hurtbox : Area2D = $Hurtbox
 var starting_position : Vector2
 
-@export var velocity : float = 10
-@export var direction := Vector2.ONE
+@export var velocity : float = 20
+@export var direction := Vector2(1,0)
 var state := State.IDLE 
 enum State {
 	IDLE,
@@ -20,7 +20,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if state == State.ACTIVE:
 		global_position += direction.normalized() * velocity * delta
 		_active_process(delta)
@@ -32,8 +32,10 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area:Node2D):
-	if area is GumBubble:
-		area.pop()
+	if area.get_parent() is GumBubble:
+		print("Trying to pop")
+		area.get_parent().pop()
+	print("Area ", area, " entered obstacle ", self)
 
 
 func _active_process(delta: float) -> void:
