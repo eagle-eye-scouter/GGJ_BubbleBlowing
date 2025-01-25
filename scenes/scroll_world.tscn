@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://llfd7a127fl6"]
 
-[ext_resource type="Script" path="res://scripts/world.gd" id="1_eiwcc"]
+[ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
@@ -48,10 +48,14 @@ position = Vector2(148, 143)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 0
 limit_right = 320
+limit_bottom = 180
+position_smoothing_speed = 2.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_left_margin = 1.0
+drag_top_margin = 0.0
 drag_right_margin = 1.0
+drag_bottom_margin = 0.0
 
 [node name="Dynamic" type="Node2D" parent="."]
 
