@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://be5gtv3rimc1g"]
+
+[ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_magfb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_magfb")
