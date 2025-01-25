@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=9 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://src/player.tscn" id="1_2nuvo"]
 [ext_resource type="Script" path="res://src/kill_zone.gd" id="2_kroim"]
+[ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://src/props/floor_grass.tscn" id="3_isjir"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
@@ -85,3 +86,5 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "7:00"
+
+[node name="FloorGrass" parent="." instance=ExtResource("3_isjir")]
