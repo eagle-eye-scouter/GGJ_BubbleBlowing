@@ -17,7 +17,6 @@ enum State {
 func _ready() -> void:
 	hurtbox.area_entered.connect(_on_area_entered)
 	starting_position = global_position
-	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,10 +30,10 @@ func _physics_process(delta: float) -> void:
 	if abs(global_position.x) > 1000:
 		state = State.RESET
 	
-	if global_position.x > 1.5 * get_viewport_rect().size.x:
+	if global_position.x > 1.5 * get_viewport_rect().size.x and direction.x > 0:
 		global_position.x = -0.5 * get_viewport_rect().size.x
 		global_position.y = starting_position.y
-	elif global_position.x < -0.5 * get_viewport_rect().size.x:
+	elif global_position.x < -0.5 * get_viewport_rect().size.x and direction.x < 0:
 		global_position.x = 1.5 * get_viewport_rect().size.x
 		global_position.y = starting_position.y
 
