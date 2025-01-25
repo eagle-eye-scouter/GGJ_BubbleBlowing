@@ -11,11 +11,12 @@ const INFLATE_SPEED : float = 0.01
 const DECELLERATION : float = 0.90
 const DECCELERATION_RATE := Vector2(DECELLERATION, DECELLERATION)
 const BUBBLE_VOLUME_START_THRESHOLD : float = 0.5
-const LEVITY : float = 4000.0
+
 
 var state := State.START
 @onready var bubble : GumBubble = $Bubble
 @onready var sprite : Sprite2D = $Sprite
+
 
 enum State {
 	START,
@@ -26,7 +27,7 @@ enum State {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	bubble.popped.connect(_on_bubble_popped)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,6 +40,7 @@ func _physics_process(delta: float) -> void:
 		State.START:
 			if bubble.volume >= BUBBLE_VOLUME_START_THRESHOLD:
 				state = State.ALIVE
+				bubble.activate()
 		_:
 			_handle_movement(delta)
 
@@ -58,21 +60,24 @@ func _handle_movement(delta: float) -> void:
 	linear_velocity = (linear_velocity + vector * ACCELERATION_RATE).clamp(-SPEED_MAX, SPEED_MAX)
 	
 	if state == State.ALIVE:
-		var levity = -1 * bubble.volume * LEVITY
-		linear_velocity += Vector2(0, levity * delta)
-		print(linear_velocity)
+		linear_velocity += bubble.get_lift(delta)
 
 
 func _handle_death_animation(delta: float) -> void:
 	
-	var bubble_prior_position = $Bubble.global_position
-	
-	linear_velocity = Vector2.ZERO
-	
-	sprite.position += Vector2(0, 3*delta)
-	sprite.position += Vector2(0, bubble.inflation*delta)
+	#var bubble_prior_position = $Bubble.global_position
+	#
+	#linear_velocity = Vector2.ZERO
+	#
+	#sprite.position += Vector2(0, 3*delta)
+	#sprite.position += Vector2(0, bubble.inflation*delta)
+	gravity_scale = 1
 
 
 func kill() -> void:
 	if state != State.START:
 		state = State.DEAD
+
+
+func _on_bubble_popped():
+	kill()
