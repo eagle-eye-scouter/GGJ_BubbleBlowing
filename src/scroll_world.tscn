@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=10 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://src/player.tscn" id="1_2nuvo"]
 [ext_resource type="Script" path="res://src/world.gd" id="1_em1jr"]
@@ -20,9 +20,6 @@ size = Vector2(1837, 186.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qiv8v"]
 size = Vector2(1837, 186.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lf8y"]
-size = Vector2(945, 730)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_em1jr")
@@ -47,39 +44,47 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture1D_p6wtx")
 
-[node name="Player" parent="." instance=ExtResource("1_2nuvo")]
+[node name="Dynamic" type="Node2D" parent="."]
+
+[node name="Player" parent="Dynamic" instance=ExtResource("1_2nuvo")]
 position = Vector2(148, 143)
 
-[node name="LeftWall" type="StaticBody2D" parent="."]
+[node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_isjir")]
+position = Vector2(159, 159)
+scale = Vector2(3, 1.333)
+
+[node name="Fixed" type="Node2D" parent="."]
+
+[node name="LeftWall" type="StaticBody2D" parent="Fixed"]
 position = Vector2(-101, 436)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fixed/LeftWall"]
 shape = SubResource("RectangleShape2D_qts6x")
 
-[node name="RightWall" type="StaticBody2D" parent="."]
+[node name="RightWall" type="StaticBody2D" parent="Fixed"]
 position = Vector2(1253, 437)
 
-[node name="Collider" type="CollisionShape2D" parent="RightWall"]
+[node name="Collider" type="CollisionShape2D" parent="Fixed/RightWall"]
 position = Vector2(-832, -78)
 shape = SubResource("RectangleShape2D_qts6x")
 
-[node name="UpWall" type="StaticBody2D" parent="."]
+[node name="UpWall" type="StaticBody2D" parent="Fixed"]
 position = Vector2(561, -94)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UpWall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fixed/UpWall"]
 shape = SubResource("RectangleShape2D_6k36p")
 
-[node name="DownWall" type="StaticBody2D" parent="."]
+[node name="DownWall" type="StaticBody2D" parent="Fixed"]
 position = Vector2(607, 901)
 
-[node name="Collider" type="CollisionShape2D" parent="DownWall"]
+[node name="Collider" type="CollisionShape2D" parent="Fixed/DownWall"]
 position = Vector2(-226, -582)
 shape = SubResource("RectangleShape2D_6k36p")
 
-[node name="KillZone" type="Area2D" parent="."]
+[node name="KillZone" type="Area2D" parent="Fixed"]
 script = ExtResource("2_kroim")
 
-[node name="Collider" type="CollisionShape2D" parent="KillZone"]
+[node name="Collider" type="CollisionShape2D" parent="Fixed/KillZone"]
 position = Vector2(487, 262)
 shape = SubResource("RectangleShape2D_qiv8v")
 debug_color = Color(0.7, 0, 0, 0.419608)
@@ -95,14 +100,3 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "7:00"
-
-[node name="FloorGrass" parent="." instance=ExtResource("3_isjir")]
-position = Vector2(159, 159)
-scale = Vector2(3, 1.333)
-
-[node name="GravityZone" type="Area2D" parent="."]
-gravity_space_override = 3
-
-[node name="Collider" type="CollisionShape2D" parent="GravityZone"]
-position = Vector2(168.5, 81)
-shape = SubResource("RectangleShape2D_3lf8y")
