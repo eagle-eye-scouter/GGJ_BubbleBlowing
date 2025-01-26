@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0syfmxaqmhu0"]
+
+[ext_resource type="FontFile" uid="uid://bgcbrfthfm6i2" path="res://fonts/Bubblegum.ttf" id="1_nurcu"]
+[ext_resource type="Script" path="res://credits.gd" id="1_tjd31"]
+[ext_resource type="Texture2D" uid="uid://dciiike1b5yla" path="res://assets/sprites/UI/red_default.png" id="2_b4eja"]
+[ext_resource type="Texture2D" uid="uid://bbgmsg4814thb" path="res://assets/sprites/UI/red_clicked.png" id="3_ikf8u"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tjd31")
+
+[node name="LabelTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 14.0
+offset_right = 80.0
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -15.0
+offset_right = 54.0
+grow_vertical = 0
+texture_normal = ExtResource("2_b4eja")
+texture_pressed = ExtResource("3_ikf8u")
+
+[node name="LabelCredits1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 65.0
+offset_right = 305.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 16
+text = "Andrew Lukan"
+
+[node name="LabelCredits2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 84.0
+offset_right = 305.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 16
+text = "Charles Dill"
+
+[node name="LabelCredits3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 102.0
+offset_right = 305.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 16
+text = "Nabil Azhari"
+
+[node name="LabelCredits4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 120.0
+offset_right = 305.0
+offset_bottom = 143.0
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 16
+text = "David Hopke"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

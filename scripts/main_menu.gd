@@ -10,7 +10,7 @@ func _on_texture_button_leaderboard_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/scoreboard.tscn")
 
 func _on_texture_button_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/scoreboard.tscn")
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")
 
 func _on_texture_button_exit_pressed() -> void:
 	get_tree().quit()
