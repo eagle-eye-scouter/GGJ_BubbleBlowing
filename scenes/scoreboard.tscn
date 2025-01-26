@@ -24,13 +24,14 @@ texture = ExtResource("2_yqjne")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -242.5
+offset_left = -226.0
 offset_top = -79.0
-offset_right = -77.5
+offset_right = -94.0
 offset_bottom = -59.0
 grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_8n1s1")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "Leaderboard"
 
 [node name="Score Entry" parent="." instance=ExtResource("1_6sl18")]
