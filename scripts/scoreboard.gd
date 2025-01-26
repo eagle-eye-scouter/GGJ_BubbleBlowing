@@ -96,10 +96,12 @@ func receive_score(new_score):
 	var i:int = 0
 	
 	## Make clone to avoid duplication of scores
-	var entries_edit = entries.duplicate(true)
+	var entries_edit = []
+	for entrant in entries:
+		entries_edit.append({ "p_name":entrant.p_name, "p_score":entrant.p_score })
 	
 	## While higher scores remain higher, keep incrementing
-	while i < entries_edit.size() and entries_edit[i].get_p_score() >= new_score:
+	while i < entries_edit.size() and entries_edit[i]["p_score"] >= new_score:
 		i += 1
 	
 	## If we reached the end of the list, we can exit early
@@ -113,15 +115,20 @@ func receive_score(new_score):
 	## Shift all following values down by one
 	while i < entries_edit.size():
 		if i > 0:
-			entries_edit[i].p_name = entries[i-1].p_name
-			entries_edit[i].p_score = entries[i-1].p_score
+			entries_edit[i]["p_name"] = entries[i-1].p_name
+			entries_edit[i]["p_score"] = entries[i-1].p_score
 		i += 1
 	
 	## Set the focused entry, and start to update it.
-	entry = entries_edit[insert_index]
+	i = 0
+	while i < entries.size():
+		entries[i].p_name = entries_edit[i]["p_name"]
+		entries[i].p_score = entries_edit[i]["p_score"]
+		i += 1
+	
+	entry = entries[insert_index] 
 	update_name("AAA")
 	update_score(new_score)
-	entries = entries_edit
 	flash_timer.start()
 
 
