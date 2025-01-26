@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cjohqyu1gyco2" path="res://assets/clouds/cloud_3.png" id="8_0vi3f"]
 [ext_resource type="PackedScene" uid="uid://cuqxd3qt0rcca" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
 [ext_resource type="Script" path="res://scripts/victory_area.gd" id="10_gxggg"]
-[ext_resource type="PackedScene" path="res://scenes/ufo_victory.tscn" id="15_384kq"]
+[ext_resource type="PackedScene" uid="uid://4smypriutml1" path="res://scenes/ufo_victory.tscn" id="15_384kq"]
 [ext_resource type="Texture2D" uid="uid://dbb12xnd347us" path="res://assets/sprites/stars.png" id="16_gvx8e"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
@@ -541,17 +541,23 @@ position = Vector2(377, -478)
 velocity = 80.0
 direction = Vector2(-1, 0)
 
-[node name="VictoryArea" type="Area2D" parent="Dynamic"]
+[node name="VictoryArea" type="Area2D" parent="Dynamic" node_paths=PackedStringArray("victory_point")]
 position = Vector2(8, -15784)
+scale = Vector2(1, 1.84)
+gravity_space_override = 3
+gravity_point = true
 script = ExtResource("10_gxggg")
+victory_point = NodePath("../UFO/UfoTracker")
 
 [node name="Collider" type="CollisionShape2D" parent="Dynamic/VictoryArea"]
 position = Vector2(152, 79)
 shape = SubResource("RectangleShape2D_fmsma")
 
 [node name="UFO" parent="Dynamic" instance=ExtResource("15_384kq")]
-position = Vector2(160, -15840)
+position = Vector2(160, -15792)
 scale = Vector2(2, 2)
+
+[node name="UfoTracker" type="Marker2D" parent="Dynamic/UFO"]
 
 [node name="Stars" type="Sprite2D" parent="Dynamic"]
 position = Vector2(136, -15592)
