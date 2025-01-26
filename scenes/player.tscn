@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://fe3melf145un" path="res://assets/bubblegum/bubble_animation12.png" id="18_0agb8"]
 [ext_resource type="Texture2D" uid="uid://vr0nppj05roo" path="res://assets/bubblegum/bubble_animation13.png" id="19_k07h1"]
 [ext_resource type="Texture2D" uid="uid://b1lyeb2konu5a" path="res://assets/bubblegum/bubble_animation14.png" id="20_iomk4"]
-[ext_resource type="Texture2D" uid="uid://c02d2yfitmj01" path="res://assets/bubblegum/bubble_animation15.png" id="21_pb1bu"]
+[ext_resource type="Texture2D" uid="uid://qacaktc8tecu" path="res://assets/bubblegum/bubble_animation15.png" id="21_pb1bu"]
 [ext_resource type="Texture2D" uid="uid://dhw3pntvf51g0" path="res://assets/pop/bubble_animation_pop1.png" id="22_bvi2s"]
 [ext_resource type="Texture2D" uid="uid://bhay83wrbnglw" path="res://assets/pop/bubble_animation_pop2.png" id="23_dovwj"]
 [ext_resource type="Texture2D" uid="uid://dq1v8gitlu81" path="res://assets/pop/bubble_animation_pop3.png" id="24_8qql5"]
