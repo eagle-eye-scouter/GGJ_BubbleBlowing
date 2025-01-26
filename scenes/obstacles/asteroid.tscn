@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://crw3hh2yu5xwe"]
 
 [ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_s0h3k"]
-[ext_resource type="Texture2D" uid="uid://mclqh2aqf0ta" path="res://assets/asteroid_1.png" id="2_jc08f"]
-[ext_resource type="Texture2D" uid="uid://clriirnoxf1ie" path="res://assets/asteroid_2.png" id="3_qfxc4"]
+[ext_resource type="Texture2D" path="res://assets/asteroid_1.png" id="2_jc08f"]
+[ext_resource type="Texture2D" path="res://assets/asteroid_2.png" id="3_qfxc4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wbtup"]
 animations = [{

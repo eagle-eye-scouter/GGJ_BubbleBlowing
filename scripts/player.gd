@@ -103,7 +103,6 @@ func _set_state(new_state:State):
 			new_animation = "float"
 			sea_level = global_position.y
 		State.DEAD:
-<<<<<<< Updated upstream
 			if state == State.DEAD or state == State.VICTORY:
 				return
 			new_animation = "pop"
@@ -113,7 +112,7 @@ func _set_state(new_state:State):
 			if state == State.DEAD or state == State.VICTORY:
 				return
 			camera.reparent($"..")
-=======
+			
 			timer.stop()
 			if state == State.DEAD:
 				return
@@ -121,7 +120,7 @@ func _set_state(new_state:State):
 			camera.reparent($"..")
 			print("SL:", sea_level-global_position.y)
 			print("Remaining Time: ", timer.time_left)
->>>>>>> Stashed changes
+			
 	if (new_animation != null && sprite.get_animation() != new_animation):
 		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())
