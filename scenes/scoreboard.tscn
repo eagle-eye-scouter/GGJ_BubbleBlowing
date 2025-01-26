@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://yeplf5s6wa2n" path="res://scenes/score_entry.tscn" id="1_6sl18"]
 [ext_resource type="Script" path="res://scripts/scoreboard.gd" id="1_lrco3"]
-[ext_resource type="Texture2D" uid="uid://83e16xqas8" path="res://assets/sprites/UI/leaderboard.png" id="2_yqjne"]
-[ext_resource type="Texture2D" uid="uid://b2b7r15c6hwp6" path="res://assets/sprites/UI/red_default.png" id="4_j02nj"]
-[ext_resource type="Texture2D" uid="uid://sahdtm30kdpb" path="res://assets/sprites/UI/red_clicked.png" id="5_el65j"]
+[ext_resource type="Texture2D" uid="uid://cul43bq70q2ps" path="res://assets/sprites/UI/leaderboard.png" id="2_yqjne"]
+[ext_resource type="Texture2D" uid="uid://ds1ef0ixmbjce" path="res://assets/sprites/UI/red_default.png" id="4_j02nj"]
+[ext_resource type="Texture2D" uid="uid://31i5erqfgsy8" path="res://assets/sprites/UI/red_clicked.png" id="5_el65j"]
 [ext_resource type="FontFile" uid="uid://3bglvarup5fg" path="res://fonts/Bubblegum.ttf" id="6_8n1s1"]
 
 [node name="Scoreboard" type="Control"]
@@ -24,13 +24,14 @@ texture = ExtResource("2_yqjne")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -242.5
+offset_left = -226.0
 offset_top = -79.0
-offset_right = -77.5
+offset_right = -94.0
 offset_bottom = -59.0
 grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_8n1s1")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "Leaderboard"
 
 [node name="Score Entry" parent="." instance=ExtResource("1_6sl18")]
