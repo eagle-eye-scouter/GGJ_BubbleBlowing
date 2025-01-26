@@ -180,4 +180,10 @@ func toggle_letter(display):
 	update_display()
 
 func _on_texture_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	flash_timer.paused = true
+	flash_timer.stop()
+	toggle_letter(true)
+	update_display()
+	entry = null
+	update_board()
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn") # Exit screen
