@@ -1,15 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkqeenp2sn04y"]
+[gd_scene load_steps=14 format=3 uid="uid://bkqeenp2sn04y"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w5eq5"]
 [ext_resource type="Texture2D" uid="uid://b6lsymrywrljb" path="res://assets/sprites/UI/green_default.png" id="3_64272"]
 [ext_resource type="Texture2D" uid="uid://dpklycp531su0" path="res://assets/sprites/UI/green_clicked.png" id="4_5sen0"]
-[ext_resource type="FontFile" uid="uid://3bglvarup5fg" path="res://fonts/Bubblegum.ttf" id="5_05bwl"]
 [ext_resource type="Texture2D" uid="uid://df2tj3vyyeiny" path="res://assets/sprites/UI/gold_default_long.png" id="5_u7jre"]
 [ext_resource type="Texture2D" uid="uid://ds1ef0ixmbjce" path="res://assets/sprites/UI/red_default.png" id="6_cewoy"]
 [ext_resource type="Texture2D" uid="uid://du0qij4wyqjnu" path="res://assets/sprites/UI/gold_default_clicked_long.png" id="6_hqmv1"]
 [ext_resource type="Texture2D" uid="uid://31i5erqfgsy8" path="res://assets/sprites/UI/red_clicked.png" id="7_bmg56"]
 [ext_resource type="Texture2D" uid="uid://eynbp8sga33m" path="res://assets/sprites/UI/blue_default.png" id="7_r1vig"]
 [ext_resource type="Texture2D" uid="uid://clbyou5ixibe6" path="res://assets/sprites/UI/blue_clicked.png" id="8_44jes"]
+[ext_resource type="Texture2D" uid="uid://p54uqwe66m0j" path="res://assets/sprites/UI/menu_background.png" id="10_jl0o5"]
+[ext_resource type="Texture2D" uid="uid://dogkaom6x45ax" path="res://assets/sprites/UI/title.png" id="11_0c515"]
+[ext_resource type="Texture2D" uid="uid://vr0nppj05roo" path="res://assets/bubblegum/bubble_animation13.png" id="12_q762l"]
+[ext_resource type="Script" path="res://scripts/TweenFloat.gd" id="13_um3ga"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -19,19 +22,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w5eq5")
-
-[node name="LabelTitle" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -56.0
-offset_top = 8.0
-offset_right = 57.0
-offset_bottom = 24.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("5_05bwl")
-text = "Bubblenaut"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -65,6 +55,22 @@ texture_pressed = ExtResource("8_44jes")
 layout_mode = 2
 texture_normal = ExtResource("6_cewoy")
 texture_pressed = ExtResource("7_bmg56")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Sprite2DBG" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(160, 90)
+texture = ExtResource("10_jl0o5")
+
+[node name="Sprite2DTitle" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(160, 22)
+texture = ExtResource("11_0c515")
+
+[node name="Sprite2DFloat" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(160, 101)
+texture = ExtResource("12_q762l")
+script = ExtResource("13_um3ga")
 
 [connection signal="pressed" from="VBoxContainer/TextureButtonStart" to="." method="_on_texture_button_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/TextureButtonLeaderboard" to="." method="_on_texture_button_leaderboard_pressed"]
