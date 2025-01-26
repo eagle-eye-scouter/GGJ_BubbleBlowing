@@ -126,7 +126,7 @@ func _set_state(new_state:State):
 			new_animation = "pop"
 			camera.reparent($"..")
 			calculate_score(true)
-			print("SL:", sea_level-global_position.y)
+			print("Victory elevation:", sea_level-max_altitude)
 			print("Remaining Time: ", timer.time_left)
 	if (new_animation != null && sprite.get_animation() != new_animation):
 		sprite.play(new_animation)
