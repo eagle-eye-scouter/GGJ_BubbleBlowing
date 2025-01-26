@@ -19,6 +19,7 @@ var state := State.START
 @onready var bubble : GumBubble = $Bubble
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var camera : Camera2D = $Camera2D
+@onready var timer: Timer = $Timer
 
 var bubble_stage_size = float(bubble.POP_VOLUME_THRESHOLD)/8
 
@@ -96,6 +97,7 @@ func _set_state(new_state:State):
 		State.START:
 			new_animation = "chew"
 		State.ALIVE:
+			timer.start()
 			if state == State.ALIVE or state == State.DEAD:
 				return
 			new_animation = "float"
@@ -110,6 +112,15 @@ func _set_state(new_state:State):
 			if state == State.DEAD or state == State.VICTORY:
 				return
 			camera.reparent($"..")
+			
+			timer.stop()
+			if state == State.DEAD:
+				return
+			new_animation = "pop"
+			camera.reparent($"..")
+			print("SL:", sea_level-global_position.y)
+			print("Remaining Time: ", timer.time_left)
+			
 	if (new_animation != null && sprite.get_animation() != new_animation):
 		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())
@@ -119,7 +130,12 @@ func _set_state(new_state:State):
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if (sprite.get_animation() == "chew"):
 		sprite.play("float")
-		print("Current animation: " + sprite.animation)
 	if (sprite.get_animation() == "pop"):
 		sprite.play("fall")
-		print("Current animation: " + sprite.animation)
+	print("Current animation: " + sprite.animation)
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	get_tree().change_scene_to_file("res://scenes/scoreboard.tscn")
+
+func _on_timer_timeout() -> void:
+	_set_state(State.DEAD)

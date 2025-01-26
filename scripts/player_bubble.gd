@@ -6,7 +6,7 @@ signal popped()
 const MAX_RADIUS = 100
 const MAX_VOLUME = 100
 const POP_VOLUME_THRESHOLD = 2
-const SCALING_FACTOR := 0.5
+const SCALING_FACTOR := 0.7
 @export var volume = 0
 var deflate_factor = 0.75 ## Multiplicative rate of decay per second
 const SWALLOW_THRESHOLD = 0.001
