@@ -125,10 +125,8 @@ func _set_state(new_state:State):
 		State.VICTORY:
 			if state == State.DEAD or state == State.VICTORY:
 				return
-			
+			camera.reparent($"..")
 			timer.stop()
-			if state == State.DEAD:
-				return
 			new_animation = "pop"
 			calculate_score(true)
 			print("Victory elevation:", sea_level-max_altitude)

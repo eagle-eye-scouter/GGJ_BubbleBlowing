@@ -80,6 +80,236 @@ position = Vector2(166, 147)
 
 [node name="Dynamic" type="Node2D" parent="."]
 
+[node name="Clouds" type="Node2D" parent="Dynamic"]
+z_index = -1
+position = Vector2(159, 172)
+scale = Vector2(3, 1.333)
+
+[node name="Stars" type="Sprite2D" parent="Dynamic/Clouds"]
+position = Vector2(-7.66666, -11826)
+scale = Vector2(0.333333, 0.750188)
+texture = ExtResource("16_gvx8e")
+
+[node name="Cloud0" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-23.6667, -1335.33)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud1" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-31.6667, -5332.33)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud2" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(29.6667, -2049.51)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud3" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-7.66666, -8315.08)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud4" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(24.3333, -8117.03)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud5" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-21, -7624.91)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud6" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(5.66667, -6922.73)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud7" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-15.6667, -6436.61)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud8" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(19, -5800.45)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud9" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(19, -4450.11)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud10" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-26.3333, -4195.8)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Cloud11" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(3, -3315.83)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Stars3" type="Sprite2D" parent="Dynamic/Clouds"]
+position = Vector2(0.333336, -11615.9)
+rotation = -1.57079
+scale = Vector2(0.750188, -0.333333)
+texture = ExtResource("16_gvx8e")
+
+[node name="CloudB1" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-71.6667, -759.19)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudB1" index="0"]
+texture = ExtResource("7_xh6x7")
+
+[node name="CloudB2" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-61, -1659.41)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudB2" index="0"]
+texture = ExtResource("7_xh6x7")
+
+[node name="CloudB3" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-39.6667, -897.224)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudB3" index="0"]
+texture = ExtResource("7_xh6x7")
+
+[node name="CloudB4" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(40.3333, -1089.27)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudB4" index="0"]
+texture = ExtResource("7_xh6x7")
+
+[node name="Stars4" type="Sprite2D" parent="Dynamic/Clouds"]
+position = Vector2(3, -11892)
+rotation = -1.57079
+scale = Vector2(0.750188, -0.333333)
+texture = ExtResource("16_gvx8e")
+
+[node name="CloudB5" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-42.3333, -1263.32)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudB5" index="0"]
+texture = ExtResource("7_xh6x7")
+
+[node name="CloudB6" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-39.6667, -2433.61)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudB6" index="0"]
+texture = ExtResource("7_xh6x7")
+
+[node name="CloudB7" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-13, -3873.97)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudB7" index="0"]
+texture = ExtResource("7_xh6x7")
+
+[node name="CloudC1" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-66.3333, -2985.75)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC1" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC2" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(21.6667, -1815.45)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC2" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC3" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(13.6667, -3837.96)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC3" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC4" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-23.6667, -2217.55)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC4" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC5" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-63.6667, -471.118)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC5" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC6" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-21, -165.041)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC6" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC7" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-34.3333, -381.095)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC7" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC8" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-7.66666, -627.157)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC8" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC9" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(24.3333, -825.206)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC9" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC10" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-18.3333, -1251.31)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC10" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC11" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(11, -1473.37)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC11" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC12" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-29, -1701.43)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC12" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC13" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-21, -1983.5)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC13" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC14" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-55.6667, -2367.59)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC14" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC15" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-2.33333, -2625.66)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/Clouds/CloudC15" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="Stars2" type="Sprite2D" parent="Dynamic/Clouds"]
+position = Vector2(8.33334, -11795.9)
+rotation = 3.14159
+scale = Vector2(0.333333, -0.750188)
+texture = ExtResource("16_gvx8e")
+
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_xqx3g")]
 position = Vector2(159, 172)
 
@@ -786,17 +1016,28 @@ label_settings = ExtResource("20_o63pe")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[editable path="Dynamic/CloudB1"]
-[editable path="Dynamic/CloudB2"]
-[editable path="Dynamic/CloudB3"]
-[editable path="Dynamic/CloudB4"]
-[editable path="Dynamic/CloudB5"]
-[editable path="Dynamic/CloudB6"]
-[editable path="Dynamic/CloudB7"]
-[editable path="Dynamic/CloudC1"]
-[editable path="Dynamic/CloudC2"]
-[editable path="Dynamic/CloudC3"]
-[editable path="Dynamic/CloudC4"]
+[editable path="Dynamic/Clouds/CloudB1"]
+[editable path="Dynamic/Clouds/CloudB2"]
+[editable path="Dynamic/Clouds/CloudB3"]
+[editable path="Dynamic/Clouds/CloudB4"]
+[editable path="Dynamic/Clouds/CloudB5"]
+[editable path="Dynamic/Clouds/CloudB6"]
+[editable path="Dynamic/Clouds/CloudB7"]
+[editable path="Dynamic/Clouds/CloudC1"]
+[editable path="Dynamic/Clouds/CloudC2"]
+[editable path="Dynamic/Clouds/CloudC3"]
+[editable path="Dynamic/Clouds/CloudC4"]
+[editable path="Dynamic/Clouds/CloudC5"]
+[editable path="Dynamic/Clouds/CloudC6"]
+[editable path="Dynamic/Clouds/CloudC7"]
+[editable path="Dynamic/Clouds/CloudC8"]
+[editable path="Dynamic/Clouds/CloudC9"]
+[editable path="Dynamic/Clouds/CloudC10"]
+[editable path="Dynamic/Clouds/CloudC11"]
+[editable path="Dynamic/Clouds/CloudC12"]
+[editable path="Dynamic/Clouds/CloudC13"]
+[editable path="Dynamic/Clouds/CloudC14"]
+[editable path="Dynamic/Clouds/CloudC15"]
 [editable path="Dynamic/SpawnerBird1"]
 [editable path="Dynamic/SpawnerBird8"]
 [editable path="Dynamic/SpawnerBird9"]

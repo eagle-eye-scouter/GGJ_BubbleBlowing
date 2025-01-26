@@ -25,7 +25,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fs3s"]
-size = Vector2(255, 43)
+size = Vector2(256, 22)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1c2ok"]
 blend_mode = 1
@@ -45,7 +45,7 @@ frame_progress = 0.227997
 position = Vector2(0, -22)
 
 [node name="Collider" type="CollisionShape2D" parent="Body"]
-position = Vector2(0.5, 0.5)
+position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_2fs3s")
 
 [node name="TractorBeamGlow" type="Sprite2D" parent="."]
