@@ -328,8 +328,16 @@ texture = ExtResource("16_gvx8e")
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_xqx3g")]
 position = Vector2(160, 174)
 
+[node name="Cloud0" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(88, -1608)
+scale = Vector2(2, 2)
+
 [node name="Cloud3" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(127, -10850)
+scale = Vector2(2, 2)
+
+[node name="CloudB3" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(40, -1024)
 scale = Vector2(2, 2)
 
 [node name="SpawnerBird1" parent="Dynamic" instance=ExtResource("4_ptieh")]
