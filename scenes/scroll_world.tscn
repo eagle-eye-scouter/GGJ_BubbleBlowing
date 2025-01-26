@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="Texture2D" uid="uid://b2peuyikjg5ts" path="res://assets/sprites/city_2.png" id="2_0sb07"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
-[ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
+[ext_resource type="PackedScene" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d5e7bscersxy" path="res://assets/sprites/UI/score_board.png" id="18_1omni"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="18_425hx"]
 [ext_resource type="Texture2D" uid="uid://b3t7xhu0iokg7" path="res://assets/sprites/UI/timer_board.png" id="19_nx3pg"]
-[ext_resource type="LabelSettings" uid="uid://4yfi27agppkd" path="res://fonts/hud_font_setting.tres" id="20_o63pe"]
+[ext_resource type="LabelSettings" path="res://fonts/hud_font_setting.tres" id="20_o63pe"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
@@ -365,78 +365,45 @@ scale = Vector2(2, 2)
 position = Vector2(-56, -840)
 scale = Vector2(2, 2)
 
-[node name="Sprite2D" parent="Dynamic/CloudB1" index="0"]
-texture = ExtResource("7_xh6x7")
-
 [node name="CloudB2" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(-24, -2040)
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Dynamic/CloudB2" index="0"]
-texture = ExtResource("7_xh6x7")
 
 [node name="CloudB3" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(40, -1024)
 scale = Vector2(2, 2)
 
-[node name="Sprite2D" parent="Dynamic/CloudB3" index="0"]
-texture = ExtResource("7_xh6x7")
-
 [node name="CloudB4" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(280, -1280)
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Dynamic/CloudB4" index="0"]
-texture = ExtResource("7_xh6x7")
 
 [node name="CloudB5" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(32, -1512)
 scale = Vector2(2, 2)
 
-[node name="Sprite2D" parent="Dynamic/CloudB5" index="0"]
-texture = ExtResource("7_xh6x7")
-
 [node name="CloudB6" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(40, -3072)
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Dynamic/CloudB6" index="0"]
-texture = ExtResource("7_xh6x7")
 
 [node name="CloudB7" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(120, -4992)
 scale = Vector2(2, 2)
 
-[node name="Sprite2D" parent="Dynamic/CloudB7" index="0"]
-texture = ExtResource("7_xh6x7")
-
 [node name="CloudC1" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(-40, -3808)
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Dynamic/CloudC1" index="0"]
-texture = ExtResource("8_0vi3f")
 
 [node name="CloudC2" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(224, -2248)
 scale = Vector2(2, 2)
 
-[node name="Sprite2D" parent="Dynamic/CloudC2" index="0"]
-texture = ExtResource("8_0vi3f")
-
 [node name="CloudC3" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(200, -4944)
 scale = Vector2(2, 2)
 
-[node name="Sprite2D" parent="Dynamic/CloudC3" index="0"]
-texture = ExtResource("8_0vi3f")
-
 [node name="CloudC4" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(88, -2784)
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Dynamic/CloudC4" index="0"]
-texture = ExtResource("8_0vi3f")
 
 [node name="SpawnerBird1" parent="Dynamic" instance=ExtResource("4_ptieh")]
 
