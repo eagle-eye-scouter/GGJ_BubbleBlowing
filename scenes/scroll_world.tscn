@@ -6,8 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" path="res://scenes/cloud.tscn" id="5_74hj0"]
+=======
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
 [ext_resource type="PackedScene" uid="uid://nn5ehnsqv2po" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
@@ -780,17 +785,114 @@ position = Vector2(-4.35126, -3)
 shape = SubResource("RectangleShape2D_06o81")
 
 [node name="Asteroid" parent="Dynamic/SpawnerAsteroid/Fleet" index="0" instance=ExtResource("8_1kd0q")]
-position = Vector2(-240, -176)
+position = Vector2(-193, -95)
 scale = Vector2(-3, 3)
-velocity = 200.0
+velocity = 100.0
 direction = Vector2(1.3, -1)
 
 [node name="Asteroid2" parent="Dynamic/SpawnerAsteroid/Fleet" index="1" instance=ExtResource("8_1kd0q")]
 position = Vector2(-287, -566)
 rotation = 1.39626
 scale = Vector2(-3, 3)
-velocity = 200.0
+velocity = 100.0
 direction = Vector2(1.3, -1)
+
+[node name="SpawnerAsteroid2" parent="Dynamic" instance=ExtResource("4_ptieh")]
+position = Vector2(70, -12903)
+
+[node name="Trigger" parent="Dynamic/SpawnerAsteroid2" index="0"]
+position = Vector2(148, 147)
+scale = Vector2(12.64, 1)
+
+[node name="Collider" parent="Dynamic/SpawnerAsteroid2/Trigger" index="0"]
+position = Vector2(-4.35126, -3)
+shape = SubResource("RectangleShape2D_06o81")
+
+[node name="Asteroid7" parent="Dynamic/SpawnerAsteroid2/Fleet" index="0" instance=ExtResource("8_1kd0q")]
+position = Vector2(203, -1986)
+rotation = 2.3178
+scale = Vector2(1, 1)
+velocity = 34.0
+direction = Vector2(0, 1)
+
+[node name="Sprite" parent="Dynamic/SpawnerAsteroid2/Fleet/Asteroid7" index="0"]
+animation = &"rock2"
+
+[node name="Asteroid9" parent="Dynamic/SpawnerAsteroid2/Fleet" index="1" instance=ExtResource("8_1kd0q")]
+position = Vector2(35, -1276)
+rotation = 1.1589
+scale = Vector2(1, 1)
+velocity = 30.0
+direction = Vector2(0, 1)
+
+[node name="Asteroid" parent="Dynamic/SpawnerAsteroid2/Fleet" index="2" instance=ExtResource("8_1kd0q")]
+position = Vector2(2190.84, -814.461)
+rotation = -2.80649
+scale = Vector2(1, 1)
+velocity = 120.0
+direction = Vector2(0, 1)
+
+[node name="Asteroid8" parent="Dynamic/SpawnerAsteroid2/Fleet" index="3" instance=ExtResource("8_1kd0q")]
+position = Vector2(1281.81, -1765.27)
+rotation = 2.3178
+scale = Vector2(1, 1)
+velocity = 50.0
+direction = Vector2(0, 1)
+
+[node name="Asteroid10" parent="Dynamic/SpawnerAsteroid2/Fleet" index="4" instance=ExtResource("8_1kd0q")]
+position = Vector2(1373.21, -1389.35)
+rotation = 2.3178
+scale = Vector2(1, 1)
+velocity = 100.0
+direction = Vector2(0, 1)
+
+[node name="Asteroid12" parent="Dynamic/SpawnerAsteroid2/Fleet" index="5" instance=ExtResource("8_1kd0q")]
+position = Vector2(22, -883)
+rotation = -2.80649
+scale = Vector2(1, 1)
+velocity = 22.0
+direction = Vector2(0, 1)
+
+[node name="Sprite" parent="Dynamic/SpawnerAsteroid2/Fleet/Asteroid12" index="0"]
+animation = &"rock2"
+
+[node name="Asteroid11" parent="Dynamic/SpawnerAsteroid2/Fleet" index="6" instance=ExtResource("8_1kd0q")]
+position = Vector2(1372.81, -1390.27)
+rotation = 2.3178
+scale = Vector2(1, 1)
+velocity = 200.0
+direction = Vector2(0, 1)
+
+[node name="Asteroid6" parent="Dynamic/SpawnerAsteroid2/Fleet" index="7" instance=ExtResource("8_1kd0q")]
+position = Vector2(138, -937)
+rotation = 1.1589
+scale = Vector2(1, 1)
+velocity = 30.0
+direction = Vector2(0, 1)
+
+[node name="Asteroid2" parent="Dynamic/SpawnerAsteroid2/Fleet" index="8" instance=ExtResource("8_1kd0q")]
+position = Vector2(189, -1433)
+rotation = 6.28319
+scale = Vector2(1, 1)
+velocity = 45.0
+direction = Vector2(0, 1)
+
+[node name="Asteroid3" parent="Dynamic/SpawnerAsteroid2/Fleet" index="9" instance=ExtResource("8_1kd0q")]
+position = Vector2(104, -1591)
+rotation = 4.63385
+scale = Vector2(1, 1)
+velocity = 60.0
+direction = Vector2(0, 1)
+
+[node name="Sprite" parent="Dynamic/SpawnerAsteroid2/Fleet/Asteroid3" index="0"]
+animation = &"rock2"
+
+[node name="Asteroid5" parent="Dynamic/SpawnerAsteroid2/Fleet" index="10" instance=ExtResource("8_1kd0q")]
+position = Vector2(-25, -1559)
+rotation = -0.15708
+scale = Vector2(1, 1)
+velocity = 25.0
+direction = Vector2(0, 1)
 
 [node name="SpawnerUFO" parent="Dynamic" instance=ExtResource("4_ptieh")]
 position = Vector2(64, -14889)
@@ -955,4 +1057,8 @@ vertical_alignment = 1
 [editable path="Dynamic/SpawnerBird4"]
 [editable path="Dynamic/SpawnerBird5"]
 [editable path="Dynamic/SpawnerAsteroid"]
+[editable path="Dynamic/SpawnerAsteroid2"]
+[editable path="Dynamic/SpawnerAsteroid2/Fleet/Asteroid7"]
+[editable path="Dynamic/SpawnerAsteroid2/Fleet/Asteroid12"]
+[editable path="Dynamic/SpawnerAsteroid2/Fleet/Asteroid3"]
 [editable path="Dynamic/SpawnerUFO"]
