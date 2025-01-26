@@ -346,6 +346,9 @@ scale = Vector2(2, 2)
 position = Vector2(152, 6)
 scale = Vector2(12.64, 1)
 
+[node name="Collider" parent="Dynamic/SpawnerBird1/Trigger" index="0"]
+position = Vector2(0, 42)
+
 [node name="Bird" parent="Dynamic/SpawnerBird1/Fleet" index="0" instance=ExtResource("5_q1vn8")]
 position = Vector2(89, -63)
 
@@ -413,7 +416,7 @@ position = Vector2(149, 20)
 scale = Vector2(12.64, 1)
 
 [node name="Collider" parent="Dynamic/SpawnerBird2/Trigger" index="0"]
-position = Vector2(-4.35126, -3)
+position = Vector2(-3.79747, 48)
 shape = SubResource("RectangleShape2D_06o81")
 
 [node name="Bird" parent="Dynamic/SpawnerBird2/Fleet" index="0" instance=ExtResource("5_q1vn8")]
