@@ -42,7 +42,22 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmwmx"]
 animations = [{
 "frames": [{
-"duration": 3.0,
+"duration": 1.0,
+"texture": ExtResource("2_75i4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_75i4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_75i4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_75i4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_75i4u")
+}, {
+"duration": 1.0,
 "texture": ExtResource("2_75i4u")
 }],
 "loop": false,
