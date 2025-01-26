@@ -149,9 +149,9 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	if (sprite.get_animation() == "pop"):
 		sprite.play("fall")
 	if (sprite.get_animation() == "abduction_begin"):
-		gravity_scale = 1
+		gravity_scale = 0.5
 		sprite.play("abduction")
-		get_tree().create_timer(2).timeout.connect(_finish)
+		get_tree().create_timer(1).timeout.connect(_finish)
 	print("Current animation: " + sprite.animation)
 
 
