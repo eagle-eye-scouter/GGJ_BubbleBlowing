@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
 [ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
 [ext_resource type="PackedScene" uid="uid://nn5ehnsqv2po" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
@@ -86,6 +87,54 @@ drag_bottom_margin = 0.0
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_xqx3g")]
 position = Vector2(159, 159)
 scale = Vector2(3, 1.333)
+
+[node name="Cloud0" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(88, -1608)
+scale = Vector2(2, 2)
+
+[node name="Cloud1" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(168, -12136)
+scale = Vector2(2, 2)
+
+[node name="Cloud2" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(248, -2560)
+scale = Vector2(2, 2)
+
+[node name="Cloud3" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(136, -10912)
+scale = Vector2(2, 2)
+
+[node name="Cloud4" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(232, -10648)
+scale = Vector2(2, 2)
+
+[node name="Cloud5" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(96, -9992)
+scale = Vector2(2, 2)
+
+[node name="Cloud6" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(176, -9056)
+scale = Vector2(2, 2)
+
+[node name="Cloud7" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(112, -8408)
+scale = Vector2(2, 2)
+
+[node name="Cloud8" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(216, -7560)
+scale = Vector2(2, 2)
+
+[node name="Cloud9" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(216, -5760)
+scale = Vector2(2, 2)
+
+[node name="Cloud10" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(80, -5421)
+scale = Vector2(2, 2)
+
+[node name="Cloud11" parent="Dynamic" instance=ExtResource("5_74hj0")]
+position = Vector2(168, -4248)
+scale = Vector2(2, 2)
 
 [node name="SpawnerBird1" parent="Dynamic" instance=ExtResource("4_ptieh")]
 
