@@ -1,6 +1,6 @@
 extends Control
 
-var entries: Array
+var entries : Array = []
 
 ## Components used to make a score entry
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -96,7 +96,7 @@ func receive_score(new_score):
 	var i:int = 0
 	
 	## Make clone to avoid duplication of scores
-	var entries_edit = entries.duplicate()
+	var entries_edit = entries.duplicate(true)
 	
 	## While higher scores remain higher, keep incrementing
 	while i < entries_edit.size() and entries_edit[i].get_p_score() >= new_score:
@@ -113,7 +113,9 @@ func receive_score(new_score):
 	## Shift all following values down by one
 	while i < entries_edit.size():
 		if i > 0:
-			entries_edit[i] = entries[i-1]
+			entries_edit[i].p_name = entries[i-1].p_name
+			entries_edit[i].p_score = entries[i-1].p_score
+		i += 1
 	
 	## Set the focused entry, and start to update it.
 	entry = entries_edit[insert_index]
