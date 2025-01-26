@@ -102,10 +102,7 @@ func receive_score(new_score):
 func _input(event: InputEvent):
 	# Score is not noteworthy, don't receive edit inputs
 	if (!entry):
-		if (event.is_action_pressed("ui_accept")):
-			get_tree().change_scene_to_file("res://scenes/main_menu.tscn") # Exit screen
-		else:
-			return
+		return
 
 	# New score on the board
 	if (event.is_action_pressed("ui_down") || event.is_action_pressed("player_down")): # Next letter
@@ -126,7 +123,6 @@ func _input(event: InputEvent):
 			update_display()
 			entry = null
 			update_board()
-			get_tree().change_scene_to_file("res://scenes/main_menu.tscn") # Exit screen
 
 # Calculates new alphabet index when selecting letters
 func change_letter(dir: int):
