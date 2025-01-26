@@ -23,6 +23,7 @@ var state := State.START
 @onready var timer: Timer = $Timer
 
 var bubble_stage_size = float(bubble.POP_VOLUME_THRESHOLD)/8
+var _is_invulnerable : bool = false
 
 enum State {
 	START,
@@ -36,9 +37,14 @@ func _ready() -> void:
 	bubble.popped.connect(_on_bubble_popped)
 	_set_state(State.START)
 
+
 func _process(delta: float) -> void:
+	if Input.is_action_pressed("sacred_mode"):
+		_is_invulnerable = true
+		bubble._set_state(GumBubble.State.INVULNERABLE)
 	if (sprite.get_animation() == "float"):
 		sprite.set_frame(bubble.volume/bubble_stage_size)
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -89,6 +95,9 @@ func _handle_victory_animation(delta:float) -> void:
 
 
 func kill() -> void:
+	if _is_invulnerable:
+		bubble.state = GumBubble.State.INVULNERABLE
+		return
 	if state != State.START:
 		_set_state(State.DEAD)
 

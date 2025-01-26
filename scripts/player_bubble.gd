@@ -18,6 +18,7 @@ enum State {
 	STABLE,
 	POPPED,
 	SWALLOWED,
+	INVULNERABLE,
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -46,10 +47,11 @@ func radius():
 
 func pop():
 	## Guard clause
-	if state == State.POPPED:
+	if state == State.POPPED or state == State.INVULNERABLE:
 		return
+	print("I got popped! ", State.find_key(state))
 	_set_state(State.POPPED)
-	print("I got popped!")
+	
 
 
 func activate():
@@ -64,6 +66,8 @@ func get_lift(delta:float=1.0):
 
 
 func _set_state(new_state:State):
+	if state == State.INVULNERABLE:
+		return
 	match new_state:
 		State.POPPED:
 			popped.emit()
@@ -74,6 +78,8 @@ func _set_state(new_state:State):
 
 
 func _update_state():
+	if state == State.INVULNERABLE:
+		return
 	match state:
 		State.STABLE:
 			if volume < SWALLOW_THRESHOLD:
