@@ -133,6 +133,7 @@ func _set_state(new_state:State):
 			calculate_score(true)
 			print("Victory elevation:", sea_level-max_altitude)
 			print("Remaining Time: ", timer.time_left)
+			end_game()
 	if (new_animation != null && sprite.get_animation() != new_animation):
 		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())
@@ -153,12 +154,15 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	if (state == State.DEAD):
+		end_game()
+
+func end_game():
 	var temp_score = "user://temp.cfg"
 	var config_manager = ConfigFile.new()
 	config_manager.set_value("P0", "score", score)
 	config_manager.save(temp_score)
 	get_tree().change_scene_to_file("res://scenes/scoreboard.tscn")
-
 
 func _on_timer_timeout() -> void:
 	_set_state(State.DEAD)
