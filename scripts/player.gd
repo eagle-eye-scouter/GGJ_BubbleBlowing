@@ -14,6 +14,7 @@ const BUBBLE_VOLUME_START_THRESHOLD : float = 0.5
 
 var sea_level := 0.0
 var max_altitude := 0.0
+var score = 0
 
 var state := State.START
 @onready var bubble : GumBubble = $Bubble
@@ -29,7 +30,6 @@ enum State {
 	DEAD,
 	VICTORY,
 }
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -108,6 +108,7 @@ func _set_state(new_state:State):
 			new_animation = "pop"
 			camera.reparent($"..")
 			print("Maximum elevation:", sea_level-max_altitude)
+			calculate_score(false)
 		State.VICTORY:
 			if state == State.DEAD or state == State.VICTORY:
 				return
@@ -118,9 +119,9 @@ func _set_state(new_state:State):
 				return
 			new_animation = "pop"
 			camera.reparent($"..")
+			calculate_score(true)
 			print("SL:", sea_level-global_position.y)
 			print("Remaining Time: ", timer.time_left)
-			
 	if (new_animation != null && sprite.get_animation() != new_animation):
 		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())
@@ -135,7 +136,20 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	print("Current animation: " + sprite.animation)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	var temp_score = "user://temp.cfg"
+	var config_manager = ConfigFile.new()
+	config_manager.set_value("P0", "score", score)
+	config_manager.save(temp_score)
 	get_tree().change_scene_to_file("res://scenes/scoreboard.tscn")
 
 func _on_timer_timeout() -> void:
 	_set_state(State.DEAD)
+
+func calculate_score(victory: bool):
+	var altitude = abs(global_position.y)-abs(sea_level)
+	if (victory):
+		score = altitude + (altitude * timer.time_left/10)
+	else:
+		score = altitude
+	print("Calculated score: ", score)
+	return score

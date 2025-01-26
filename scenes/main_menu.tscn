@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://bkqeenp2sn04y"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w5eq5"]
-[ext_resource type="Texture2D" uid="uid://behf5fm1xw3vq" path="res://assets/sprites/UI/green_default.png" id="3_64272"]
-[ext_resource type="Texture2D" uid="uid://dubmdmvu8uobe" path="res://assets/sprites/UI/green_clicked.png" id="4_5sen0"]
+[ext_resource type="Texture2D" uid="uid://834tltvxrbxf" path="res://assets/sprites/UI/green_default.png" id="3_64272"]
+[ext_resource type="Texture2D" uid="uid://djnp2gtor3r35" path="res://assets/sprites/UI/green_clicked.png" id="4_5sen0"]
 [ext_resource type="FontFile" uid="uid://3bglvarup5fg" path="res://fonts/Bubblegum.ttf" id="5_05bwl"]
-[ext_resource type="Texture2D" uid="uid://dkxwv25a2l6m4" path="res://assets/sprites/UI/gold_default_long.png" id="5_u7jre"]
-[ext_resource type="Texture2D" uid="uid://dciiike1b5yla" path="res://assets/sprites/UI/red_default.png" id="6_cewoy"]
-[ext_resource type="Texture2D" uid="uid://dii45e3im21kr" path="res://assets/sprites/UI/gold_default_clicked_long.png" id="6_hqmv1"]
-[ext_resource type="Texture2D" uid="uid://bbgmsg4814thb" path="res://assets/sprites/UI/red_clicked.png" id="7_bmg56"]
-[ext_resource type="Texture2D" uid="uid://qbn3njarh3lq" path="res://assets/sprites/UI/blue_default.png" id="7_r1vig"]
-[ext_resource type="Texture2D" uid="uid://1r2o1ws2irb3" path="res://assets/sprites/UI/blue_clicked.png" id="8_44jes"]
+[ext_resource type="Texture2D" uid="uid://ce3u8trw0bany" path="res://assets/sprites/UI/gold_default_long.png" id="5_u7jre"]
+[ext_resource type="Texture2D" uid="uid://b2b7r15c6hwp6" path="res://assets/sprites/UI/red_default.png" id="6_cewoy"]
+[ext_resource type="Texture2D" uid="uid://dh1qo861rwjh7" path="res://assets/sprites/UI/gold_default_clicked_long.png" id="6_hqmv1"]
+[ext_resource type="Texture2D" uid="uid://sahdtm30kdpb" path="res://assets/sprites/UI/red_clicked.png" id="7_bmg56"]
+[ext_resource type="Texture2D" uid="uid://cqy7efgyvlqm1" path="res://assets/sprites/UI/blue_default.png" id="7_r1vig"]
+[ext_resource type="Texture2D" uid="uid://de0dfqqvdmhcm" path="res://assets/sprites/UI/blue_clicked.png" id="8_44jes"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
