@@ -45,7 +45,7 @@ animations = [{
 "duration": 3.0,
 "texture": ExtResource("2_75i4u")
 }],
-"loop": true,
+"loop": false,
 "name": &"abduction",
 "speed": 1.0
 }, {
@@ -74,7 +74,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_75i4u")
 }],
-"loop": true,
+"loop": false,
 "name": &"abduction_begin",
 "speed": 5.0
 }, {
