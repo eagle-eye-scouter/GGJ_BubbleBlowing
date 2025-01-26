@@ -1,14 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=18 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
-[ext_resource type="PackedScene" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
-[ext_resource type="PackedScene" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
-[ext_resource type="PackedScene" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
+[ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
+[ext_resource type="PackedScene" uid="uid://baj1cgpjrapyv" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
+[ext_resource type="PackedScene" uid="uid://cuqxd3qt0rcca" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
+[ext_resource type="Script" path="res://scripts/victory_area.gd" id="10_gxggg"]
 [ext_resource type="Texture2D" uid="uid://cf1rfkio8lg05" path="res://assets/sprites/city.png" id="10_xnh1p"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
@@ -303,6 +304,7 @@ direction = Vector2(-1, 0)
 
 [node name="VictoryArea" type="Area2D" parent="Dynamic"]
 position = Vector2(8, -15784)
+script = ExtResource("10_gxggg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dynamic/VictoryArea"]
 position = Vector2(152, 79)
