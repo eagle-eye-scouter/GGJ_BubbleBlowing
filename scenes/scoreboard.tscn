@@ -59,7 +59,6 @@ texture_pressed = ExtResource("5_idcn0")
 texture_hover = ExtResource("6_vcx45")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-visible = false
 z_index = -1
 position = Vector2(160, 90)
 texture = ExtResource("7_fajq4")
