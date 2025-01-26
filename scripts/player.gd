@@ -16,6 +16,7 @@ const SPRITE_GROUNDED := preload("res://assets/sprites/player_start_position.png
 const SPRITE_FLOATING := preload("res://assets/guy_floating.png")
 
 var sea_level := 0.0
+var max_altitude := 0.0
 
 var state := State.START
 @onready var bubble : GumBubble = $Bubble
@@ -27,7 +28,8 @@ var bubble_stage_size = float(bubble.POP_VOLUME_THRESHOLD)/8
 enum State {
 	START,
 	ALIVE,
-	DEAD
+	DEAD,
+	VICTORY,
 }
 
 
@@ -57,6 +59,8 @@ func _physics_process(delta: float) -> void:
 
 func _handle_movement(delta: float) -> void:
 	## First, slow down the speed, so that we can push it to the max.
+	max_altitude = min(max_altitude, global_position.y)
+	
 	linear_velocity *= DECCELERATION_RATE
 	
 	## Get the raw input direction
@@ -100,11 +104,15 @@ func _set_state(new_state:State):
 			new_animation = "float"
 			sea_level = global_position.y
 		State.DEAD:
-			if state == State.DEAD:
+			if state == State.DEAD or state == State.VICTORY:
 				return
 			new_animation = "pop"
 			camera.reparent($"..")
-			print("SL:", sea_level-global_position.y)
+			print("Maximum elevation:", sea_level-max_altitude)
+		State.VICTORY:
+			if state == State.DEAD or state == State.VICTORY:
+				return
+			camera.reparent($"..")
 	if (new_animation != null && sprite.get_animation() != new_animation):
 		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())
