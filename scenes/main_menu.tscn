@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w5eq5"]
 [ext_resource type="Texture2D" uid="uid://behf5fm1xw3vq" path="res://assets/sprites/UI/green_default.png" id="3_64272"]
 [ext_resource type="Texture2D" uid="uid://dubmdmvu8uobe" path="res://assets/sprites/UI/green_clicked.png" id="4_5sen0"]
-[ext_resource type="FontFile" uid="uid://bgcbrfthfm6i2" path="res://fonts/Bubblegum.ttf" id="5_05bwl"]
+[ext_resource type="FontFile" uid="uid://3bglvarup5fg" path="res://fonts/Bubblegum.ttf" id="5_05bwl"]
 [ext_resource type="Texture2D" uid="uid://dkxwv25a2l6m4" path="res://assets/sprites/UI/gold_default_long.png" id="5_u7jre"]
 [ext_resource type="Texture2D" uid="uid://dciiike1b5yla" path="res://assets/sprites/UI/red_default.png" id="6_cewoy"]
 [ext_resource type="Texture2D" uid="uid://dii45e3im21kr" path="res://assets/sprites/UI/gold_default_clicked_long.png" id="6_hqmv1"]
@@ -38,8 +38,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -72.0
-offset_right = 71.0
+offset_left = 3.0
+offset_top = -75.0
+offset_right = 99.0
+offset_bottom = -3.0
 grow_vertical = 0
 size_flags_horizontal = 4
 alignment = 1
