@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0syfmxaqmhu0"]
 
 [ext_resource type="FontFile" uid="uid://3bglvarup5fg" path="res://fonts/Bubblegum.ttf" id="1_nurcu"]
-[ext_resource type="Script" path="res://assets/sprites/UI/credits.gd" id="1_tjd31"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_ugg7v"]
 [ext_resource type="Texture2D" uid="uid://ds1ef0ixmbjce" path="res://assets/sprites/UI/red_default.png" id="2_b4eja"]
 [ext_resource type="Texture2D" uid="uid://31i5erqfgsy8" path="res://assets/sprites/UI/red_clicked.png" id="3_ikf8u"]
 
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tjd31")
+script = ExtResource("1_ugg7v")
 
 [node name="LabelTitle" type="Label" parent="."]
 layout_mode = 1
@@ -30,7 +30,7 @@ theme_override_fonts/font = ExtResource("1_nurcu")
 theme_override_font_sizes/font_size = 32
 text = "Credits"
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButtonExit" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -118,4 +118,5 @@ theme_override_fonts/font = ExtResource("1_nurcu")
 theme_override_font_sizes/font_size = 16
 text = "Andrew Lukan"
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButtonExit" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButtonExit" to="." method="_on_texture_button_exit_pressed"]
