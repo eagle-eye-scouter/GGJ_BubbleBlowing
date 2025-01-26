@@ -50,15 +50,16 @@ wait_time = 0.75
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 5.0
+offset_left = 4.0
 offset_top = 159.0
-offset_right = 61.0
+offset_right = 60.0
 offset_bottom = 176.0
 texture_normal = ExtResource("4_fedm2")
 texture_pressed = ExtResource("5_idcn0")
 texture_hover = ExtResource("6_vcx45")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
 z_index = -1
 position = Vector2(160, 90)
 texture = ExtResource("7_fajq4")

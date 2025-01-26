@@ -47,6 +47,8 @@ func _physics_process(delta: float) -> void:
 	match state:
 		State.DEAD:
 			_handle_death_animation(delta)
+		State.VICTORY:
+			_handle_victory_animation(delta)
 		State.START:
 			if bubble.volume >= BUBBLE_VOLUME_START_THRESHOLD:
 				_set_state(State.ALIVE)
@@ -80,6 +82,10 @@ func _handle_death_animation(delta: float) -> void:
 		linear_velocity = Vector2(0, 0)
 	else:
 		gravity_scale = 1
+
+
+func _handle_victory_animation(delta:float) -> void:
+	pass
 
 
 func kill() -> void:
