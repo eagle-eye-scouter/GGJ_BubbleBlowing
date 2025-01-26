@@ -23,7 +23,6 @@ var flash_timer: Timer
 func _ready():
 	entries = [$"Score Entry", $"Score Entry2", $"Score Entry3"]
 	flash_timer = $Timer
-	receive_score(2050)
 
 # Compare new score with existing scores
 # If score is not noteworthy, it won't be added to the list
