@@ -135,6 +135,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		sprite.play("fall")
 	print("Current animation: " + sprite.animation)
 
+
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	var temp_score = "user://temp.cfg"
 	var config_manager = ConfigFile.new()
@@ -142,8 +143,10 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	config_manager.save(temp_score)
 	get_tree().change_scene_to_file("res://scenes/scoreboard.tscn")
 
+
 func _on_timer_timeout() -> void:
 	_set_state(State.DEAD)
+
 
 func calculate_score(victory: bool):
 	var altitude = abs(global_position.y)-abs(sea_level)
@@ -153,3 +156,8 @@ func calculate_score(victory: bool):
 		score = altitude
 	print("Calculated score: ", score)
 	return score
+
+
+func victory(egress:Node):
+	_set_state(State.VICTORY)
+	pass

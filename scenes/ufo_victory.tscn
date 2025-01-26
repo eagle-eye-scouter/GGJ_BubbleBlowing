@@ -35,21 +35,23 @@ scale = Vector2(-1, 1)
 script = ExtResource("1_u11vo")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -9)
+position = Vector2(0, -31)
 sprite_frames = SubResource("SpriteFrames_taguf")
 animation = &"ufo_abduction"
 autoplay = "ufo"
 frame_progress = 0.227997
 
 [node name="Body" type="Area2D" parent="."]
+position = Vector2(0, -22)
 
 [node name="Collider" type="CollisionShape2D" parent="Body"]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_2fs3s")
 
 [node name="TractorBeamGlow" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.560784)
 z_index = 1
 material = SubResource("CanvasItemMaterial_1c2ok")
-position = Vector2(0, 81)
+position = Vector2(0, 59)
 scale = Vector2(0.14, 0.14)
 texture = ExtResource("4_5wb12")
