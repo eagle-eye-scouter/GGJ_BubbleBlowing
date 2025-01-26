@@ -17,12 +17,6 @@ enum State {
 func _ready() -> void:
 	hurtbox.area_entered.connect(_on_area_entered)
 	starting_position = global_position
-	#var angle = direction.angle()
-	#scale.x = abs(scale.x) * sign(-direction.x)
-	#scale.y = abs(scale.y) #* sign(direction)
-	#if (angle > 90 and angle < 270) or (angle < -90 and angle > -270):
-		#angle = 180 - abs(angle)
-	#rotation = angle
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
