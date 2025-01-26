@@ -125,7 +125,7 @@ func _set_state(new_state:State):
 		State.VICTORY:
 			if state == State.DEAD or state == State.VICTORY:
 				return
-			camera.reparent($"..")
+			##camera.reparent($"..")
 			timer.stop()
 			new_animation = "pop"
 			calculate_score(true)
