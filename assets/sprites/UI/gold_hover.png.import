@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp8jm2ql8gwyv"
-path="res://.godot/imported/bubble_animation6.png-99d74ce0e7a056500df98bb4bddf23e0.ctex"
+uid="uid://coxh8vccb3x7b"
+path="res://.godot/imported/gold_hover.png-f1697015fc59252378141b9856062964.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/abducted/bubble_animation6.png"
-dest_files=["res://.godot/imported/bubble_animation6.png-99d74ce0e7a056500df98bb4bddf23e0.ctex"]
+source_file="res://assets/sprites/UI/gold_hover.png"
+dest_files=["res://.godot/imported/gold_hover.png-f1697015fc59252378141b9856062964.ctex"]
 
 [params]
 
