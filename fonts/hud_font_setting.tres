@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://4yfi27agppkd"]
+
+[ext_resource type="FontFile" uid="uid://3bglvarup5fg" path="res://fonts/Bubblegum.ttf" id="1_goh3p"]
+
+[resource]
+font = ExtResource("1_goh3p")
+font_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0

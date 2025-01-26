@@ -19,7 +19,6 @@ var score = 0
 var state := State.START
 @onready var bubble : GumBubble = $Bubble
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
-@onready var camera : Camera2D = $Camera2D
 @onready var timer: Timer = $Timer
 
 var bubble_stage_size = float(bubble.POP_VOLUME_THRESHOLD)/8
@@ -111,29 +110,26 @@ func _set_state(new_state:State):
 	match new_state:
 		State.START:
 			new_animation = "chew"
+			sea_level = global_position.y
 		State.ALIVE:
 			timer.start()
 			if state == State.ALIVE or state == State.DEAD:
 				return
 			new_animation = "float"
-			sea_level = global_position.y
 		State.DEAD:
 			if state == State.DEAD or state == State.VICTORY:
 				return
 			new_animation = "pop"
-			camera.reparent($"..")
 			print("Maximum elevation:", sea_level-max_altitude)
 			calculate_score(false)
 		State.VICTORY:
 			if state == State.DEAD or state == State.VICTORY:
 				return
-			camera.reparent($"..")
 			
 			timer.stop()
 			if state == State.DEAD:
 				return
 			new_animation = "pop"
-			camera.reparent($"..")
 			calculate_score(true)
 			print("Victory elevation:", sea_level-max_altitude)
 			print("Remaining Time: ", timer.time_left)
@@ -176,3 +172,6 @@ func calculate_score(victory: bool):
 func victory(egress:Node):
 	_set_state(State.VICTORY)
 	pass
+
+func _on_timer_2_timeout() -> void:
+	calculate_score(false)
