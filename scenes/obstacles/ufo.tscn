@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bf0ojisur7uyr"]
 
 [ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_k34nh"]
-[ext_resource type="Texture2D" uid="uid://k1euleh137ei" path="res://assets/sprites/ufo/ufo1.png" id="11_jiu5g"]
-[ext_resource type="Texture2D" uid="uid://bsi5cwjvxcx1j" path="res://assets/sprites/ufo/ufo2.png" id="12_7trj1"]
+[ext_resource type="Texture2D" uid="uid://du31joj7w5a0n" path="res://assets/sprites/ufo/ufo1.png" id="11_jiu5g"]
+[ext_resource type="Texture2D" uid="uid://cp5ct5jiny4v7" path="res://assets/sprites/ufo/ufo2.png" id="12_7trj1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_taguf"]
 animations = [{

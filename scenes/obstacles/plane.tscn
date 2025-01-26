@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://nn5ehnsqv2po"]
 
 [ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_gxva8"]
-[ext_resource type="Texture2D" uid="uid://rjg3xc35le0u" path="res://assets/sprites/plane.png" id="11_26duw"]
+[ext_resource type="Texture2D" uid="uid://d2255ospl46hx" path="res://assets/sprites/plane.png" id="11_26duw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_taguf"]
 animations = [{
