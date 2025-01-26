@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ct157yqi3i3qm" path="res://assets/sprites/UI/leaderboard.png" id="2_yqjne"]
 [ext_resource type="Texture2D" uid="uid://dciiike1b5yla" path="res://assets/sprites/UI/red_default.png" id="4_j02nj"]
 [ext_resource type="Texture2D" uid="uid://bbgmsg4814thb" path="res://assets/sprites/UI/red_clicked.png" id="5_el65j"]
-[ext_resource type="FontFile" uid="uid://bgcbrfthfm6i2" path="res://fonts/Bubblegum.ttf" id="6_8n1s1"]
+[ext_resource type="FontFile" uid="uid://3bglvarup5fg" path="res://fonts/Bubblegum.ttf" id="6_8n1s1"]
 
 [node name="Scoreboard" type="Control"]
 layout_mode = 3
@@ -62,22 +62,12 @@ wait_time = 0.75
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 16.0
+offset_left = 3.0
 offset_top = 162.0
-offset_right = 50.0
+offset_right = 57.0
 offset_bottom = 177.0
 texture_normal = ExtResource("4_j02nj")
 texture_pressed = ExtResource("5_el65j")
-
-[node name="Label" type="Label" parent="TextureButton"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 6.0
-offset_right = 29.0
-offset_bottom = 14.0
-theme_override_fonts/font = ExtResource("6_8n1s1")
-theme_override_font_sizes/font_size = 8
-text = "Exit"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
