@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
@@ -47,6 +47,7 @@ texture = ExtResource("2_0sb07")
 offset = Vector2(0, -0.5)
 
 [node name="TransitionController" parent="." instance=ExtResource("3_i4vfr")]
+visible = false
 
 [node name="Background" type="Control" parent="."]
 z_index = -1
@@ -71,7 +72,7 @@ grow_vertical = 2
 texture = SubResource("GradientTexture1D_p6wtx")
 
 [node name="Player" parent="." instance=ExtResource("2_wuabt")]
-position = Vector2(144.5, 136)
+position = Vector2(166, 147)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0.5, -37)
@@ -89,7 +90,7 @@ drag_bottom_margin = 0.0
 [node name="Dynamic" type="Node2D" parent="."]
 
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_xqx3g")]
-position = Vector2(159, 159)
+position = Vector2(159, 172)
 scale = Vector2(3, 1.333)
 
 [node name="Cloud0" parent="Dynamic" instance=ExtResource("5_74hj0")]
@@ -238,70 +239,6 @@ position = Vector2(15, -94)
 [node name="Bird5" parent="Dynamic/SpawnerBird1/Fleet" index="4" instance=ExtResource("5_q1vn8")]
 position = Vector2(15, -35)
 
-[node name="SpawnerBird5" parent="Dynamic" instance=ExtResource("4_ptieh")]
-position = Vector2(0, -3672)
-
-[node name="Trigger" parent="Dynamic/SpawnerBird5" index="0"]
-position = Vector2(152, 6)
-scale = Vector2(12.64, 1)
-
-[node name="Fleet" parent="Dynamic/SpawnerBird5" index="1"]
-position = Vector2(-8, -72)
-
-[node name="Bird" parent="Dynamic/SpawnerBird5/Fleet" index="0" instance=ExtResource("5_q1vn8")]
-position = Vector2(-24, -192)
-
-[node name="Bird6" parent="Dynamic/SpawnerBird5/Fleet" index="1" instance=ExtResource("5_q1vn8")]
-position = Vector2(-104, -200)
-
-[node name="Bird2" parent="Dynamic/SpawnerBird5/Fleet" index="2" instance=ExtResource("5_q1vn8")]
-position = Vector2(-48, -208)
-
-[node name="Bird3" parent="Dynamic/SpawnerBird5/Fleet" index="3" instance=ExtResource("5_q1vn8")]
-position = Vector2(-48, -176)
-
-[node name="Bird4" parent="Dynamic/SpawnerBird5/Fleet" index="4" instance=ExtResource("5_q1vn8")]
-position = Vector2(-72, -232)
-
-[node name="Bird5" parent="Dynamic/SpawnerBird5/Fleet" index="5" instance=ExtResource("5_q1vn8")]
-position = Vector2(-80, -160)
-
-[node name="Bird11" parent="Dynamic/SpawnerBird5/Fleet" index="6" instance=ExtResource("5_q1vn8")]
-position = Vector2(352, -184)
-rotation = 3.14159
-scale = Vector2(-1, -1)
-direction = Vector2(-1, 0)
-
-[node name="Bird12" parent="Dynamic/SpawnerBird5/Fleet" index="7" instance=ExtResource("5_q1vn8")]
-position = Vector2(376, -200)
-rotation = 3.14159
-scale = Vector2(-1, -1)
-direction = Vector2(-1, 0)
-
-[node name="Bird13" parent="Dynamic/SpawnerBird5/Fleet" index="8" instance=ExtResource("5_q1vn8")]
-position = Vector2(376, -168)
-rotation = 3.14159
-scale = Vector2(-1, -1)
-direction = Vector2(-1, 0)
-
-[node name="Bird14" parent="Dynamic/SpawnerBird5/Fleet" index="9" instance=ExtResource("5_q1vn8")]
-position = Vector2(408, -216)
-rotation = 3.14159
-scale = Vector2(-1, -1)
-direction = Vector2(-1, 0)
-
-[node name="Bird15" parent="Dynamic/SpawnerBird5/Fleet" index="10" instance=ExtResource("5_q1vn8")]
-position = Vector2(408, -152)
-rotation = 3.14159
-scale = Vector2(-1, -1)
-direction = Vector2(-1, 0)
-
-[node name="Bird16" parent="Dynamic/SpawnerBird5/Fleet" index="11" instance=ExtResource("5_q1vn8")]
-position = Vector2(432, -184)
-rotation = 3.14159
-scale = Vector2(-1, -1)
-direction = Vector2(-1, 0)
-
 [node name="SpawnerBird2" parent="Dynamic" instance=ExtResource("4_ptieh")]
 position = Vector2(59, -212)
 
@@ -420,7 +357,7 @@ direction = Vector2(-1, 0)
 position = Vector2(72, -8032)
 
 [node name="Trigger" parent="Dynamic/SpawnerPlane2" index="0"]
-position = Vector2(148, 147)
+position = Vector2(144, 280)
 scale = Vector2(12.64, 1)
 
 [node name="Collider" parent="Dynamic/SpawnerPlane2/Trigger" index="0"]
@@ -492,6 +429,73 @@ direction = Vector2(-1, 0)
 [node name="Bird5" parent="Dynamic/SpawnerBird4/Fleet" index="4" instance=ExtResource("5_q1vn8")]
 position = Vector2(160, -88)
 scale = Vector2(1, 1)
+direction = Vector2(-1, 0)
+
+[node name="UFO" parent="Dynamic/SpawnerBird4/Fleet" index="5" instance=ExtResource("6_3hp1q")]
+position = Vector2(-219, -8900)
+
+[node name="SpawnerBird5" parent="Dynamic" instance=ExtResource("4_ptieh")]
+position = Vector2(0, -3672)
+
+[node name="Trigger" parent="Dynamic/SpawnerBird5" index="0"]
+position = Vector2(152, 6)
+scale = Vector2(12.64, 1)
+
+[node name="Fleet" parent="Dynamic/SpawnerBird5" index="1"]
+position = Vector2(-8, -72)
+
+[node name="Bird" parent="Dynamic/SpawnerBird5/Fleet" index="0" instance=ExtResource("5_q1vn8")]
+position = Vector2(-24, -192)
+
+[node name="Bird6" parent="Dynamic/SpawnerBird5/Fleet" index="1" instance=ExtResource("5_q1vn8")]
+position = Vector2(-104, -200)
+
+[node name="Bird2" parent="Dynamic/SpawnerBird5/Fleet" index="2" instance=ExtResource("5_q1vn8")]
+position = Vector2(-48, -208)
+
+[node name="Bird3" parent="Dynamic/SpawnerBird5/Fleet" index="3" instance=ExtResource("5_q1vn8")]
+position = Vector2(-48, -176)
+
+[node name="Bird4" parent="Dynamic/SpawnerBird5/Fleet" index="4" instance=ExtResource("5_q1vn8")]
+position = Vector2(-72, -232)
+
+[node name="Bird5" parent="Dynamic/SpawnerBird5/Fleet" index="5" instance=ExtResource("5_q1vn8")]
+position = Vector2(-80, -160)
+
+[node name="Bird11" parent="Dynamic/SpawnerBird5/Fleet" index="6" instance=ExtResource("5_q1vn8")]
+position = Vector2(352, -184)
+rotation = 3.14159
+scale = Vector2(-1, -1)
+direction = Vector2(-1, 0)
+
+[node name="Bird12" parent="Dynamic/SpawnerBird5/Fleet" index="7" instance=ExtResource("5_q1vn8")]
+position = Vector2(376, -200)
+rotation = 3.14159
+scale = Vector2(-1, -1)
+direction = Vector2(-1, 0)
+
+[node name="Bird13" parent="Dynamic/SpawnerBird5/Fleet" index="8" instance=ExtResource("5_q1vn8")]
+position = Vector2(376, -168)
+rotation = 3.14159
+scale = Vector2(-1, -1)
+direction = Vector2(-1, 0)
+
+[node name="Bird14" parent="Dynamic/SpawnerBird5/Fleet" index="9" instance=ExtResource("5_q1vn8")]
+position = Vector2(408, -216)
+rotation = 3.14159
+scale = Vector2(-1, -1)
+direction = Vector2(-1, 0)
+
+[node name="Bird15" parent="Dynamic/SpawnerBird5/Fleet" index="10" instance=ExtResource("5_q1vn8")]
+position = Vector2(408, -152)
+rotation = 3.14159
+scale = Vector2(-1, -1)
+direction = Vector2(-1, 0)
+
+[node name="Bird16" parent="Dynamic/SpawnerBird5/Fleet" index="11" instance=ExtResource("5_q1vn8")]
+position = Vector2(432, -184)
+rotation = 3.14159
+scale = Vector2(-1, -1)
 direction = Vector2(-1, 0)
 
 [node name="SpawnerAsteroid" parent="Dynamic" instance=ExtResource("4_ptieh")]
@@ -616,11 +620,11 @@ debug_color = Color(0.7, 0, 0, 0.419608)
 [editable path="Dynamic/CloudC3"]
 [editable path="Dynamic/CloudC4"]
 [editable path="Dynamic/SpawnerBird1"]
-[editable path="Dynamic/SpawnerBird5"]
 [editable path="Dynamic/SpawnerBird2"]
 [editable path="Dynamic/SpawnerBird3"]
 [editable path="Dynamic/SpawnerPlane"]
 [editable path="Dynamic/SpawnerPlane2"]
 [editable path="Dynamic/SpawnerBird4"]
+[editable path="Dynamic/SpawnerBird5"]
 [editable path="Dynamic/SpawnerAsteroid"]
 [editable path="Dynamic/SpawnerUFO"]
