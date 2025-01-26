@@ -44,11 +44,6 @@ animations = [{
 "loop": true,
 "name": &"bird_fly",
 "speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ol8fg"]
@@ -63,7 +58,7 @@ velocity = 40.0
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_taguf")
 animation = &"bird_fly"
-frame_progress = 0.055238
+autoplay = "bird_fly"
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 2

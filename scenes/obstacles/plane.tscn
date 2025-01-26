@@ -1,56 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://baj1cgpjrapyv"]
+[gd_scene load_steps=5 format=3 uid="uid://nn5ehnsqv2po"]
 
 [ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_gxva8"]
-[ext_resource type="Texture2D" uid="uid://btguoc2lwwx82" path="res://assets/sprites/bird/bird1.png" id="2_i4ivy"]
-[ext_resource type="Texture2D" uid="uid://dhh3er2ber2bn" path="res://assets/sprites/bird/bird2.png" id="3_ukhvn"]
-[ext_resource type="Texture2D" uid="uid://qun2cb1dg3e7" path="res://assets/sprites/bird/bird3.png" id="4_00q0k"]
-[ext_resource type="Texture2D" uid="uid://3soffp4t6jch" path="res://assets/sprites/bird/bird4.png" id="5_vcicq"]
-[ext_resource type="Texture2D" uid="uid://btv6pneg5ddts" path="res://assets/sprites/bird/bird5.png" id="6_wf5qu"]
-[ext_resource type="Texture2D" uid="uid://blqhslp4imqoi" path="res://assets/sprites/bird/bird6.png" id="7_0sw46"]
-[ext_resource type="Texture2D" uid="uid://cggjbbo4hb656" path="res://assets/sprites/bird/bird7.png" id="8_k00x7"]
-[ext_resource type="Texture2D" uid="uid://dk6m0502fetou" path="res://assets/sprites/bird/bird8.png" id="9_s1om2"]
-[ext_resource type="Texture2D" uid="uid://cuq8h6rdy4a6x" path="res://assets/sprites/bird/bird9.png" id="10_5dnb1"]
 [ext_resource type="Texture2D" uid="uid://rjg3xc35le0u" path="res://assets/sprites/plane.png" id="11_26duw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_taguf"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_i4ivy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ukhvn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_00q0k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_vcicq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_wf5qu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_0sw46")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_k00x7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_s1om2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_5dnb1")
-}],
-"loop": true,
-"name": &"bird_fly",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("11_26duw")
@@ -72,6 +26,7 @@ velocity = 40.0
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_taguf")
 animation = &"plane"
+autoplay = "plane"
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 2

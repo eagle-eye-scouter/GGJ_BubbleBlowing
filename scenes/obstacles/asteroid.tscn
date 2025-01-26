@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuqxd3qt0rcca"]
+[gd_scene load_steps=6 format=3 uid="uid://crw3hh2yu5xwe"]
 
 [ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_s0h3k"]
 [ext_resource type="Texture2D" uid="uid://mclqh2aqf0ta" path="res://assets/asteroid_1.png" id="2_jc08f"]

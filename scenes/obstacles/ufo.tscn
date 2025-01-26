@@ -1,57 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://bf0ojisur7uyr"]
+[gd_scene load_steps=6 format=3 uid="uid://bf0ojisur7uyr"]
 
 [ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_k34nh"]
-[ext_resource type="Texture2D" uid="uid://cowlkbhmvctkm" path="res://assets/sprites/bird/bird1.png" id="2_ejlll"]
-[ext_resource type="Texture2D" uid="uid://bqvj45elolwh7" path="res://assets/sprites/bird/bird2.png" id="3_8pwj1"]
-[ext_resource type="Texture2D" uid="uid://5lwswa20x3mw" path="res://assets/sprites/bird/bird3.png" id="4_brwaf"]
-[ext_resource type="Texture2D" uid="uid://dm6pis3pjnc5r" path="res://assets/sprites/bird/bird4.png" id="5_hiej7"]
-[ext_resource type="Texture2D" uid="uid://cblc2o6d06fqg" path="res://assets/sprites/bird/bird5.png" id="6_lg61n"]
-[ext_resource type="Texture2D" uid="uid://l8ojkkwv1tb0" path="res://assets/sprites/bird/bird6.png" id="7_0xwgf"]
-[ext_resource type="Texture2D" uid="uid://c27ibu7fepmue" path="res://assets/sprites/bird/bird7.png" id="8_lga26"]
-[ext_resource type="Texture2D" uid="uid://u1aif08bxqy" path="res://assets/sprites/bird/bird8.png" id="9_bpdcm"]
-[ext_resource type="Texture2D" uid="uid://b6d7ygpwgkfr6" path="res://assets/sprites/bird/bird9.png" id="10_6lhi3"]
 [ext_resource type="Texture2D" uid="uid://k1euleh137ei" path="res://assets/sprites/ufo/ufo1.png" id="11_jiu5g"]
 [ext_resource type="Texture2D" uid="uid://bsi5cwjvxcx1j" path="res://assets/sprites/ufo/ufo2.png" id="12_7trj1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_taguf"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ejlll")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_8pwj1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_brwaf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_hiej7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_lg61n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_0xwgf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_lga26")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_bpdcm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_6lhi3")
-}],
-"loop": true,
-"name": &"bird_fly",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("11_jiu5g")
@@ -82,6 +36,7 @@ velocity = 40.0
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_taguf")
 animation = &"ufo"
+autoplay = "ufo"
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 2
