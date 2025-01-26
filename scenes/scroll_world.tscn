@@ -6,13 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-<<<<<<< Updated upstream
-[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
-[ext_resource type="PackedScene" path="res://scenes/cloud.tscn" id="5_74hj0"]
-=======
 [ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
 [ext_resource type="PackedScene" uid="uid://nn5ehnsqv2po" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
@@ -25,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d5e7bscersxy" path="res://assets/sprites/UI/score_board.png" id="18_1omni"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="18_425hx"]
 [ext_resource type="Texture2D" uid="uid://b3t7xhu0iokg7" path="res://assets/sprites/UI/timer_board.png" id="19_nx3pg"]
-[ext_resource type="LabelSettings" uid="uid://4yfi27agppkd" path="res://fonts/hud_font_setting.tres" id="20_o63pe"]
+[ext_resource type="LabelSettings" path="res://fonts/hud_font_setting.tres" id="20_o63pe"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
@@ -333,16 +328,8 @@ texture = ExtResource("16_gvx8e")
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_xqx3g")]
 position = Vector2(160, 174)
 
-[node name="Cloud0" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(88, -1608)
-scale = Vector2(2, 2)
-
 [node name="Cloud3" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(127, -10850)
-scale = Vector2(2, 2)
-
-[node name="CloudB3" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(40, -1024)
 scale = Vector2(2, 2)
 
 [node name="SpawnerBird1" parent="Dynamic" instance=ExtResource("4_ptieh")]
