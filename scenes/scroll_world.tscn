@@ -1,12 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://llfd7a127fl6"]
+[gd_scene load_steps=28 format=3 uid="uid://llfd7a127fl6"]
 
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="Texture2D" uid="uid://u0vtr8r4hnre" path="res://assets/sprites/city_2.png" id="2_0sb07"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
-[ext_resource type="PackedScene" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
+[ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
@@ -21,7 +21,6 @@
 [ext_resource type="Script" path="res://scripts/hud.gd" id="18_425hx"]
 [ext_resource type="Texture2D" uid="uid://b3t7xhu0iokg7" path="res://assets/sprites/UI/timer_board.png" id="19_nx3pg"]
 [ext_resource type="LabelSettings" path="res://fonts/hud_font_setting.tres" id="20_o63pe"]
-[ext_resource type="AudioStream" uid="uid://biwtykwmrnp8y" path="res://assets/sounds/music/BGM.wav" id="22_pnikj"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
 interpolation_color_space = 2
@@ -35,7 +34,7 @@ gradient = SubResource("Gradient_p0pkq")
 size = Vector2(27.057, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmsma"]
-size = Vector2(336, 226.086)
+size = Vector2(336, 178)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qts6x"]
 size = Vector2(202, 1554.75)
@@ -918,7 +917,7 @@ script = ExtResource("10_gxggg")
 victory_point = NodePath("../UFO/UfoTracker")
 
 [node name="Collider" type="CollisionShape2D" parent="Dynamic/VictoryArea"]
-position = Vector2(152, 0.000976563)
+position = Vector2(152, 79)
 shape = SubResource("RectangleShape2D_fmsma")
 
 [node name="UFO" parent="Dynamic" instance=ExtResource("15_384kq")]
@@ -1014,10 +1013,6 @@ text = "TIME"
 label_settings = ExtResource("20_o63pe")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("22_pnikj")
-autoplay = true
 
 [editable path="Dynamic/Clouds/CloudB1"]
 [editable path="Dynamic/Clouds/CloudB2"]
