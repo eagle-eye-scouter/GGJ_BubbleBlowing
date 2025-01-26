@@ -117,7 +117,7 @@ func _set_state(new_state:State):
 				return
 			new_animation = "float"
 		State.DEAD:
-			if state == State.DEAD or state == State.VICTORY:
+			if state == State.DEAD or state == State.VICTORY or _is_invulnerable:
 				return
 			new_animation = "pop"
 			print("Maximum elevation:", sea_level-max_altitude)
@@ -125,9 +125,8 @@ func _set_state(new_state:State):
 		State.VICTORY:
 			if state == State.DEAD or state == State.VICTORY:
 				return
-			##camera.reparent($"..")
 			timer.stop()
-			new_animation = "pop"
+			new_animation = "abduction_begin"
 			calculate_score(true)
 			print("Victory elevation:", sea_level-max_altitude)
 			print("Remaining Time: ", timer.time_left)
@@ -158,7 +157,7 @@ func _on_timer_timeout() -> void:
 
 
 func calculate_score(victory: bool):
-	var altitude = abs(global_position.y)-abs(sea_level)
+	var altitude = abs(global_position.y - sea_level)
 	if (victory):
 		score = altitude + (altitude * timer.time_left/10)
 	else:
