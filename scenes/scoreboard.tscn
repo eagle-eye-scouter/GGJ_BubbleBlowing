@@ -34,18 +34,28 @@ theme_override_font_sizes/font_size = 20
 text = "Leaderboard"
 
 [node name="Score Entry" parent="." instance=ExtResource("1_6sl18")]
-position = Vector2(84, 21)
-p_name = "DOT"
-p_score = 49201
+position = Vector2(84, 32)
+p_name = "ACE"
 
 [node name="Score Entry2" parent="." instance=ExtResource("1_6sl18")]
-position = Vector2(84, 48)
-p_score = 2003
+position = Vector2(84, 59)
+p_name = "BOB"
+p_score = 90
 
 [node name="Score Entry3" parent="." instance=ExtResource("1_6sl18")]
-position = Vector2(84, 75)
-p_name = "BOB"
-p_score = 402
+position = Vector2(84, 87)
+p_name = "CAT"
+p_score = 80
+
+[node name="Score Entry4" parent="." instance=ExtResource("1_6sl18")]
+position = Vector2(84, 113)
+p_name = "DAL"
+p_score = 50
+
+[node name="Score Entry5" parent="." instance=ExtResource("1_6sl18")]
+position = Vector2(84, 141)
+p_name = "EOF"
+p_score = 30
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.75
@@ -70,3 +80,4 @@ theme_override_font_sizes/font_size = 8
 text = "Exit"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

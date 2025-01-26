@@ -27,4 +27,4 @@ func update_score(new_score):
 
 func update_display():
 	disp_name.text = p_name
-	disp_score.text = "%06d" % p_score
+	disp_score.text = "%05d" % p_score
