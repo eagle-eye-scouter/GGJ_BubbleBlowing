@@ -95,7 +95,7 @@ func _set_state(new_state:State):
 		State.START:
 			new_animation = "chew"
 		State.ALIVE:
-			if state == State.ALIVE:
+			if state == State.ALIVE or state == State.DEAD:
 				return
 			new_animation = "float"
 			sea_level = global_position.y
