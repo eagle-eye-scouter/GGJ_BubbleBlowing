@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="Texture2D" uid="uid://b2peuyikjg5ts" path="res://assets/sprites/city_2.png" id="2_0sb07"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
-[ext_resource type="PackedScene" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
+[ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
@@ -34,7 +34,7 @@ gradient = SubResource("Gradient_p0pkq")
 size = Vector2(27.057, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmsma"]
-size = Vector2(336, 96.957)
+size = Vector2(336, 178)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qts6x"]
 size = Vector2(202, 1554.75)
@@ -323,41 +323,6 @@ texture = ExtResource("8_0vi3f")
 position = Vector2(-2.33333, -11355.6)
 rotation = 3.14159
 scale = Vector2(0.333333, -0.750188)
-texture = ExtResource("16_gvx8e")
-
-[node name="Stars5" type="Sprite2D" parent="Dynamic/Clouds"]
-position = Vector2(-7.66666, -11826)
-scale = Vector2(0.333333, 0.750188)
-texture = ExtResource("16_gvx8e")
-
-[node name="Stars6" type="Sprite2D" parent="Dynamic/Clouds"]
-position = Vector2(8.33334, -11795.9)
-rotation = 3.14159
-scale = Vector2(0.333333, -0.750188)
-texture = ExtResource("16_gvx8e")
-
-[node name="Stars7" type="Sprite2D" parent="Dynamic/Clouds"]
-position = Vector2(0.333336, -11615.9)
-rotation = -1.57079
-scale = Vector2(0.750188, -0.333333)
-texture = ExtResource("16_gvx8e")
-
-[node name="Cloud12" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
-position = Vector2(-23.6667, -1335.33)
-scale = Vector2(0.666667, 1.50038)
-
-[node name="Cloud13" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
-position = Vector2(-10.6667, -8268.57)
-scale = Vector2(0.666667, 1.50038)
-
-[node name="CloudB8" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
-position = Vector2(-39.6667, -897.224)
-scale = Vector2(0.666667, 1.50038)
-
-[node name="Stars8" type="Sprite2D" parent="Dynamic/Clouds"]
-position = Vector2(3, -11892)
-rotation = -1.57079
-scale = Vector2(0.750188, -0.333333)
 texture = ExtResource("16_gvx8e")
 
 [node name="FloorGrass" parent="Dynamic" instance=ExtResource("3_xqx3g")]
@@ -948,7 +913,7 @@ script = ExtResource("10_gxggg")
 victory_point = NodePath("../UFO/UfoTracker")
 
 [node name="Collider" type="CollisionShape2D" parent="Dynamic/VictoryArea"]
-position = Vector2(152, 38.4785)
+position = Vector2(152, 79)
 shape = SubResource("RectangleShape2D_fmsma")
 
 [node name="UFO" parent="Dynamic" instance=ExtResource("15_384kq")]
@@ -956,6 +921,27 @@ position = Vector2(160, -15792)
 scale = Vector2(2, 2)
 
 [node name="UfoTracker" type="Marker2D" parent="Dynamic/UFO"]
+
+[node name="Stars" type="Sprite2D" parent="Dynamic"]
+position = Vector2(136, -15592)
+texture = ExtResource("16_gvx8e")
+
+[node name="Stars2" type="Sprite2D" parent="Dynamic"]
+position = Vector2(184, -15552)
+scale = Vector2(-1, 1)
+texture = ExtResource("16_gvx8e")
+
+[node name="Stars3" type="Sprite2D" parent="Dynamic"]
+position = Vector2(160, -15312)
+rotation = 1.5708
+scale = Vector2(-1, 1)
+texture = ExtResource("16_gvx8e")
+
+[node name="Stars4" type="Sprite2D" parent="Dynamic"]
+position = Vector2(168, -15680)
+rotation = 1.5708
+scale = Vector2(-1, 1)
+texture = ExtResource("16_gvx8e")
 
 [node name="Fixed" type="Node2D" parent="."]
 
