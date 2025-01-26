@@ -90,14 +90,43 @@ func update_board():
 # If score is not noteworthy, it won't be added to the list
 func receive_score(new_score):
 	entry = null
-	for old_entry in entries:
-		# Noteworthy score, clear old one and update with new one
-		if (new_score > old_entry.get_p_score()):
-			entry = old_entry
-			update_name("AAA")
-			update_score(new_score)
-			flash_timer.start()
-			break
+	var i:int = 0
+	
+	## Make clone to avoid duplication of scores
+	var entries_edit = entries.duplicate()
+	
+	## While higher scores remain higher, keep incrementing
+	while i < entries_edit.size() and entries_edit[i].get_p_score() >= new_score:
+		i += 1
+	
+	## If we reached the end of the list, we can exit early
+	if i >= entries_edit.size():
+		return
+	
+	## If we have not reached the end of the list, we can mark this position for insertion
+	var insert_index = i
+	i += 1
+	
+	## Shift all following values down by one
+	while i < entries_edit.size():
+		if i > 0:
+			entries_edit[i] = entries[i-1]
+	
+	## Set the focused entry, and start to update it.
+	entry = entries_edit[insert_index]
+	update_name("AAA")
+	update_score(new_score)
+	entries = entries_edit
+	flash_timer.start()
+		#
+	#for old_entry in entries:
+		## Noteworthy score, clear old one and update with new one
+		#if (new_score > old_entry.get_p_score()):
+			#entry = old_entry
+			#update_name("AAA")
+			#update_score(new_score)
+			#flash_timer.start()
+			#break
 
 func _input(event: InputEvent):
 	# Score is not noteworthy, don't receive edit inputs
