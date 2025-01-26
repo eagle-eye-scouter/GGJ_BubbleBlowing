@@ -6,7 +6,7 @@ extends Sprite2D
 func _ready() -> void:
 	
 	#set_loops() causes the debugger to freak out, so I set the number of loops very high
-	var tween = get_tree().create_tween().set_loops(1000)
+	var tween = get_tree().create_tween().set_loops(100)
 	#Others ways to write tween properties.
 	#tween.tween_property(self, "position", position + Vector2.UP * 100, 5)
 	#tween.tween_property(self, "position:y", position.y * 100, 5)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bkqeenp2sn04y"]
+[gd_scene load_steps=19 format=3 uid="uid://bkqeenp2sn04y"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w5eq5"]
 [ext_resource type="Texture2D" uid="uid://b6lsymrywrljb" path="res://assets/sprites/UI/green_default.png" id="3_64272"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://vr0nppj05roo" path="res://assets/bubblegum/bubble_animation13.png" id="12_q762l"]
 [ext_resource type="Script" path="res://scripts/TweenFloat.gd" id="13_um3ga"]
 [ext_resource type="Texture2D" uid="uid://jlheerabi5un" path="res://assets/sprites/UI/red_hover.png" id="13_wod3d"]
+[ext_resource type="AudioStream" uid="uid://ssj6a7ggoodt" path="res://assets/sounds/music/main_menu_BGM.wav" id="18_wi7ec"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -79,6 +80,10 @@ texture = ExtResource("11_0c515")
 position = Vector2(160, 101)
 texture = ExtResource("12_q762l")
 script = ExtResource("13_um3ga")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_wi7ec")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/TextureButtonStart" to="." method="_on_texture_button_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/TextureButtonLeaderboard" to="." method="_on_texture_button_leaderboard_pressed"]

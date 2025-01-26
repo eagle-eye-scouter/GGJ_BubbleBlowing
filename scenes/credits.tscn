@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0syfmxaqmhu0"]
+[gd_scene load_steps=7 format=3 uid="uid://d0syfmxaqmhu0"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_ugg7v"]
 [ext_resource type="Texture2D" uid="uid://drfbvgq1jb2t2" path="res://assets/sprites/UI/back_default.png" id="2_vvlw6"]
 [ext_resource type="Texture2D" uid="uid://ifpvbneeewkq" path="res://assets/sprites/UI/back_clicked.png" id="3_7un63"]
 [ext_resource type="Texture2D" uid="uid://dct8eptk2ma4x" path="res://assets/sprites/UI/credits.png" id="4_538xd"]
 [ext_resource type="Texture2D" uid="uid://bw3rjnsx8ahp7" path="res://assets/sprites/UI/back_hover.png" id="4_v8i6s"]
+[ext_resource type="AudioStream" uid="uid://ssj6a7ggoodt" path="res://assets/sounds/music/main_menu_BGM.wav" id="6_nlg8a"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -59,5 +60,9 @@ z_index = -1
 position = Vector2(160, 90)
 texture = ExtResource("4_538xd")
 
-[connection signal="pressed" from="TextureButtonExit" to="." method="_on_texture_button_pressed"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_nlg8a")
+autoplay = true
+
 [connection signal="pressed" from="TextureButtonExit" to="." method="_on_texture_button_exit_pressed"]
+[connection signal="pressed" from="TextureButtonExit" to="." method="_on_texture_button_pressed"]
