@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cbakx8t0abo2i" path="res://assets/floor_grass.png" id="1_dcf5e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ctov"]
-size = Vector2(128, 18.3036)
+size = Vector2(128.889, 20)
 
 [node name="FloorGrass" type="Sprite2D"]
 position = Vector2(576, 584)
@@ -13,5 +13,5 @@ texture = ExtResource("1_dcf5e")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 6.91965)
+position = Vector2(0.44445, 0)
 shape = SubResource("RectangleShape2D_6ctov")

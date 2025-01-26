@@ -157,7 +157,7 @@ visible = false
 position = Vector2(0, -16)
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_wox2i")
 
 [node name="Timer" type="Timer" parent="."]
