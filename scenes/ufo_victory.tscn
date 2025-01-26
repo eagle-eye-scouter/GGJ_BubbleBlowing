@@ -41,7 +41,7 @@ animation = &"ufo_abduction"
 autoplay = "ufo"
 frame_progress = 0.227997
 
-[node name="Body" type="Area2D" parent="."]
+[node name="Body" type="StaticBody2D" parent="."]
 position = Vector2(0, -22)
 
 [node name="Collider" type="CollisionShape2D" parent="Body"]
