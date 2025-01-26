@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
