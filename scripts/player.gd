@@ -42,7 +42,7 @@ func _process(delta: float) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("player_breath"):
+	if Input.is_action_pressed("player_breath") or Input.is_action_pressed("player_up"):
 		bubble.volume += INFLATE_SPEED
 	match state:
 		State.DEAD:

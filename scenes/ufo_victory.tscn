@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://4smypriutml1"]
+
+[ext_resource type="Script" path="res://scripts/ufo_victory.gd" id="1_u11vo"]
+[ext_resource type="Texture2D" uid="uid://du31joj7w5a0n" path="res://assets/sprites/ufo/ufo1.png" id="2_xhxn2"]
+[ext_resource type="Texture2D" uid="uid://cp5ct5jiny4v7" path="res://assets/sprites/ufo/ufo2.png" id="3_2og3q"]
+[ext_resource type="Texture2D" uid="uid://bus23ib657f6q" path="res://assets/abducted/tractor_beam_glow.png" id="4_5wb12"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_taguf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xhxn2")
+}],
+"loop": true,
+"name": &"ufo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("3_2og3q")
+}],
+"loop": true,
+"name": &"ufo_abduction",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fs3s"]
+size = Vector2(255, 43)
+
+[node name="UFO" type="Node2D"]
+scale = Vector2(-1, 1)
+script = ExtResource("1_u11vo")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_taguf")
+animation = &"ufo_abduction"
+autoplay = "ufo"
+frame_progress = 0.227997
+
+[node name="Body" type="Area2D" parent="."]
+
+[node name="Collider" type="CollisionShape2D" parent="Body"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_2fs3s")
+
+[node name="TractorBeamGlow" type="Sprite2D" parent="."]
+position = Vector2(0, 81)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("4_5wb12")
