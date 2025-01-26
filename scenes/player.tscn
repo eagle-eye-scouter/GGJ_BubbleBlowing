@@ -1,13 +1,21 @@
-[gd_scene load_steps=33 format=3 uid="uid://b687vbeoimm0h"]
+[gd_scene load_steps=41 format=3 uid="uid://b687vbeoimm0h"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ssbc3"]
 [ext_resource type="PackedScene" uid="uid://cycv7lfgdrhhy" path="res://scenes/player_bubble.tscn" id="2_2mrk3"]
+[ext_resource type="Texture2D" uid="uid://j4qcdrsg7c0x" path="res://assets/abducted/bubble_animation_abducted8.png" id="2_75i4u"]
 [ext_resource type="Texture2D" uid="uid://1qli047jdms7" path="res://assets/bubblegum/bubble_animation1.png" id="3_6vyim"]
+[ext_resource type="Texture2D" uid="uid://db4pjr8vuhis0" path="res://assets/abducted/bubble_animation_abducted1.png" id="3_w5jp0"]
+[ext_resource type="Texture2D" uid="uid://p07pjbsmm8t" path="res://assets/abducted/bubble_animation_abducted2.png" id="4_7cp2q"]
 [ext_resource type="Texture2D" uid="uid://dk5w6ihilh27t" path="res://assets/bubblegum/bubble_animation2.png" id="4_d3k0m"]
+[ext_resource type="Texture2D" uid="uid://chp44dpaw4vo7" path="res://assets/abducted/bubble_animation_abducted3.png" id="5_2ybox"]
 [ext_resource type="Texture2D" uid="uid://badma51v1b1el" path="res://assets/bubblegum/bubble_animation3.png" id="5_anjht"]
+[ext_resource type="Texture2D" uid="uid://dnn8wuqlwoduh" path="res://assets/abducted/bubble_animation_abducted4.png" id="6_ms8dn"]
 [ext_resource type="Texture2D" uid="uid://dxunbopvrcxjt" path="res://assets/bubblegum/bubble_animation4.png" id="6_nsgbl"]
+[ext_resource type="Texture2D" uid="uid://boxk0nbfnq07v" path="res://assets/abducted/bubble_animation_abducted5.png" id="7_7n7oj"]
 [ext_resource type="Texture2D" uid="uid://ue37pqlfjxjp" path="res://assets/bubblegum/bubble_animation5.png" id="7_bgbsu"]
+[ext_resource type="Texture2D" uid="uid://d33utotlhe3t6" path="res://assets/abducted/bubble_animation_abducted6.png" id="8_tbofu"]
 [ext_resource type="Texture2D" uid="uid://c0m5igl1usvji" path="res://assets/bubblegum/bubble_animation6.png" id="8_w7o4s"]
+[ext_resource type="Texture2D" uid="uid://cnolptftk0aam" path="res://assets/abducted/bubble_animation_abducted7.png" id="9_1lgvb"]
 [ext_resource type="Texture2D" uid="uid://6lst7d5in2yg" path="res://assets/bubblegum/bubble_animation7.png" id="9_afyhq"]
 [ext_resource type="Texture2D" uid="uid://dxkrjaidcu3oo" path="res://assets/pop/bubble_animation_pop10.png" id="10_jomq7"]
 [ext_resource type="Texture2D" uid="uid://boxpavbarqaf" path="res://assets/pop/bubble_animation_pop11.png" id="11_h4fhg"]
@@ -33,6 +41,43 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmwmx"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_75i4u")
+}],
+"loop": true,
+"name": &"abduction",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w5jp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7cp2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2ybox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ms8dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7n7oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tbofu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1lgvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_75i4u")
+}],
+"loop": true,
+"name": &"abduction_begin",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_6vyim")
@@ -149,7 +194,7 @@ script = ExtResource("1_ssbc3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_qmwmx")
-animation = &"chew"
+animation = &"abduction"
 autoplay = "chew"
 
 [node name="Bubble" parent="." instance=ExtResource("2_2mrk3")]

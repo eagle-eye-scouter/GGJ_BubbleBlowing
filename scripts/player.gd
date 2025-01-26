@@ -117,7 +117,7 @@ func _set_state(new_state:State):
 				return
 			new_animation = "float"
 		State.DEAD:
-			if state == State.DEAD or state == State.VICTORY:
+			if state == State.DEAD or state == State.VICTORY or _is_invulnerable:
 				return
 			new_animation = "pop"
 			print("Maximum elevation:", sea_level-max_altitude)
@@ -126,7 +126,7 @@ func _set_state(new_state:State):
 			if state == State.DEAD or state == State.VICTORY:
 				return
 			timer.stop()
-			new_animation = "pop"
+			new_animation = "abduction_begin"
 			calculate_score(true)
 			print("Victory elevation:", sea_level-max_altitude)
 			print("Remaining Time: ", timer.time_left)
