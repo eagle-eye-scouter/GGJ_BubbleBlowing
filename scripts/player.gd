@@ -12,9 +12,6 @@ const DECELLERATION : float = 0.90
 const DECCELERATION_RATE := Vector2(DECELLERATION, DECELLERATION)
 const BUBBLE_VOLUME_START_THRESHOLD : float = 0.5
 
-const SPRITE_GROUNDED := preload("res://assets/sprites/player_start_position.png") 
-const SPRITE_FLOATING := preload("res://assets/guy_floating.png")
-
 var sea_level := 0.0
 var max_altitude := 0.0
 

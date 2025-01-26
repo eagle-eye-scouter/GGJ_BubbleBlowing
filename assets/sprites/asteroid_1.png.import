@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0tels6dyg6g8"
-path="res://.godot/imported/guy_grounded.png-d19ff6660330048131e3a9d68e3ca3d3.ctex"
+uid="uid://mclqh2aqf0ta"
+path="res://.godot/imported/asteroid_1.png-dd6fcedb99fc8b86b2857713aeb51539.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/guy_grounded.png"
-dest_files=["res://.godot/imported/guy_grounded.png-d19ff6660330048131e3a9d68e3ca3d3.ctex"]
+source_file="res://assets/sprites/asteroid_1.png"
+dest_files=["res://.godot/imported/asteroid_1.png-dd6fcedb99fc8b86b2857713aeb51539.ctex"]
 
 [params]
 
