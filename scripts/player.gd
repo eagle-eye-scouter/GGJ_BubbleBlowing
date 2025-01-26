@@ -151,9 +151,12 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	if (sprite.get_animation() == "abduction_begin"):
 		gravity_scale = 1
 		sprite.play("abduction")
-	if (sprite.get_animation() == "abduction"):
-		_set_state(State.FINISHED)
+		get_tree().create_timer(2).timeout.connect(_finish)
 	print("Current animation: " + sprite.animation)
+
+
+func _finish():
+	_set_state(State.FINISHED)
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:

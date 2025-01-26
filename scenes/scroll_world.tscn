@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/scroll_world.gd" id="1_eiwcc"]
 [ext_resource type="Texture2D" uid="uid://u0vtr8r4hnre" path="res://assets/sprites/city_2.png" id="2_0sb07"]
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
-[ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
+[ext_resource type="PackedScene" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
 [ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d5e7bscersxy" path="res://assets/sprites/UI/score_board.png" id="18_1omni"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="18_425hx"]
 [ext_resource type="Texture2D" uid="uid://b3t7xhu0iokg7" path="res://assets/sprites/UI/timer_board.png" id="19_nx3pg"]
-[ext_resource type="LabelSettings" uid="uid://4yfi27agppkd" path="res://fonts/hud_font_setting.tres" id="20_o63pe"]
+[ext_resource type="LabelSettings" path="res://fonts/hud_font_setting.tres" id="20_o63pe"]
 [ext_resource type="AudioStream" uid="uid://biwtykwmrnp8y" path="res://assets/sounds/music/BGM.wav" id="22_pnikj"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
