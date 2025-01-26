@@ -125,7 +125,6 @@ func _set_state(new_state:State):
 		State.VICTORY:
 			if state == State.DEAD or state == State.VICTORY:
 				return
-			##camera.reparent($"..")
 			timer.stop()
 			new_animation = "pop"
 			calculate_score(true)
@@ -158,7 +157,7 @@ func _on_timer_timeout() -> void:
 
 
 func calculate_score(victory: bool):
-	var altitude = abs(global_position.y)-abs(sea_level)
+	var altitude = abs(global_position.y - sea_level)
 	if (victory):
 		score = altitude + (altitude * timer.time_left/10)
 	else:
