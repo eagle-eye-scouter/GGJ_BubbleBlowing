@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
@@ -34,7 +34,7 @@ gradient = SubResource("Gradient_p0pkq")
 size = Vector2(27.057, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmsma"]
-size = Vector2(336, 178)
+size = Vector2(336, 96.957)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qts6x"]
 size = Vector2(202, 1554.75)
@@ -948,7 +948,7 @@ script = ExtResource("10_gxggg")
 victory_point = NodePath("../UFO/UfoTracker")
 
 [node name="Collider" type="CollisionShape2D" parent="Dynamic/VictoryArea"]
-position = Vector2(152, 79)
+position = Vector2(152, 38.4785)
 shape = SubResource("RectangleShape2D_fmsma")
 
 [node name="UFO" parent="Dynamic" instance=ExtResource("15_384kq")]
