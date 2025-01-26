@@ -31,10 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://drcltbjekbku5" path="res://assets/pop/bubble_animation_pop8.png" id="29_s1nsd"]
 [ext_resource type="Texture2D" uid="uid://bg4bax2wnf7lx" path="res://assets/pop/bubble_animation_pop9.png" id="30_or31n"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wox2i"]
-radius = 3.0
-height = 16.0
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmwmx"]
 animations = [{
 "frames": [{
@@ -142,24 +138,34 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wox2i"]
+radius = 3.0
+height = 16.0
+
 [node name="Character" type="RigidBody2D"]
 lock_rotation = true
 script = ExtResource("1_ssbc3")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_qmwmx")
+animation = &"chew"
+autoplay = "chew"
+
 [node name="Bubble" parent="." instance=ExtResource("2_2mrk3")]
 visible = false
-position = Vector2(0, -1)
+position = Vector2(0, -16)
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_wox2i")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -64)
-sprite_frames = SubResource("SpriteFrames_qmwmx")
-animation = &"fall"
-autoplay = "chew"
-frame = 2
-frame_progress = 0.254861
+[node name="Timer" type="Timer" parent="."]
+wait_time = 180.0
+one_shot = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
