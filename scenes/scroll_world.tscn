@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
-[ext_resource type="PackedScene" uid="uid://baj1cgpjrapyv" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
-[ext_resource type="PackedScene" uid="uid://cuqxd3qt0rcca" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
+[ext_resource type="PackedScene" uid="uid://nn5ehnsqv2po" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
+[ext_resource type="PackedScene" uid="uid://crw3hh2yu5xwe" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
 [ext_resource type="Script" path="res://scripts/victory_area.gd" id="10_gxggg"]
 [ext_resource type="Texture2D" uid="uid://cf1rfkio8lg05" path="res://assets/sprites/city.png" id="10_xnh1p"]
 
