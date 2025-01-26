@@ -5,6 +5,8 @@ func _ready() -> void:
 
 func _on_texture_button_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/scroll_world.tscn")
+	#TransitionController.transition()
+	#await TransitionController.on_transition_finished
 
 func _on_texture_button_leaderboard_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/scoreboard.tscn")

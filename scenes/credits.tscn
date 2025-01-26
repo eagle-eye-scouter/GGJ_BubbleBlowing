@@ -41,44 +41,73 @@ grow_vertical = 0
 texture_normal = ExtResource("2_b4eja")
 texture_pressed = ExtResource("3_ikf8u")
 
-[node name="LabelCredits1" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 163.0
-offset_top = 65.0
-offset_right = 305.0
-offset_bottom = 88.0
+offset_left = 162.0
+offset_top = 54.0
+offset_right = 304.0
+offset_bottom = 148.0
+theme_override_constants/separation = 10
+
+[node name="LabelCredits1" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("1_nurcu")
 theme_override_font_sizes/font_size = 16
 text = "Andrew Lukan"
 
-[node name="LabelCredits2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 163.0
-offset_top = 84.0
-offset_right = 305.0
-offset_bottom = 107.0
+[node name="LabelCredits2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("1_nurcu")
 theme_override_font_sizes/font_size = 16
 text = "Charles Dill"
 
-[node name="LabelCredits3" type="Label" parent="."]
-layout_mode = 0
-offset_left = 163.0
-offset_top = 102.0
-offset_right = 305.0
-offset_bottom = 125.0
+[node name="LabelCredits3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("1_nurcu")
 theme_override_font_sizes/font_size = 16
 text = "Nabil Azhari"
 
-[node name="LabelCredits4" type="Label" parent="."]
-layout_mode = 0
-offset_left = 163.0
-offset_top = 120.0
-offset_right = 305.0
-offset_bottom = 143.0
+[node name="LabelCredits4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("1_nurcu")
 theme_override_font_sizes/font_size = 16
 text = "David Hopke"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 54.0
+offset_right = 142.0
+offset_bottom = 148.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="LabelRole1" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 16
+text = "Producer"
+horizontal_alignment = 1
+
+[node name="LabelRole2" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 16
+text = "Artist"
+horizontal_alignment = 1
+
+[node name="LabelRole3" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 16
+text = "Programmer"
+horizontal_alignment = 1
+
+[node name="LabelRole4" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nurcu")
+theme_override_font_sizes/font_size = 16
+text = "Programmer"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
