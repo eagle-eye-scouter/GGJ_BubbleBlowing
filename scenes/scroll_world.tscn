@@ -90,6 +90,21 @@ position = Vector2(-7.66666, -11826)
 scale = Vector2(0.333333, 0.750188)
 texture = ExtResource("16_gvx8e")
 
+[node name="Stars" type="Sprite2D" parent="Dynamic/Clouds/Stars"]
+position = Vector2(-7.66666, -11826)
+scale = Vector2(0.333333, 0.750188)
+texture = ExtResource("16_gvx8e")
+
+[node name="Stars2" type="Sprite2D" parent="Dynamic/Clouds/Stars"]
+position = Vector2(146, -11405.9)
+scale = Vector2(0.333333, 0.750188)
+texture = ExtResource("16_gvx8e")
+
+[node name="Stars" type="Sprite2D" parent="Dynamic/Clouds/Stars/Stars2"]
+position = Vector2(-7.66666, -11826)
+scale = Vector2(0.333333, 0.750188)
+texture = ExtResource("16_gvx8e")
+
 [node name="Cloud0" parent="Dynamic/Clouds" instance=ExtResource("5_74hj0")]
 position = Vector2(-23.6667, -1335.33)
 scale = Vector2(0.666667, 1.50038)
@@ -305,7 +320,7 @@ scale = Vector2(0.666667, 1.50038)
 texture = ExtResource("8_0vi3f")
 
 [node name="Stars2" type="Sprite2D" parent="Dynamic/Clouds"]
-position = Vector2(8.33334, -11795.9)
+position = Vector2(-2.33333, -11355.6)
 rotation = 3.14159
 scale = Vector2(0.333333, -0.750188)
 texture = ExtResource("16_gvx8e")
@@ -317,92 +332,12 @@ position = Vector2(160, 174)
 position = Vector2(88, -1608)
 scale = Vector2(2, 2)
 
-[node name="Cloud1" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(64, -6936)
-scale = Vector2(2, 2)
-
-[node name="Cloud2" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(248, -2560)
-scale = Vector2(2, 2)
-
 [node name="Cloud3" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(136, -10912)
-scale = Vector2(2, 2)
-
-[node name="Cloud4" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(232, -10648)
-scale = Vector2(2, 2)
-
-[node name="Cloud5" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(96, -9992)
-scale = Vector2(2, 2)
-
-[node name="Cloud6" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(176, -9056)
-scale = Vector2(2, 2)
-
-[node name="Cloud7" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(112, -8408)
-scale = Vector2(2, 2)
-
-[node name="Cloud8" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(216, -7560)
-scale = Vector2(2, 2)
-
-[node name="Cloud9" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(216, -5760)
-scale = Vector2(2, 2)
-
-[node name="Cloud10" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(80, -5421)
-scale = Vector2(2, 2)
-
-[node name="Cloud11" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(168, -4248)
-scale = Vector2(2, 2)
-
-[node name="CloudB1" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(-56, -840)
-scale = Vector2(2, 2)
-
-[node name="CloudB2" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(-24, -2040)
+position = Vector2(127, -10850)
 scale = Vector2(2, 2)
 
 [node name="CloudB3" parent="Dynamic" instance=ExtResource("5_74hj0")]
 position = Vector2(40, -1024)
-scale = Vector2(2, 2)
-
-[node name="CloudB4" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(280, -1280)
-scale = Vector2(2, 2)
-
-[node name="CloudB5" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(32, -1512)
-scale = Vector2(2, 2)
-
-[node name="CloudB6" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(40, -3072)
-scale = Vector2(2, 2)
-
-[node name="CloudB7" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(120, -4992)
-scale = Vector2(2, 2)
-
-[node name="CloudC1" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(-40, -3808)
-scale = Vector2(2, 2)
-
-[node name="CloudC2" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(224, -2248)
-scale = Vector2(2, 2)
-
-[node name="CloudC3" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(200, -4944)
-scale = Vector2(2, 2)
-
-[node name="CloudC4" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(88, -2784)
 scale = Vector2(2, 2)
 
 [node name="SpawnerBird1" parent="Dynamic" instance=ExtResource("4_ptieh")]
