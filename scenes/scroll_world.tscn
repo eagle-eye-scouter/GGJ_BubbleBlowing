@@ -6,13 +6,13 @@
 [ext_resource type="PackedScene" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
 [ext_resource type="PackedScene" uid="uid://nn5ehnsqv2po" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
-[ext_resource type="Texture2D" uid="uid://cssf3w48yntkr" path="res://assets/clouds/cloud_2.png" id="7_xh6x7"]
-[ext_resource type="Texture2D" uid="uid://cjohqyu1gyco2" path="res://assets/clouds/cloud_3.png" id="8_0vi3f"]
+[ext_resource type="Texture2D" uid="uid://dvmv141mblvlb" path="res://assets/clouds/cloud_2.png" id="7_xh6x7"]
+[ext_resource type="Texture2D" uid="uid://oxesigr8r3fx" path="res://assets/clouds/cloud_3.png" id="8_0vi3f"]
 [ext_resource type="PackedScene" uid="uid://cuqxd3qt0rcca" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
 [ext_resource type="Script" path="res://scripts/victory_area.gd" id="10_gxggg"]
 [ext_resource type="PackedScene" uid="uid://4smypriutml1" path="res://scenes/ufo_victory.tscn" id="15_384kq"]
@@ -93,129 +93,153 @@ drag_bottom_margin = 0.0
 position = Vector2(159, 172)
 scale = Vector2(3, 1.333)
 
-[node name="Cloud0" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(88, -1608)
-scale = Vector2(2, 2)
+[node name="Clouds" type="Node2D" parent="Dynamic/FloorGrass"]
+z_index = -1
 
-[node name="Cloud1" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(64, -6936)
-scale = Vector2(2, 2)
+[node name="Cloud0" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-23.6667, -1335.33)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud2" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(248, -2560)
-scale = Vector2(2, 2)
+[node name="Cloud1" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-31.6667, -5332.33)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud3" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(136, -10912)
-scale = Vector2(2, 2)
+[node name="Cloud2" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(29.6667, -2049.51)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud4" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(232, -10648)
-scale = Vector2(2, 2)
+[node name="Cloud3" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-7.66666, -8315.08)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud5" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(96, -9992)
-scale = Vector2(2, 2)
+[node name="Cloud4" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(24.3333, -8117.03)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud6" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(176, -9056)
-scale = Vector2(2, 2)
+[node name="Cloud5" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-21, -7624.91)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud7" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(112, -8408)
-scale = Vector2(2, 2)
+[node name="Cloud6" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(5.66667, -6922.73)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud8" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(216, -7560)
-scale = Vector2(2, 2)
+[node name="Cloud7" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-15.6667, -6436.61)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud9" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(216, -5760)
-scale = Vector2(2, 2)
+[node name="Cloud8" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(19, -5800.45)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud10" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(80, -5421)
-scale = Vector2(2, 2)
+[node name="Cloud9" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(19, -4450.11)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Cloud11" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(168, -4248)
-scale = Vector2(2, 2)
+[node name="Cloud10" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-26.3333, -4195.8)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="CloudB1" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(-56, -840)
-scale = Vector2(2, 2)
+[node name="Cloud11" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(3, -3315.83)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudB1" index="0"]
+[node name="CloudB1" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-71.6667, -759.19)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudB1" index="0"]
 texture = ExtResource("7_xh6x7")
 
-[node name="CloudB2" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(-24, -2040)
-scale = Vector2(2, 2)
+[node name="CloudB2" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-61, -1659.41)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudB2" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudB2" index="0"]
 texture = ExtResource("7_xh6x7")
 
-[node name="CloudB3" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(40, -1024)
-scale = Vector2(2, 2)
+[node name="CloudB3" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-39.6667, -897.224)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudB3" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudB3" index="0"]
 texture = ExtResource("7_xh6x7")
 
-[node name="CloudB4" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(280, -1280)
-scale = Vector2(2, 2)
+[node name="CloudB4" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(40.3333, -1089.27)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudB4" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudB4" index="0"]
 texture = ExtResource("7_xh6x7")
 
-[node name="CloudB5" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(32, -1512)
-scale = Vector2(2, 2)
+[node name="CloudB5" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-42.3333, -1263.32)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudB5" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudB5" index="0"]
 texture = ExtResource("7_xh6x7")
 
-[node name="CloudB6" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(40, -3072)
-scale = Vector2(2, 2)
+[node name="CloudB6" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-39.6667, -2433.61)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudB6" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudB6" index="0"]
 texture = ExtResource("7_xh6x7")
 
-[node name="CloudB7" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(120, -4992)
-scale = Vector2(2, 2)
+[node name="CloudB7" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-13, -3873.97)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudB7" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudB7" index="0"]
 texture = ExtResource("7_xh6x7")
 
-[node name="CloudC1" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(-40, -3808)
-scale = Vector2(2, 2)
+[node name="CloudC1" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-66.3333, -2985.75)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudC1" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudC1" index="0"]
 texture = ExtResource("8_0vi3f")
 
-[node name="CloudC2" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(224, -2248)
-scale = Vector2(2, 2)
+[node name="CloudC2" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(21.6667, -1815.45)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudC2" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudC2" index="0"]
 texture = ExtResource("8_0vi3f")
 
-[node name="CloudC3" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(200, -4944)
-scale = Vector2(2, 2)
+[node name="CloudC3" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(13.6667, -3837.96)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudC3" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudC3" index="0"]
 texture = ExtResource("8_0vi3f")
 
-[node name="CloudC4" parent="Dynamic" instance=ExtResource("5_74hj0")]
-position = Vector2(88, -2784)
-scale = Vector2(2, 2)
+[node name="CloudC4" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-23.6667, -2217.55)
+scale = Vector2(0.666667, 1.50038)
 
-[node name="Sprite2D" parent="Dynamic/CloudC4" index="0"]
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudC4" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC5" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-63.6667, -471.118)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudC5" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC6" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-21, -165.041)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudC6" index="0"]
+texture = ExtResource("8_0vi3f")
+
+[node name="CloudC7" parent="Dynamic/FloorGrass/Clouds" instance=ExtResource("5_74hj0")]
+position = Vector2(-34.3333, -381.095)
+scale = Vector2(0.666667, 1.50038)
+
+[node name="Sprite2D" parent="Dynamic/FloorGrass/Clouds/CloudC7" index="0"]
 texture = ExtResource("8_0vi3f")
 
 [node name="SpawnerBird1" parent="Dynamic" instance=ExtResource("4_ptieh")]
@@ -454,7 +478,7 @@ velocity = 100.0
 direction = Vector2(-1, -1)
 
 [node name="Bird6" parent="Dynamic/SpawnerBird7/Fleet" index="3" instance=ExtResource("5_q1vn8")]
-position = Vector2(440, -312)
+position = Vector2(360, -400)
 rotation = 0.785398
 scale = Vector2(1, 1)
 velocity = 100.0
@@ -753,17 +777,20 @@ position = Vector2(352, 886)
 shape = SubResource("RectangleShape2D_qiv8v")
 debug_color = Color(0.7, 0, 0, 0.419608)
 
-[editable path="Dynamic/CloudB1"]
-[editable path="Dynamic/CloudB2"]
-[editable path="Dynamic/CloudB3"]
-[editable path="Dynamic/CloudB4"]
-[editable path="Dynamic/CloudB5"]
-[editable path="Dynamic/CloudB6"]
-[editable path="Dynamic/CloudB7"]
-[editable path="Dynamic/CloudC1"]
-[editable path="Dynamic/CloudC2"]
-[editable path="Dynamic/CloudC3"]
-[editable path="Dynamic/CloudC4"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudB1"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudB2"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudB3"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudB4"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudB5"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudB6"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudB7"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudC1"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudC2"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudC3"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudC4"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudC5"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudC6"]
+[editable path="Dynamic/FloorGrass/Clouds/CloudC7"]
 [editable path="Dynamic/SpawnerBird1"]
 [editable path="Dynamic/SpawnerBird8"]
 [editable path="Dynamic/SpawnerBird9"]
