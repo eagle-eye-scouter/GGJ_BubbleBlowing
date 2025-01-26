@@ -158,10 +158,13 @@ func _on_timer_timeout() -> void:
 
 func calculate_score(victory: bool):
 	var altitude = abs(global_position.y - sea_level)
+	var new_score
 	if (victory):
-		score = altitude + (altitude * timer.time_left/10)
+		new_score = altitude + (altitude * timer.time_left/10)
 	else:
-		score = altitude
+		new_score = altitude
+	if (score < new_score):
+		score = new_score
 	print("Calculated score: ", score)
 	return score
 
