@@ -88,15 +88,20 @@ func kill() -> void:
 func _on_bubble_popped():
 	kill()
 
+
 func _set_state(new_state:State):
 	var new_animation = null
 	match new_state:
 		State.START:
 			new_animation = "chew"
 		State.ALIVE:
+			if state == State.ALIVE:
+				return
 			new_animation = "float"
 			sea_level = global_position.y
 		State.DEAD:
+			if state == State.DEAD:
+				return
 			new_animation = "pop"
 			camera.reparent($"..")
 			print("SL:", sea_level-global_position.y)
@@ -104,6 +109,7 @@ func _set_state(new_state:State):
 		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())
 	state = new_state
+
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if (sprite.get_animation() == "chew"):
