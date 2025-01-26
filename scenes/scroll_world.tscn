@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b687vbeoimm0h" path="res://scenes/player.tscn" id="2_wuabt"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
 [ext_resource type="PackedScene" path="res://scenes/obstacles/plane.tscn" id="7_rhndl"]
@@ -296,6 +296,8 @@ direction = Vector2(-1, 0)
 position = Vector2(377, -478)
 velocity = 80.0
 direction = Vector2(-1, 0)
+
+[node name="WinArea" type="Area2D" parent="Dynamic"]
 
 [node name="Fixed" type="Node2D" parent="."]
 

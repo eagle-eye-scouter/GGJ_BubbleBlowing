@@ -45,6 +45,9 @@ func radius():
 
 
 func pop():
+	## Guard clause
+	if state == State.POPPED:
+		return
 	_set_state(State.POPPED)
 	print("I got popped!")
 

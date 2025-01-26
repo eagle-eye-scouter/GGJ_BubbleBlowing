@@ -15,6 +15,7 @@ const BUBBLE_VOLUME_START_THRESHOLD : float = 0.5
 const SPRITE_GROUNDED := preload("res://assets/sprites/player_start_position.png") 
 const SPRITE_FLOATING := preload("res://assets/guy_floating.png")
 
+var sea_level := 0.0
 
 var state := State.START
 @onready var bubble : GumBubble = $Bubble
@@ -87,20 +88,28 @@ func kill() -> void:
 func _on_bubble_popped():
 	kill()
 
+
 func _set_state(new_state:State):
 	var new_animation = null
 	match new_state:
 		State.START:
 			new_animation = "chew"
 		State.ALIVE:
+			if state == State.ALIVE:
+				return
 			new_animation = "float"
+			sea_level = global_position.y
 		State.DEAD:
+			if state == State.DEAD:
+				return
 			new_animation = "pop"
 			camera.reparent($"..")
+			print("SL:", sea_level-global_position.y)
 	if (new_animation != null && sprite.get_animation() != new_animation):
 		sprite.play(new_animation)
 		print("Current animation: " + sprite.get_animation())
 	state = new_state
+
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if (sprite.get_animation() == "chew"):
