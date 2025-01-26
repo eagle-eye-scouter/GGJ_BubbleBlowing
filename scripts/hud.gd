@@ -5,7 +5,7 @@ extends Camera2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (player.state != player.State.DEAD):
+	if (player.state != player.State.DEAD and player.state != player.State.VICTORY):
 		global_position.y = player.global_position.y + diffstance
 		update_hud()
 
