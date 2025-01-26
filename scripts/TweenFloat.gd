@@ -5,7 +5,9 @@ extends Sprite2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	var tween = get_tree().create_tween().set_loops()
+	#set_loops() causes the debugger to freak out, so I set the number of loops very high
+	var tween = get_tree().create_tween().set_loops(1000)
+	#Others ways to write tween properties.
 	#tween.tween_property(self, "position", position + Vector2.UP * 100, 5)
 	#tween.tween_property(self, "position:y", position.y * 100, 5)
 	#tween.tween_property(self, "position:y",100, 5).from(-100)
