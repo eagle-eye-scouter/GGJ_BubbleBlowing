@@ -29,6 +29,7 @@ enum State {
 	ALIVE,
 	DEAD,
 	VICTORY,
+	FINISHED,
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -113,7 +114,7 @@ func _set_state(new_state:State):
 			sea_level = global_position.y
 		State.ALIVE:
 			timer.start()
-			if state == State.ALIVE or state == State.DEAD:
+			if state == State.ALIVE or state == State.DEAD or state == State.VICTORY:
 				return
 			new_animation = "float"
 		State.DEAD:
@@ -157,8 +158,7 @@ func _on_timer_timeout() -> void:
 
 
 func calculate_score(victory: bool):
-	var altitude = abs(global_position.y - sea_level)
-	var new_score
+	var altitude = abs(max_altitude - sea_level)
 	if (victory):
 		new_score = altitude + (altitude * timer.time_left/10)
 	else:
@@ -171,7 +171,7 @@ func calculate_score(victory: bool):
 
 func victory(egress:Node):
 	_set_state(State.VICTORY)
-	pass
+
 
 func _on_timer_2_timeout() -> void:
 	calculate_score(false)

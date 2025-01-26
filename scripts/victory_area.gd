@@ -15,7 +15,8 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body:Node2D):
-	var parent = body.get_parent()
-	if parent is Player:
-		parent.victory(victory_point)
+	print(body, " entered the Victory Area!")
+	##var parent = body.get_parent()
+	if body is Player:
+		body.victory(victory_point)
 	pass
