@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://brsyxcqnwx7lx" path="res://scenes/TransitionController.tscn" id="3_i4vfr"]
 [ext_resource type="PackedScene" uid="uid://bbpbsq52fuimg" path="res://scenes/floor_grass.tscn" id="3_xqx3g"]
 [ext_resource type="Script" path="res://scripts/kill_zone.gd" id="4_f4p2y"]
-[ext_resource type="PackedScene" uid="uid://bx6oy5wxvwiyb" path="res://scenes/spawner.tscn" id="4_ptieh"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="4_ptieh"]
 [ext_resource type="PackedScene" uid="uid://c4b4p526kgt21" path="res://scenes/cloud.tscn" id="5_74hj0"]
 [ext_resource type="PackedScene" uid="uid://be5gtv3rimc1g" path="res://scenes/obstacles/bird.tscn" id="5_q1vn8"]
 [ext_resource type="PackedScene" uid="uid://bf0ojisur7uyr" path="res://scenes/obstacles/ufo.tscn" id="6_3hp1q"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cjohqyu1gyco2" path="res://assets/clouds/cloud_3.png" id="8_0vi3f"]
 [ext_resource type="PackedScene" uid="uid://cuqxd3qt0rcca" path="res://scenes/obstacles/asteroid.tscn" id="8_1kd0q"]
 [ext_resource type="Script" path="res://scripts/victory_area.gd" id="10_gxggg"]
-[ext_resource type="PackedScene" uid="uid://4smypriutml1" path="res://scenes/ufo_victory.tscn" id="15_384kq"]
+[ext_resource type="PackedScene" path="res://scenes/ufo_victory.tscn" id="15_384kq"]
 [ext_resource type="Texture2D" uid="uid://dbb12xnd347us" path="res://assets/sprites/stars.png" id="16_gvx8e"]
 
 [sub_resource type="Gradient" id="Gradient_p0pkq"]
