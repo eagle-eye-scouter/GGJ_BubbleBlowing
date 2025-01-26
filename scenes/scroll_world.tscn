@@ -34,7 +34,7 @@ gradient = SubResource("Gradient_p0pkq")
 size = Vector2(27.057, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmsma"]
-size = Vector2(336, 178)
+size = Vector2(336, 226.086)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qts6x"]
 size = Vector2(202, 1554.75)
@@ -913,7 +913,7 @@ script = ExtResource("10_gxggg")
 victory_point = NodePath("../UFO/UfoTracker")
 
 [node name="Collider" type="CollisionShape2D" parent="Dynamic/VictoryArea"]
-position = Vector2(152, 79)
+position = Vector2(152, 0.000976563)
 shape = SubResource("RectangleShape2D_fmsma")
 
 [node name="UFO" parent="Dynamic" instance=ExtResource("15_384kq")]
