@@ -1,18 +1,22 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkqeenp2sn04y"]
+[gd_scene load_steps=18 format=3 uid="uid://bkqeenp2sn04y"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w5eq5"]
 [ext_resource type="Texture2D" uid="uid://b6lsymrywrljb" path="res://assets/sprites/UI/green_default.png" id="3_64272"]
 [ext_resource type="Texture2D" uid="uid://dpklycp531su0" path="res://assets/sprites/UI/green_clicked.png" id="4_5sen0"]
+[ext_resource type="Texture2D" uid="uid://x13t1bv7a4dp" path="res://assets/sprites/UI/green_hover.png" id="4_8lrc1"]
 [ext_resource type="Texture2D" uid="uid://df2tj3vyyeiny" path="res://assets/sprites/UI/gold_default_long.png" id="5_u7jre"]
 [ext_resource type="Texture2D" uid="uid://ds1ef0ixmbjce" path="res://assets/sprites/UI/red_default.png" id="6_cewoy"]
 [ext_resource type="Texture2D" uid="uid://du0qij4wyqjnu" path="res://assets/sprites/UI/gold_default_clicked_long.png" id="6_hqmv1"]
 [ext_resource type="Texture2D" uid="uid://31i5erqfgsy8" path="res://assets/sprites/UI/red_clicked.png" id="7_bmg56"]
+[ext_resource type="Texture2D" uid="uid://coxh8vccb3x7b" path="res://assets/sprites/UI/gold_hover.png" id="7_itda7"]
 [ext_resource type="Texture2D" uid="uid://eynbp8sga33m" path="res://assets/sprites/UI/blue_default.png" id="7_r1vig"]
 [ext_resource type="Texture2D" uid="uid://clbyou5ixibe6" path="res://assets/sprites/UI/blue_clicked.png" id="8_44jes"]
+[ext_resource type="Texture2D" uid="uid://u4thyfb1oqii" path="res://assets/sprites/UI/blue_hover.png" id="10_6dhwr"]
 [ext_resource type="Texture2D" uid="uid://p54uqwe66m0j" path="res://assets/sprites/UI/menu_background.png" id="10_jl0o5"]
 [ext_resource type="Texture2D" uid="uid://dogkaom6x45ax" path="res://assets/sprites/UI/title.png" id="11_0c515"]
 [ext_resource type="Texture2D" uid="uid://vr0nppj05roo" path="res://assets/bubblegum/bubble_animation13.png" id="12_q762l"]
 [ext_resource type="Script" path="res://scripts/TweenFloat.gd" id="13_um3ga"]
+[ext_resource type="Texture2D" uid="uid://jlheerabi5un" path="res://assets/sprites/UI/red_hover.png" id="13_wod3d"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -40,21 +44,25 @@ alignment = 1
 layout_mode = 2
 texture_normal = ExtResource("3_64272")
 texture_pressed = ExtResource("4_5sen0")
+texture_hover = ExtResource("4_8lrc1")
 
 [node name="TextureButtonLeaderboard" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("5_u7jre")
 texture_pressed = ExtResource("6_hqmv1")
+texture_hover = ExtResource("7_itda7")
 
 [node name="TextureButtonCredits" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("7_r1vig")
 texture_pressed = ExtResource("8_44jes")
+texture_hover = ExtResource("10_6dhwr")
 
 [node name="TextureButtonExit" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("6_cewoy")
 texture_pressed = ExtResource("7_bmg56")
+texture_hover = ExtResource("13_wod3d")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1

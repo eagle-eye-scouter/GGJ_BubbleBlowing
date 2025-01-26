@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://m24coaqulwcp"]
+[gd_scene load_steps=8 format=3 uid="uid://m24coaqulwcp"]
 
 [ext_resource type="PackedScene" uid="uid://yeplf5s6wa2n" path="res://scenes/score_entry.tscn" id="1_6sl18"]
 [ext_resource type="Script" path="res://scripts/scoreboard.gd" id="1_lrco3"]
 [ext_resource type="Texture2D" uid="uid://cul43bq70q2ps" path="res://assets/sprites/UI/leaderboard.png" id="2_yqjne"]
-[ext_resource type="Texture2D" uid="uid://ds1ef0ixmbjce" path="res://assets/sprites/UI/red_default.png" id="4_j02nj"]
-[ext_resource type="Texture2D" uid="uid://31i5erqfgsy8" path="res://assets/sprites/UI/red_clicked.png" id="5_el65j"]
-[ext_resource type="FontFile" uid="uid://3bglvarup5fg" path="res://fonts/Bubblegum.ttf" id="6_8n1s1"]
+[ext_resource type="Texture2D" uid="uid://drfbvgq1jb2t2" path="res://assets/sprites/UI/back_default.png" id="4_fedm2"]
+[ext_resource type="Texture2D" uid="uid://ifpvbneeewkq" path="res://assets/sprites/UI/back_clicked.png" id="5_idcn0"]
+[ext_resource type="Texture2D" uid="uid://bw3rjnsx8ahp7" path="res://assets/sprites/UI/back_hover.png" id="6_vcx45"]
+[ext_resource type="Texture2D" uid="uid://p54uqwe66m0j" path="res://assets/sprites/UI/menu_background.png" id="7_fajq4"]
 
 [node name="Scoreboard" type="Control"]
 layout_mode = 3
@@ -20,41 +21,27 @@ script = ExtResource("1_lrco3")
 position = Vector2(161, 90)
 texture = ExtResource("2_yqjne")
 
-[node name="Label" type="Label" parent="Sprite2D"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -226.0
-offset_top = -79.0
-offset_right = -94.0
-offset_bottom = -59.0
-grow_horizontal = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_8n1s1")
-theme_override_font_sizes/font_size = 16
-text = "Leaderboard"
-
 [node name="Score Entry" parent="." instance=ExtResource("1_6sl18")]
-position = Vector2(84, 32)
+position = Vector2(84, 37)
 p_name = "ACE"
 
 [node name="Score Entry2" parent="." instance=ExtResource("1_6sl18")]
-position = Vector2(84, 59)
+position = Vector2(84, 64)
 p_name = "BOB"
 p_score = 90
 
 [node name="Score Entry3" parent="." instance=ExtResource("1_6sl18")]
-position = Vector2(84, 87)
+position = Vector2(84, 91)
 p_name = "CAT"
 p_score = 80
 
 [node name="Score Entry4" parent="." instance=ExtResource("1_6sl18")]
-position = Vector2(84, 113)
+position = Vector2(84, 118)
 p_name = "DAL"
 p_score = 50
 
 [node name="Score Entry5" parent="." instance=ExtResource("1_6sl18")]
-position = Vector2(84, 141)
+position = Vector2(84, 145)
 p_name = "EOF"
 p_score = 30
 
@@ -63,12 +50,18 @@ wait_time = 0.75
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 162.0
-offset_right = 57.0
-offset_bottom = 177.0
-texture_normal = ExtResource("4_j02nj")
-texture_pressed = ExtResource("5_el65j")
+offset_left = 5.0
+offset_top = 159.0
+offset_right = 61.0
+offset_bottom = 176.0
+texture_normal = ExtResource("4_fedm2")
+texture_pressed = ExtResource("5_idcn0")
+texture_hover = ExtResource("6_vcx45")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(160, 90)
+texture = ExtResource("7_fajq4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
