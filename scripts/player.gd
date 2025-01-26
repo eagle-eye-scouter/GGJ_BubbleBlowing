@@ -44,6 +44,9 @@ func _process(delta: float) -> void:
 		bubble._set_state(GumBubble.State.INVULNERABLE)
 	if (sprite.get_animation() == "float"):
 		sprite.set_frame(bubble.volume/bubble_stage_size)
+	if (sprite.get_animation() == "abduction_begin"):
+		linear_velocity = Vector2.ZERO
+		gravity_scale = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
