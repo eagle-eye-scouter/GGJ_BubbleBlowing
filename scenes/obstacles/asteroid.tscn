@@ -27,7 +27,7 @@ animations = [{
 radius = 20.0
 height = 42.0
 
-[node name="Plane" type="Node2D"]
+[node name="Asteroid" type="Node2D"]
 scale = Vector2(-1, 1)
 script = ExtResource("1_s0h3k")
 velocity = 40.0
