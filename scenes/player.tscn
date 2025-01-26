@@ -42,12 +42,12 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmwmx"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("2_75i4u")
 }],
 "loop": true,
 "name": &"abduction",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,

@@ -128,6 +128,8 @@ func _set_state(new_state:State):
 				return
 			timer.stop()
 			new_animation = "abduction_begin"
+			gravity_scale = 0
+		State.FINISHED:
 			calculate_score(true)
 			print("Victory elevation:", sea_level-max_altitude)
 			print("Remaining Time: ", timer.time_left)
@@ -142,6 +144,11 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		sprite.play("float")
 	if (sprite.get_animation() == "pop"):
 		sprite.play("fall")
+	if (sprite.get_animation() == "abduction_begin"):
+		gravity_scale = 1
+		sprite.play("abduction")
+	if (sprite.get_animation() == "abduction"):
+		_set_state(State.FINISHED)
 	print("Current animation: " + sprite.animation)
 
 
