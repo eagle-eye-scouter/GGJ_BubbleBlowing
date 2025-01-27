@@ -125,6 +125,7 @@ func _set_state(new_state:State):
 				return
 			new_animation = "pop"
 			print("Maximum elevation:", sea_level-max_altitude)
+			timer.set_paused(true)
 			calculate_score(false)
 		State.VICTORY:
 			if state == State.DEAD or state == State.VICTORY:
@@ -180,7 +181,7 @@ func calculate_score(victory: bool):
 	var altitude = abs(max_altitude - sea_level)
 	var new_score = altitude
 	if (victory):
-		new_score = altitude + (altitude * timer.time_left/10)
+		new_score = altitude + (altitude * timer.time_left/50)
 	if (score < new_score):
 		score = new_score
 	print("Calculated score: ", score)

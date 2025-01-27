@@ -7,7 +7,7 @@ extends Camera2D
 func _process(delta: float) -> void:
 	if (player.state != player.State.DEAD and player.state != player.State.VICTORY):
 		global_position.y = player.global_position.y + diffstance
-		update_hud()
+	update_hud()
 
 func update_hud():
 	$TimeLabel.set_text(str(int(player.timer.time_left)))  
