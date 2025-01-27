@@ -129,7 +129,7 @@ func _set_state(new_state:State):
 		State.VICTORY:
 			if state == State.DEAD or state == State.VICTORY:
 				return
-			timer.stop()
+			timer.set_paused(true)
 			new_animation = "abduction_begin"
 			gravity_scale = 0
 		State.FINISHED:
