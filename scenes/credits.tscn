@@ -64,5 +64,5 @@ texture = ExtResource("4_538xd")
 stream = ExtResource("6_nlg8a")
 autoplay = true
 
-[connection signal="pressed" from="TextureButtonExit" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButtonExit" to="." method="_on_texture_button_exit_pressed"]
+[connection signal="pressed" from="TextureButtonExit" to="." method="_on_texture_button_pressed"]
